@@ -614,8 +614,8 @@ function soblossom_supports_wp_features() {
 
 	function soblossom_add_favicon() {
 	
-	    echo '<link rel="apple-touch-icon" href="' . get_template_directory_uri() . '/inc/images/apple-icon-touch.png">';
-	    echo '<link rel="shortcut icon" href="' . get_template_directory_uri() . '/inc/images/favicon.png" />';
+	    echo '<link rel="apple-touch-icon" href="' . get_template_directory_uri() . '/images/apple-icon-touch.png">';
+	    echo '<link rel="shortcut icon" href="' . get_template_directory_uri() . '/images/favicon.png" />';
 	
 	}
 	

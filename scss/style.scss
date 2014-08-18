@@ -20,4 +20,19 @@ This theme, is licensed under the GPL.
 @import "compass";
 @import "underscores";
 
+// Import mixins
+@import "gallery";
 
+// Import styles for printed media
+@import "print";
+
+// Import styles based on different screen sizes (mobile first)
+@import "small";
+@import "medium";
+@import "large";
+@import "xlarge";
+@import "xxlarge";
+
+
+// if RTL language, then add RTL styles
+// @import "rtl";

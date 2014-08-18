@@ -31,6 +31,8 @@
 		<!--[if IE]>
 			<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
 		<![endif]-->
+		
+		<?php wp_head(); ?>
 
 	</head>
 
