@@ -1,15 +1,20 @@
 <?php
 /**
- * The sidebar containing the main widget area.
+ * The Sidebar containing the main widget areas.
  *
  * @package soblossom
  */
-
-if ( ! is_active_sidebar( 'sidebar-1' ) ) {
-	return;
-}
 ?>
-
-<div id="secondary" class="widget-area" role="complementary">
-	<?php dynamic_sidebar( 'sidebar-1' ); ?>
-</div><!-- #secondary -->
+	<div id="sidebar" class="widget-area medium-4 columns" role="complementary">
+		
+		<?php if ( is_active_sidebar( 'sidebar-widget-area' ) ) {
+			
+			dynamic_sidebar( 'sidebar-widget-area' );
+		
+		} else {
+		
+			echo '<div class="alert help"><p>' . __( 'Go to Appearance <i class="fa fa-long-arrow-right"></i> Widgets in your Dashboard to add some widgets', 'soblossom' ) . '</p></div>';
+			
+		} //endif/else sidebar-widget-area ?>
+	
+	</div><!-- #sidebar -->

@@ -1,32 +1,37 @@
 <?php
 /**
- * The template for displaying all single posts.
+ * The Template for displaying all single posts.
  *
  * @package soblossom
  */
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+	<div id="content" class="contentarea-wrap">
 
-		<?php while ( have_posts() ) : the_post(); ?>
+		<div id="inner-content" class="row">
+	
+			<main id="main" class="site-main medium-8 columns clearfix" role="main">
 
-			<?php get_template_part( 'content', 'single' ); ?>
+				<?php while ( have_posts() ) { the_post();
+		
+					get_template_part( 'tplparts/content', 'single' );
+		
+					soblossom_post_nav(); // defined in inc/soblossom.php
+		
+					// If comments are open or we have at least one comment, load up the comment template
+					if ( comments_open() || '0' != get_comments_number() ) {
+						comments_template();
+					} //endif
+		
+				} //endwhile end of the loop. ?>
 
-			<?php soblossom_post_nav(); ?>
+			</main><!-- #main.site-main -->
+	
+			<?php get_sidebar(); ?>
+			
+		</div> <!-- end #inner-content -->
+	
+	</div> <!-- end #content.contentarea-wrap -->
 
-			<?php
-				// If comments are open or we have at least one comment, load up the comment template
-				if ( comments_open() || '0' != get_comments_number() ) :
-					comments_template();
-				endif;
-			?>
-
-		<?php endwhile; // end of the loop. ?>
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
-
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

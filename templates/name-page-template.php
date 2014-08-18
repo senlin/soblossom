@@ -1,11 +1,10 @@
 <?php
 /**
- * The template for displaying all pages.
+ * Template Name: Name Page Template
  *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages
- * and that other 'pages' on your WordPress site will use a
- * different template.
+ * Sample Page Template
+ *
+ * Change the title above and the file name to use this file as a special page template.
  *
  * @package soblossom
  */
@@ -22,6 +21,11 @@ get_header(); ?>
 	
 					get_template_part( 'tplparts/content', 'page' );
 	
+					// If comments are open or we have at least one comment, load up the comment template
+					if ( comments_open() || '0' != get_comments_number() ) {
+						comments_template();
+					} //endif;
+
 				} //endwhile; // end of the loop. ?>
 	
 			</main><!-- #main.site-main -->

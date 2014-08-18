@@ -8,18 +8,37 @@
  */
 ?>
 
-	</div><!-- #content -->
+					</div><!-- end #content.contentarea-wrap (on each template right after header call) --> 
+		
+					<footer id="colophon" class="site-footer" role="contentinfo">
+						
+						<?php get_sidebar( 'footer' ); ?>
+						
+						<div class="site-info">
+						
+							<?php
+								printf( __( '&copy %1$s <a href="#page" title="back to top">%2$s</a>; %3$s theme by %4$s.', 'soblossom' ),
+									date( 'Y' ),
+									esc_attr( get_bloginfo( 'name' ) ),
+									'<a href="http://so-wp.com/themes/soblossom/">soblossom</a>',
+									'<a href="http://senlinonline.com" rel="designer">Piet Bos</a>'
+								);
+							?>
+							
+						</div><!-- .site-info -->
+					
+					</footer><!-- #colophon -->
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'soblossom' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'soblossom' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( __( 'Theme: %1$s by %2$s.', 'soblossom' ), 'soblossom', '<a href="http://piethfbos@gmail.com" rel="designer">Piet Bos</a>' ); ?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
+				</div> <!-- end #page .hfeed.site line 59 header.php -->
 
-<?php wp_footer(); ?>
+		</div> <!-- end .inner-wrap line 57 header.php -->
+	
+	</div> <!-- end .off-canvas-wrap line 55 header.php -->
+							
+	<?php // all js scripts are loaded in inc/soblossom.php
+		wp_footer();
+	?>
 
 </body>
+
 </html>

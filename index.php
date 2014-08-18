@@ -13,34 +13,37 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+<div class="contentarea-wrap">
 
-		<?php if ( have_posts() ) : ?>
+	<div id="primary" class="content-area clearfix">
 
-			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
+		<main id="main" class="site-main row" role="main">
 
-				<?php
-					/* Include the Post-Format-specific template for the content.
-					 * If you want to override this in a child theme, then include a file
-					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-					 */
-					get_template_part( 'content', get_post_format() );
-				?>
+		<?php if ( have_posts() ) {
 
-			<?php endwhile; ?>
+			/* Start the Loop */
+			while ( have_posts() ) { the_post();
 
-			<?php soblossom_paging_nav(); ?>
+				/* Include the Post-Format-specific template for the content.
+				 * If you want to override this in a child theme, then include a file
+				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+				 */
+				get_template_part( 'tplparts/content', get_post_format() );
 
-		<?php else : ?>
+			} // endwhile
 
-			<?php get_template_part( 'content', 'none' ); ?>
+			soblossom_paging_nav();
 
-		<?php endif; ?>
+		} else {
+
+			get_template_part( 'tplparts/content', 'none' );
+
+		} //endif; ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
-<?php get_footer(); ?>
+<?php
+	get_sidebar();
+	get_footer();
+?>

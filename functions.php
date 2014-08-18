@@ -1,130 +1,216 @@
 <?php
 /**
- * soblossom functions and definitions
+ * functions and definitions
  *
  * @package soblossom
  */
 
 /**
- * Set the content width based on the theme's design and stylesheet.
+ * Lineup of all required files:
  */
-if ( ! isset( $content_width ) ) {
-	$content_width = 640; /* pixels */
-}
-
-if ( ! function_exists( 'soblossom_setup' ) ) :
-/**
- * Sets up theme defaults and registers support for various WordPress features.
- *
- * Note that this function is hooked into the after_setup_theme hook, which
- * runs before the init hook. The init hook is too late for some features, such
- * as indicating support for post thumbnails.
- */
-function soblossom_setup() {
-
-	/*
-	 * Make theme available for translation.
-	 * Translations can be filed in the /languages/ directory.
-	 * If you're building a theme based on soblossom, use a find and replace
-	 * to change 'soblossom' to the name of your theme in all the template files
-	 */
-	load_theme_textdomain( 'soblossom', get_template_directory() . '/languages' );
-
-	// Add default posts and comments RSS feed links to head.
-	add_theme_support( 'automatic-feed-links' );
-
-	/*
-	 * Enable support for Post Thumbnails on posts and pages.
-	 *
-	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
-	 */
-	//add_theme_support( 'post-thumbnails' );
-
-	// This theme uses wp_nav_menu() in one location.
-	register_nav_menus( array(
-		'primary' => __( 'Primary Menu', 'soblossom' ),
-	) );
-	
-	/*
-	 * Switch default core markup for search form, comment form, and comments
-	 * to output valid HTML5.
-	 */
-	add_theme_support( 'html5', array(
-		'search-form', 'comment-form', 'comment-list', 'gallery', 'caption'
-	) );
-
-	/*
-	 * Enable support for Post Formats.
-	 * See http://codex.wordpress.org/Post_Formats
-	 */
-	add_theme_support( 'post-formats', array(
-		'aside', 'image', 'video', 'quote', 'link'
-	) );
-
-	// Setup the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'soblossom_custom_background_args', array(
-		'default-color' => 'ffffff',
-		'default-image' => '',
-	) ) );
-}
-endif; // soblossom_setup
-add_action( 'after_setup_theme', 'soblossom_setup' );
 
 /**
- * Register widget area.
+ * inc/soblossom.php - The blossom in soblossom, if you remove this, the sky will come falling down :)
+ *	- theme setup soblossom_bloom()
+ *		- textdomain
+ *		- theme support
+ *		- enqueue scripts and styles
+ *		- add function soblossom_remove_script_version() (get rid of the ? in the script/style URLs)
+ *		- register widget areas
+ *		- register navigation menus
+ *		- general cleanup (incl. injected styling, rss, generator, p-tags around images, excerpt more and what not)
+ *		- soblossom search form
  *
- * @link http://codex.wordpress.org/Function_Reference/register_sidebar
+ *	- add Foundation Features
+ *
+ *	- Template Tags
+ *		- soblossom_featured_image
+ *		- soblossom_posted_in
+ *		- soblossom_paging_nav
+ *		- soblossom_post_nav
+ *		- soblossom_posted_on
+ *		- soblossom_categorized_blog
+ *		- soblossom_comment
+ *
+ * 	- soblossom_body_classes
+ * 	- add functions soblossom_add_favicon
  */
-function soblossom_widgets_init() {
+require get_template_directory() . '/inc/soblossom.php';
+
+/**
+ * inc/iconfont-walker.php - Custom Walker to enable using Font Awesome icon font in navigation menus
+ *	- used for social media menu
+ *
+ * comment out to exclude
+ */
+require get_template_directory() . '/inc/walkers/iconfont-walker.php';
+
+/**
+ * /inc/classes/Mobile_Detect.php - Mobile Detect Library
+ *	- used for tplparts/nav-topbar.php among others
+ *
+ * @link: mobiledetect.net
+ * comment out to exclude
+ */
+require get_template_directory() . '/inc/classes/Mobile_Detect.php';
+$soblossom_detect = new Mobile_Detect();
+
+/**
+ * /inc/classes/aq_resizer.php - Aqua Resizer script to dynamically resize images
+ *
+ * @link: github.com/syamilmj/Aqua-Resizer
+ * uncomment to include
+ */
+//require get_template_directory() . '/inc/classes/aq_resizer.php';
+
+/**
+ * /inc/functions/functionality.php - your own functions file
+ * this file is for you to add your own functions, added with an eye on portability
+ * you can also add your own functions to this main functions.php file or any other place you like
+ * 
+ * uncomment to include
+ */
+//require get_template_directory() . '/inc/functions/functionality.php';
+
+/**
+ * /inc/functions/cpt.php - Custom Post Type registration file
+ * /inc/functions/cmb.php - Custom Meta Box registration file
+ *
+ * 	sample custom post type included, generated with generatewp.com/post-type/; generate custom taxonomies with generatewp.com/taxonomy/
+ * 	sample custom meta box included, generated from github.com/rilwis/meta-box/blob/master/demo/demo.php
+ *
+ * uncomment to include
+ */
+//require get_template_directory() . '/inc/functions/cpt.php';
+//require get_template_directory() . '/inc/functions/cmb.php';
+
+/**
+ * /inc/functions/dashboard-functions.php - specific backend functions
+ *	- change howdy into something more appropriate
+ *	- change dashboard footer
+ *	- remove number of default dashboard widgets
+ *	- remove number of default WordPress widgets
+ *	- custom login
+ *	- always remove adminbar from frontend
+ *	- remove 3 custom columns added by Yoast WordPress SEO plugin
+ * 
+ * uncomment to include
+ */
+//require get_template_directory() . '/inc/functions/dashboard-functions.php';
+
+
+/**
+ * /inc/functions/misc.php - Miscellaneous functions that you might or might not use for your theme
+ * 	- function to make it possible to query on is_post_type()
+ * 	- enable page excerpts
+ * 	- enable shortcode in text widgets
+ * 	- function that sets the authordata global when viewing an author archive
+ * 	- add hook soblossom_body_open (to add 3rd party scripts like GA)
+ *
+ * uncomment to include
+ */
+// require get_template_directory() . '/inc/functions/misc.php';
+
+
+/**
+ * NAVIGATION MENUS FUNCTIONS
+ *
+ * Top Navigation and Footer Navigation Menus
+ * Registration of the menus takes place in soblossom_setup in inc/soblossom.php
+ */
+
+// topnav-menu
+function soblossom_top_nav() {
+    wp_nav_menu(array(
+    	'container' => false,							// remove nav container
+    	'container_class' => '',						// class of container (should you choose to use it)
+    	'menu' => __( 'Top Navigation', 'soblossom' ),	// nav name
+    	'menu_class' => '',								// adding custom nav class
+    	'theme_location' => 'topnav',					// where it's located in the theme
+    	'before' => '',                                 // before the menu
+        'after' => '',                                  // after the menu
+        'link_before' => '',                            // before each link
+        'link_after' => '',                             // after each link
+    	'fallback_cb' => 'soblossom_topnav_fallback'	// fallback function
+    	// if you want to use icons in the navigation; uncomment the following line and add a comma to the line above
+    	// 'walker' => new iconfont_walker() // custom walker located in inc/iconfont-walker.php
+    	
+	));
+} /* end soblossom_top_nav */
+
+// social-media-menu (optional)
+function soblossom_social_media_links() {
+    wp_nav_menu(array(
+    	'container' => '',
+    	'container_class' => 'socialmedia clearfix',
+    	'menu' => __( 'Social Media', 'soblossom' ),
+       	'menu_class' => 'sub-nav',
+    	'theme_location' => 'social',
+    	'before' => '',
+        'after' => '',
+        'link_before' => '',
+        'link_after' => '',
+        'walker' => new iconfont_walker() // custom walker located in inc/walkers/iconfont-walker.php - add social media name to description
+	));
+} /* end soblossom_social_media_links */
+
+// footer-menu (optional)
+function soblossom_footer_nav() {
+    wp_nav_menu(array(
+    	'container' => '',
+    	'container_class' => 'footer-links clearfix',
+    	'menu' => __( 'Footer Links', 'soblossom' ),
+    	'menu_class' => 'sub-nav',
+    	'theme_location' => 'footer',
+    	'before' => '',
+        'after' => '',
+        'link_before' => '',
+        'link_after' => '',
+        'depth' => 0,
+    	'fallback_cb' => 'soblossom_footernav_fallback'
+	));
+} /* end soblossom_footer_nav */
+
+// fallback for header menu
+function soblossom_topnav_fallback() {
+	wp_page_menu( array(
+		'show_home' => true,
+    	'menu_class' => 'fallback',	// adding custom nav class
+		'include'     => '',
+		'exclude'     => '',
+		'echo'        => true,
+        'link_before' => '',
+        'link_after' => ''
+	) );
+}
+
+// fallback for footer menu
+function soblossom_footernav_fallback() {
+	/* optional, add default, see soblossom_topnav_fallback as example */
+}
+
+/**
+ * WIDGET AREAS FUNCTIONS
+ *
+ * Sidebars & Widgetised Areas
+ * Registration of the areas takes place in soblossom_setup in inc/soblossom.php
+ */
+function soblossom_register_widget_areas() {
 	register_sidebar( array(
-		'name'          => __( 'Sidebar', 'soblossom' ),
-		'id'            => 'sidebar-1',
-		'description'   => '',
+		'name'          => __( 'Sidebar Widget Area', 'soblossom' ),
+		'id'            => 'sidebar-widget-area',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
-		'before_title'  => '<h1 class="widget-title">',
-		'after_title'   => '</h1>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
+	register_sidebar( array(
+		'name'          => __( 'Footer Widget Area', 'soblossom' ),
+		'id'            => 'footer-widget-area',
+		'description'   => __( 'Appears in the footer section of the site.', 'soblossom' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
 	) );
 }
-add_action( 'widgets_init', 'soblossom_widgets_init' );
-
-/**
- * Enqueue scripts and styles.
- */
-function soblossom_scripts() {
-	wp_enqueue_style( 'soblossom-style', get_stylesheet_uri() );
-
-	wp_enqueue_script( 'soblossom-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
-
-	wp_enqueue_script( 'soblossom-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
-
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
-	}
-}
-add_action( 'wp_enqueue_scripts', 'soblossom_scripts' );
-
-/**
- * Implement the Custom Header feature.
- */
-//require get_template_directory() . '/inc/custom-header.php';
-
-/**
- * Custom template tags for this theme.
- */
-require get_template_directory() . '/inc/template-tags.php';
-
-/**
- * Custom functions that act independently of the theme templates.
- */
-require get_template_directory() . '/inc/extras.php';
-
-/**
- * Customizer additions.
- */
-require get_template_directory() . '/inc/customizer.php';
-
-/**
- * Load Jetpack compatibility file.
- */
-require get_template_directory() . '/inc/jetpack.php';

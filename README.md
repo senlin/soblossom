@@ -1,7 +1,7 @@
 SOBLOSSOM
 =========
 
-###### Last updated on 2014.8.17
+###### Last updated on 2014.8.10
 ###### Author: [Piet Bos](https://github.com/senlin)
 
 SOBLOSSOM is a starter framework that is based on [Foundation](http://foundation.zurb.com) (5.3.3 at time of writing) on the frontend and [Underscores.me](http://underscores.me) on the backend. 
@@ -36,6 +36,23 @@ All Featured Images, for example those on a Single Post, come with the builtin F
 
 ## Changelog
 
-### 140817
+### 140810
 
-* start from scratch
+* complete theme overhaul; many parts reorganised
+
+### 140804
+
+* integrate latest changes from _s
+
+### 140526
+
+* massive theme overhaul with lots of additional function (as I commited too fast, you can see the changes to all files where it says "add gitignore")
+
+### 140315
+
+* changed arrows of continue reading, next/previous post/posts/pages into Font Awesome long arrows
+* clean up
+
+### 2014.1.24
+
+* initial commit

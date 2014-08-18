@@ -1,0 +1,34 @@
+/**
+ * Custom Login Stylesheet
+ *
+ * if you have included the inc/functions/dashboard-functions.php from the
+ * functions.php file this stylesheet will be loaded to adjust the WP login screen
+ *
+ * @package soblossom
+ */
+
+/* change the background color of the login screen */
+body.login {
+	background-color: #fff;
+
+	/* replace WordPress logo with your own */
+	div#login h1 a {
+	    background-image: url(images/login.png);
+	    background-size: 307px 62px;
+	    height: 62px;
+	    padding-bottom: 0;
+	    width: 307px;
+	}
+
+	/* hide the error */
+	#login_error {
+		display: none;
+	}
+
+	/* remove box shadow and add a nice border */
+	form {
+		border: 1px solid #a7d7f9;
+		box-shadow: 0 0;
+	}
+
+}

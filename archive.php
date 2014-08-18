@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying archive pages.
+ * The template for displaying Archive pages.
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
@@ -9,94 +9,68 @@
 
 get_header(); ?>
 
-	<section id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+<div class="contentarea-wrap">
 
-		<?php if ( have_posts() ) : ?>
+	<div id="primary" class="content-area clearfix">
+
+		<main id="main" class="site-main row" role="main">
+
+		<?php if ( have_posts() ) { ?>
 
 			<header class="page-header">
 				<h1 class="page-title">
 					<?php
-						if ( is_category() ) :
+						if ( is_category() ) {
 							single_cat_title();
 
-						elseif ( is_tag() ) :
+						} elseif ( is_tag() ) {
 							single_tag_title();
 
-						elseif ( is_author() ) :
+						} elseif ( is_author() ) {
 							printf( __( 'Author: %s', 'soblossom' ), '<span class="vcard">' . get_the_author() . '</span>' );
 
-						elseif ( is_day() ) :
+						} elseif ( is_day() ) {
 							printf( __( 'Day: %s', 'soblossom' ), '<span>' . get_the_date() . '</span>' );
 
-						elseif ( is_month() ) :
+						} elseif ( is_month() ) {
 							printf( __( 'Month: %s', 'soblossom' ), '<span>' . get_the_date( _x( 'F Y', 'monthly archives date format', 'soblossom' ) ) . '</span>' );
 
-						elseif ( is_year() ) :
+						} elseif ( is_year() ) {
 							printf( __( 'Year: %s', 'soblossom' ), '<span>' . get_the_date( _x( 'Y', 'yearly archives date format', 'soblossom' ) ) . '</span>' );
 
-						elseif ( is_tax( 'post_format', 'post-format-aside' ) ) :
-							_e( 'Asides', 'soblossom' );
-
-						elseif ( is_tax( 'post_format', 'post-format-gallery' ) ) :
-							_e( 'Galleries', 'soblossom' );
-
-						elseif ( is_tax( 'post_format', 'post-format-image' ) ) :
-							_e( 'Images', 'soblossom' );
-
-						elseif ( is_tax( 'post_format', 'post-format-video' ) ) :
-							_e( 'Videos', 'soblossom' );
-
-						elseif ( is_tax( 'post_format', 'post-format-quote' ) ) :
-							_e( 'Quotes', 'soblossom' );
-
-						elseif ( is_tax( 'post_format', 'post-format-link' ) ) :
-							_e( 'Links', 'soblossom' );
-
-						elseif ( is_tax( 'post_format', 'post-format-status' ) ) :
-							_e( 'Statuses', 'soblossom' );
-
-						elseif ( is_tax( 'post_format', 'post-format-audio' ) ) :
-							_e( 'Audios', 'soblossom' );
-
-						elseif ( is_tax( 'post_format', 'post-format-chat' ) ) :
-							_e( 'Chats', 'soblossom' );
-
-						else :
+						} else {
 							_e( 'Archives', 'soblossom' );
 
-						endif;
+						} //endif
 					?>
 				</h1>
 				<?php
 					// Show an optional term description.
 					$term_description = term_description();
-					if ( ! empty( $term_description ) ) :
+					if ( ! empty( $term_description ) ) {
 						printf( '<div class="taxonomy-description">%s</div>', $term_description );
-					endif;
+					} //endif
 				?>
 			</header><!-- .page-header -->
 
-			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
+			<?php /* Start the Loop */
+			while ( have_posts() ) { the_post();
 
-				<?php
-					/* Include the Post-Format-specific template for the content.
-					 * If you want to override this in a child theme, then include a file
-					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-					 */
-					get_template_part( 'content', get_post_format() );
-				?>
+				/* Include the Post-Format-specific template for the content.
+				 * If you want to override this in a child theme, then include a file
+				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+				 */
+				get_template_part( 'tplparts/content', get_post_format() );
 
-			<?php endwhile; ?>
+			} //endwhile
 
-			<?php soblossom_paging_nav(); ?>
+			soblossom_paging_nav();
 
-		<?php else : ?>
+		} else {
 
-			<?php get_template_part( 'content', 'none' ); ?>
+			get_template_part( 'tplparts/content', 'none' );
 
-		<?php endif; ?>
+		} //endif ?>
 
 		</main><!-- #main -->
 	</section><!-- #primary -->
