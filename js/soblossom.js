@@ -6,38 +6,14 @@
 	$(document).foundation()
 
 	/**
-	 * Theme Customizer enhancements for a better user experience.
+	 * Add button to submit button only comment form or to all submit ids
 	 *
-	 * Contains handlers to make Theme Customizer preview reload changes asynchronously.
+	 * @source: //github.com/senlin/Code-Snippets/blob/master/Functions/Comments/add-class-to-comment-submit-button.php
 	 */
-	// Site title and description.
-	wp.customize( 'blogname', function( value ) {
-		value.bind( function( to ) {
-			$( '.site-title a' ).text( to );
-		} );
-	} );
-	wp.customize( 'blogdescription', function( value ) {
-		value.bind( function( to ) {
-			$( '.site-description' ).text( to );
-		} );
-	} );
-	// Header text color.
-	wp.customize( 'header_textcolor', function( value ) {
-		value.bind( function( to ) {
-			if ( 'blank' === to ) {
-				$( '.site-title, .site-description' ).css( {
-					'clip': 'rect(1px, 1px, 1px, 1px)',
-					'position': 'absolute'
-				} );
-			} else {
-				$( '.site-title, .site-description' ).css( {
-					'clip': 'auto',
-					'color': to,
-					'position': 'relative'
-				} );
-			}
-		} );
-	} );
+	// Add button class to comment form submit button
+	$('#commentform input#submit').addClass('button');
+	// Add button class to all submit buttons
+	//$('input[type="submit"]').addClass('button');
 
 
 }(jQuery)); 
