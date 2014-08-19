@@ -8501,208 +8501,33 @@ object {
   max-width: 100%;
 }
 
-/* line 58, ../scss/_gallery.scss */
-[class*="gallery-columns-"] {
+/******************************************************************
+
+Stylesheet: soblossom_clearing_blockgrid_gallery
+
+Adjust where necessary
+
+******************************************************************/
+/* line 9, ../scss/_gallery.scss */
+.soblossom-gallery ul li a img {
   display: block;
-  padding: 0;
-  margin: 0 -0.625rem;
+  margin: 0 auto;
 }
-/* line 168, ../bower_components/foundation/scss/foundation/components/_global.scss */
-[class*="gallery-columns-"]:before, [class*="gallery-columns-"]:after {
-  content: " ";
-  display: table;
-}
-/* line 169, ../bower_components/foundation/scss/foundation/components/_global.scss */
-[class*="gallery-columns-"]:after {
-  clear: both;
-}
-/* line 23, ../scss/_gallery.scss */
-[class*="gallery-columns-"] > .gallery-item {
-  display: inline;
-  height: auto;
-  float: left;
-  padding: 0 0.625rem 1.25rem;
-}
-
-/* line 32, ../scss/_gallery.scss */
-.gallery-columns-1 > .gallery-item {
-  width: 100%;
-  padding: 0 0.625rem 1.25rem;
-}
-/* line 36, ../scss/_gallery.scss */
-.gallery-columns-1 > .gallery-item:nth-of-type(n) {
-  clear: none;
-}
-/* line 37, ../scss/_gallery.scss */
-.gallery-columns-1 > .gallery-item:nth-of-type(1n+1) {
-  clear: both;
-}
-
-/* line 32, ../scss/_gallery.scss */
-.gallery-columns-2 > .gallery-item {
-  width: 50%;
-  padding: 0 0.625rem 1.25rem;
-}
-/* line 36, ../scss/_gallery.scss */
-.gallery-columns-2 > .gallery-item:nth-of-type(n) {
-  clear: none;
-}
-/* line 37, ../scss/_gallery.scss */
-.gallery-columns-2 > .gallery-item:nth-of-type(2n+1) {
-  clear: both;
-}
-
-/* line 32, ../scss/_gallery.scss */
-.gallery-columns-3 > .gallery-item {
-  width: 33.33333%;
-  padding: 0 0.625rem 1.25rem;
-}
-/* line 36, ../scss/_gallery.scss */
-.gallery-columns-3 > .gallery-item:nth-of-type(n) {
-  clear: none;
-}
-/* line 37, ../scss/_gallery.scss */
-.gallery-columns-3 > .gallery-item:nth-of-type(3n+1) {
-  clear: both;
-}
-
-/* line 32, ../scss/_gallery.scss */
-.gallery-columns-4 > .gallery-item {
-  width: 25%;
-  padding: 0 0.625rem 1.25rem;
-}
-/* line 36, ../scss/_gallery.scss */
-.gallery-columns-4 > .gallery-item:nth-of-type(n) {
-  clear: none;
-}
-/* line 37, ../scss/_gallery.scss */
-.gallery-columns-4 > .gallery-item:nth-of-type(4n+1) {
-  clear: both;
-}
-
-/* line 32, ../scss/_gallery.scss */
-.gallery-columns-5 > .gallery-item {
-  width: 20%;
-  padding: 0 0.625rem 1.25rem;
-}
-/* line 36, ../scss/_gallery.scss */
-.gallery-columns-5 > .gallery-item:nth-of-type(n) {
-  clear: none;
-}
-/* line 37, ../scss/_gallery.scss */
-.gallery-columns-5 > .gallery-item:nth-of-type(5n+1) {
-  clear: both;
-}
-
-/* line 32, ../scss/_gallery.scss */
-.gallery-columns-6 > .gallery-item {
-  width: 16.66667%;
-  padding: 0 0.625rem 1.25rem;
-}
-/* line 36, ../scss/_gallery.scss */
-.gallery-columns-6 > .gallery-item:nth-of-type(n) {
-  clear: none;
-}
-/* line 37, ../scss/_gallery.scss */
-.gallery-columns-6 > .gallery-item:nth-of-type(6n+1) {
-  clear: both;
-}
-
-/* line 32, ../scss/_gallery.scss */
-.gallery-columns-7 > .gallery-item {
-  width: 14.28571%;
-  padding: 0 0.625rem 1.25rem;
-}
-/* line 36, ../scss/_gallery.scss */
-.gallery-columns-7 > .gallery-item:nth-of-type(n) {
-  clear: none;
-}
-/* line 37, ../scss/_gallery.scss */
-.gallery-columns-7 > .gallery-item:nth-of-type(7n+1) {
-  clear: both;
-}
-
-/* line 32, ../scss/_gallery.scss */
-.gallery-columns-8 > .gallery-item {
-  width: 12.5%;
-  padding: 0 0.625rem 1.25rem;
-}
-/* line 36, ../scss/_gallery.scss */
-.gallery-columns-8 > .gallery-item:nth-of-type(n) {
-  clear: none;
-}
-/* line 37, ../scss/_gallery.scss */
-.gallery-columns-8 > .gallery-item:nth-of-type(8n+1) {
-  clear: both;
-}
-
-/* line 32, ../scss/_gallery.scss */
-.gallery-columns-9 > .gallery-item {
-  width: 11.11111%;
-  padding: 0 0.625rem 1.25rem;
-}
-/* line 36, ../scss/_gallery.scss */
-.gallery-columns-9 > .gallery-item:nth-of-type(n) {
-  clear: none;
-}
-/* line 37, ../scss/_gallery.scss */
-.gallery-columns-9 > .gallery-item:nth-of-type(9n+1) {
-  clear: both;
-}
-
-/* line 32, ../scss/_gallery.scss */
-.gallery-columns-10 > .gallery-item {
-  width: 10%;
-  padding: 0 0.625rem 1.25rem;
-}
-/* line 36, ../scss/_gallery.scss */
-.gallery-columns-10 > .gallery-item:nth-of-type(n) {
-  clear: none;
-}
-/* line 37, ../scss/_gallery.scss */
-.gallery-columns-10 > .gallery-item:nth-of-type(10n+1) {
-  clear: both;
-}
-
-/* line 32, ../scss/_gallery.scss */
-.gallery-columns-11 > .gallery-item {
-  width: 9.09091%;
-  padding: 0 0.625rem 1.25rem;
-}
-/* line 36, ../scss/_gallery.scss */
-.gallery-columns-11 > .gallery-item:nth-of-type(n) {
-  clear: none;
-}
-/* line 37, ../scss/_gallery.scss */
-.gallery-columns-11 > .gallery-item:nth-of-type(11n+1) {
-  clear: both;
-}
-
-/* line 32, ../scss/_gallery.scss */
-.gallery-columns-12 > .gallery-item {
-  width: 8.33333%;
-  padding: 0 0.625rem 1.25rem;
-}
-/* line 36, ../scss/_gallery.scss */
-.gallery-columns-12 > .gallery-item:nth-of-type(n) {
-  clear: none;
-}
-/* line 37, ../scss/_gallery.scss */
-.gallery-columns-12 > .gallery-item:nth-of-type(12n+1) {
-  clear: both;
+/* line 13, ../scss/_gallery.scss */
+.soblossom-gallery ul li .gallery-caption {
+  font-size: 0.875rem;
+  font-style: italic;
 }
 
 /******************************************************************
 
 Stylesheet: Print Stylesheet
 
-This is the print stylesheet. There's probably not a lot
-of reasons to edit this stylesheet. If you want to
-though, go for it.
+Adjust where necessary, copied verbatim from JointsWP
 
 ******************************************************************/
 @media print {
-  /* line 13, ../scss/_print.scss */
+  /* line 11, ../scss/_print.scss */
   * {
     background: transparent !important;
     color: black !important;
@@ -8711,44 +8536,44 @@ though, go for it.
     -ms-filter: none !important;
   }
 
-  /* line 21, ../scss/_print.scss */
+  /* line 19, ../scss/_print.scss */
   a, a:visited {
     color: #444 !important;
     text-decoration: underline;
   }
-  /* line 26, ../scss/_print.scss */
+  /* line 24, ../scss/_print.scss */
   a:after, a:visited:after {
     content: " (" attr(href) ")";
   }
-  /* line 31, ../scss/_print.scss */
+  /* line 29, ../scss/_print.scss */
   a abbr[title]:after, a:visited abbr[title]:after {
     content: " (" attr(title) ")";
   }
 
-  /* line 38, ../scss/_print.scss */
+  /* line 36, ../scss/_print.scss */
   .ir a:after,
   a[href^="javascript:"]:after,
   a[href^="#"]:after {
     content: "";
   }
 
-  /* line 42, ../scss/_print.scss */
+  /* line 40, ../scss/_print.scss */
   pre, blockquote {
     border: 1px solid #999;
     page-break-inside: avoid;
   }
 
-  /* line 47, ../scss/_print.scss */
+  /* line 45, ../scss/_print.scss */
   thead {
     display: table-header-group;
   }
 
-  /* line 51, ../scss/_print.scss */
+  /* line 49, ../scss/_print.scss */
   tr, img {
     page-break-inside: avoid;
   }
 
-  /* line 55, ../scss/_print.scss */
+  /* line 53, ../scss/_print.scss */
   img {
     max-width: 100% !important;
   }
@@ -8757,19 +8582,19 @@ though, go for it.
     margin: 0.5cm;
 }
 
-  /* line 63, ../scss/_print.scss */
+  /* line 61, ../scss/_print.scss */
   p, h2, h3 {
     orphans: 3;
     widows: 3;
   }
 
-  /* line 69, ../scss/_print.scss */
+  /* line 67, ../scss/_print.scss */
   h2,
   h3 {
     page-break-after: avoid;
   }
 
-  /* line 78, ../scss/_print.scss */
+  /* line 76, ../scss/_print.scss */
   .sidebar,
   .page-navigation,
   .wp-prev-next,
@@ -9136,7 +8961,10 @@ COMMENT STYLES
   background-color: #008cba;
   border-color: #007095;
   color: white;
-  transition: background-color 300ms ease-out;
+  -webkit-transition: background-color 1s;
+  -moz-transition: background-color 1s;
+  -o-transition: background-color 1s;
+  transition: background-color 1s;
   float: right;
 }
 /* line 158, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
