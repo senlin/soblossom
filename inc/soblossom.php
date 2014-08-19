@@ -596,14 +596,17 @@ function soblossom_supports_wp_features() {
 
 /**
  * ADD FAVICON TO HEAD
+ *
+ * @sizes: graphicdesign.stackexchange.com/a/27142
+ * @cheatsheet: github.com/audreyr/favicon-cheat-sheet
  */
 // add favicon
 	add_action( 'wp_head', 'soblossom_add_favicon' );
 
 	function soblossom_add_favicon() {
-	
-	    echo '<link rel="apple-touch-icon" href="' . get_template_directory_uri() . '/images/apple-icon-touch.png">';
-	    echo '<link rel="shortcut icon" href="' . get_template_directory_uri() . '/images/favicon.png" />';
+
+	    echo '<link rel="apple-touch-icon-precomposed" href="' . get_template_directory_uri() . '/images/favicon-152.png">';
+	    echo '<link rel="shortcut icon" href="' . get_template_directory_uri() . '/images/favicon-96.png" />';
 	
 	}
 	
