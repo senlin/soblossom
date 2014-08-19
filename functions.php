@@ -56,6 +56,14 @@ require get_template_directory() . '/inc/classes/Mobile_Detect.php';
 $soblossom_detect = new Mobile_Detect();
 
 /**
+ * /inc/classes/gallery.php - soblossom_clearing_blockgrid_gallery
+ * adapted the output of the WP Gallery shortcode
+ *
+ * comment out to exclude
+ */
+require get_template_directory() . '/inc/classes/gallery.php';
+
+/**
  * /inc/classes/aq_resizer.php - Aqua Resizer script to dynamically resize images
  *
  * @link: github.com/syamilmj/Aqua-Resizer

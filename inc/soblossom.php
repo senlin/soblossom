@@ -143,8 +143,6 @@ function soblossom_supports_wp_features() {
 		
 		wp_enqueue_script( 'soblossom-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), null, true );
 		
-		wp_enqueue_script( 'jquery-noconflict', get_template_directory_uri() . '/js/noconflict.js', array( 'jquery' ), null, true );
-	
 	}
 
 	/**
