@@ -14,6 +14,11 @@ To add your own functions and filters to the theme and at the same time to ensur
 
 All Featured Images, for example those on a Single Post, come with the builtin Foundation lightbox effect (called clearing thumbs). Also builtin is Foundation Interchange. The main advantage of this is that the image shown (AND loaded) is different per device: thumbs for small devices, medium sized images for tablets and laptops and the large image for everything wider than 1280px. You can customise the code by adding your own image sizes and call those instead.
 
+### Gallery Shortcode
+
+For the soblossom theme we have completely overhauled the default WordPress Gallery shortcode. You won't find any inline styling either. We have replaced the functionality with [Foundation Blockgrid](http://foundation.zurb.com/docs/components/block_grid.html) **and** clearing lightbox so you won't need an additional plugin for that either.
+By default the blockgrid shows `small-block-grid-2 medium-block-grid-3 large-block-grid-4`, which means that on small devices (up to 768px wide) it shows 2 thumbs; on medium devices (768-1280px wide) it shows 3 thumbs and on large devices (anything over 1280px) it will show 4 thumbs. Clicking on a thumb will show the [Foundation Clearing](http://foundation.zurb.com/docs/components/clearing.html) effect.
+If you want to adjust anything, you can do so in `inc/classes/gallery.php` and the `scss/_gallery.scss` files.
 
 ## License
 
