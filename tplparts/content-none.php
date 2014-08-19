@@ -10,11 +10,11 @@
 
 <section class="no-results not-found clearfix">
 
-	<header class="page-header">
-		<h1 class="page-title"><?php _e( 'Nothing Found', 'soblossom' ); ?></h1>
-	</header><!-- .page-header -->
+	<header class="entry-header">
+		<h1 class="entry-title"><?php _e( 'Nothing Found', 'soblossom' ); ?></h1>
+	</header><!-- .entry-header -->
 
-	<div class="page-content">
+	<div class="entry-content">
 		<?php 
 			if ( is_home() && current_user_can( 'publish_posts' ) ) {
 
@@ -32,6 +32,6 @@
 
 			} //endif
 		?>
-	</div><!-- .page-content -->
+	</div><!-- .entry-content -->
 
 </section><!-- .no-results -->
