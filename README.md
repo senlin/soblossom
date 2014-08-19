@@ -41,6 +41,10 @@ If you want to adjust anything, you can do so in `inc/classes/gallery.php` and t
 
 ## Changelog
 
+### 140819
+
+* nth overhaul, but we're getting somewhere now
+
 ### 140810
 
 * complete theme overhaul; many parts reorganised
