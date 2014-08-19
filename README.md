@@ -17,7 +17,7 @@ All Featured Images, for example those on a Single Post, come with the builtin F
 ### Gallery Shortcode
 
 For the soblossom theme we have completely overhauled the default WordPress Gallery shortcode. You won't find any inline styling either. We have replaced the functionality with [Foundation Blockgrid](http://foundation.zurb.com/docs/components/block_grid.html) **and** clearing lightbox so you won't need an additional plugin for that either.
-By default the blockgrid shows `small-block-grid-2 medium-block-grid-3 large-block-grid-4`, which means that on small devices (up to 768px wide) it shows 2 thumbs; on medium devices (768-1280px wide) it shows 3 thumbs and on large devices (anything over 1280px) it will show 4 thumbs. Clicking on a thumb will show the [Foundation Clearing](http://foundation.zurb.com/docs/components/clearing.html) effect.
+By default the blockgrid shows `small-block-grid-2 medium-block-grid-3 large-block-grid-4`, which means that on small devices (up to 640px wide) it shows 2 thumbs; on medium devices (640-1024px wide) it shows 3 thumbs and on large devices (anything over 1024px) it will show 4 thumbs. Clicking on a thumb will show the [Foundation Clearing](http://foundation.zurb.com/docs/components/clearing.html) effect.
 If you want to adjust anything, you can do so in `inc/classes/gallery.php` and the `scss/_gallery.scss` files.
 
 ## License
