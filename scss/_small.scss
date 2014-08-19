@@ -301,6 +301,15 @@ POSTS & CONTENT STYLES
 		border: 1px solid #cecece;
 		padding: 10px;
 		}
+	
+	form {
+		display: block;
+		min-height: 2.5rem;
+		
+		.search-icon {
+			right: 4%;
+		}
+	}
 
 } /* end .entry-content */
 

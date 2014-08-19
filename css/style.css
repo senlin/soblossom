@@ -8521,90 +8521,6 @@ Adjust where necessary
 
 /******************************************************************
 
-Stylesheet: Print Stylesheet
-
-Adjust where necessary, copied verbatim from JointsWP
-
-******************************************************************/
-@media print {
-  /* line 11, ../scss/_print.scss */
-  * {
-    background: transparent !important;
-    color: black !important;
-    text-shadow: none !important;
-    filter: none !important;
-    -ms-filter: none !important;
-  }
-
-  /* line 19, ../scss/_print.scss */
-  a, a:visited {
-    color: #444 !important;
-    text-decoration: underline;
-  }
-  /* line 24, ../scss/_print.scss */
-  a:after, a:visited:after {
-    content: " (" attr(href) ")";
-  }
-  /* line 29, ../scss/_print.scss */
-  a abbr[title]:after, a:visited abbr[title]:after {
-    content: " (" attr(title) ")";
-  }
-
-  /* line 36, ../scss/_print.scss */
-  .ir a:after,
-  a[href^="javascript:"]:after,
-  a[href^="#"]:after {
-    content: "";
-  }
-
-  /* line 40, ../scss/_print.scss */
-  pre, blockquote {
-    border: 1px solid #999;
-    page-break-inside: avoid;
-  }
-
-  /* line 45, ../scss/_print.scss */
-  thead {
-    display: table-header-group;
-  }
-
-  /* line 49, ../scss/_print.scss */
-  tr, img {
-    page-break-inside: avoid;
-  }
-
-  /* line 53, ../scss/_print.scss */
-  img {
-    max-width: 100% !important;
-  }
-
-  @page {
-    margin: 0.5cm;
-}
-
-  /* line 61, ../scss/_print.scss */
-  p, h2, h3 {
-    orphans: 3;
-    widows: 3;
-  }
-
-  /* line 67, ../scss/_print.scss */
-  h2,
-  h3 {
-    page-break-after: avoid;
-  }
-
-  /* line 76, ../scss/_print.scss */
-  .sidebar,
-  .page-navigation,
-  .wp-prev-next,
-  .respond-form,
-  nav {
-    display: none;
-  }
-}
-/******************************************************************
-
 Stylesheet: Base/Small Stylesheet
 
 Foundation uses the Mobile First approach, therefore the main styling
@@ -8808,22 +8724,31 @@ POSTS & CONTENT STYLES
   border: 1px solid #cecece;
   padding: 10px;
 }
+/* line 305, ../scss/_small.scss */
+.entry-content form {
+  display: block;
+  min-height: 2.5rem;
+}
+/* line 309, ../scss/_small.scss */
+.entry-content form .search-icon {
+  right: 4%;
+}
 
 /* end .entry-content */
-/* line 307, ../scss/_small.scss */
+/* line 316, ../scss/_small.scss */
 .wp-caption {
   max-width: 100%;
   background: #eee;
   padding: 5px;
   /* images inside wp-caption */
 }
-/* line 313, ../scss/_small.scss */
+/* line 322, ../scss/_small.scss */
 .wp-caption img {
   max-width: 100%;
   margin-bottom: 0;
   width: 100%;
 }
-/* line 319, ../scss/_small.scss */
+/* line 328, ../scss/_small.scss */
 .wp-caption p.wp-caption-text {
   font-size: 0.85em;
   margin: 4px 0 7px;
@@ -8837,7 +8762,7 @@ POSTS & CONTENT STYLES
 /******************************************************************
 PAGE NAVI STYLES
 ******************************************************************/
-/* line 356, ../scss/_small.scss */
+/* line 365, ../scss/_small.scss */
 .pagination a:hover {
   color: black;
 }
@@ -8846,17 +8771,17 @@ PAGE NAVI STYLES
 COMMENT STYLES
 ******************************************************************/
 /* h3 comment title */
-/* line 366, ../scss/_small.scss */
+/* line 375, ../scss/_small.scss */
 #comments {
   /* number of comments span */
 }
 
-/* line 374, ../scss/_small.scss */
+/* line 383, ../scss/_small.scss */
 #respond ul {
   margin-left: 0px;
 }
 
-/* line 389, ../scss/_small.scss */
+/* line 398, ../scss/_small.scss */
 .commentlist {
   /* general comment classes */
   /* vcard */
@@ -8867,7 +8792,7 @@ COMMENT STYLES
   /* comment reply link */
   /* end .commentlist .comment-reply-link */
 }
-/* line 391, ../scss/_small.scss */
+/* line 400, ../scss/_small.scss */
 .commentlist li {
   position: relative;
   clear: both;
@@ -8877,54 +8802,54 @@ COMMENT STYLES
   padding: 0.7335em 10px;
   /* end .commentlist li ul.children */
 }
-/* line 399, ../scss/_small.scss */
+/* line 408, ../scss/_small.scss */
 .commentlist li:last-child {
   margin-bottom: 0;
 }
-/* line 403, ../scss/_small.scss */
+/* line 412, ../scss/_small.scss */
 .commentlist li ul.children {
   margin: 0;
   /* variations */
   /* change number for different depth */
 }
-/* line 421, ../scss/_small.scss */
+/* line 430, ../scss/_small.scss */
 .commentlist li[class*=depth-] {
   margin-top: 1.1em;
 }
-/* line 425, ../scss/_small.scss */
+/* line 434, ../scss/_small.scss */
 .commentlist li.depth-1 {
   margin-left: 0;
   margin-top: 0;
 }
-/* line 430, ../scss/_small.scss */
+/* line 439, ../scss/_small.scss */
 .commentlist li:not(.depth-1) {
   margin-left: 10px;
   margin-top: 0;
   padding-bottom: 0;
   background: #e7e7e7;
 }
-/* line 438, ../scss/_small.scss */
+/* line 447, ../scss/_small.scss */
 .commentlist li.depth-3 {
   background: #dadada;
 }
-/* line 462, ../scss/_small.scss */
+/* line 471, ../scss/_small.scss */
 .commentlist .vcard {
   margin: 0;
 }
-/* line 471, ../scss/_small.scss */
+/* line 480, ../scss/_small.scss */
 .commentlist .vcard time {
   float: right;
 }
-/* line 474, ../scss/_small.scss */
+/* line 483, ../scss/_small.scss */
 .commentlist .vcard time a {
   color: #999;
   text-decoration: none;
 }
-/* line 478, ../scss/_small.scss */
+/* line 487, ../scss/_small.scss */
 .commentlist .vcard time a:hover {
   text-decoration: underline;
 }
-/* line 488, ../scss/_small.scss */
+/* line 497, ../scss/_small.scss */
 .commentlist .vcard img.avatar {
   position: absolute;
   left: 10px;
@@ -8932,13 +8857,13 @@ COMMENT STYLES
   border: 1px solid #cecece;
   background: #fff;
 }
-/* line 515, ../scss/_small.scss */
+/* line 524, ../scss/_small.scss */
 .commentlist .comment_content p {
   margin: 0.7335em 0 1.5em;
   font-size: 1em;
   line-height: 1.5em;
 }
-/* line 524, ../scss/_small.scss */
+/* line 533, ../scss/_small.scss */
 .commentlist .comment-reply-link {
   border-style: solid;
   border-width: 0px;
@@ -8980,27 +8905,27 @@ COMMENT STYLES
 /******************************************************************
 COMMENT FORM STYLES
 ******************************************************************/
-/* line 541, ../scss/_small.scss */
+/* line 550, ../scss/_small.scss */
 .respond-form {
   margin: 1.5em 10px;
   padding-bottom: 2.2em;
 }
-/* line 545, ../scss/_small.scss */
+/* line 554, ../scss/_small.scss */
 .respond-form form {
   margin: 0.75em 0;
 }
-/* line 548, ../scss/_small.scss */
+/* line 557, ../scss/_small.scss */
 .respond-form form li {
   list-style-type: none;
   clear: both;
   margin-bottom: 0.7335em;
 }
-/* line 554, ../scss/_small.scss */
+/* line 563, ../scss/_small.scss */
 .respond-form form li label,
 .respond-form form li small {
   display: none;
 }
-/* line 562, ../scss/_small.scss */
+/* line 571, ../scss/_small.scss */
 .respond-form form input[type=text],
 .respond-form form input[type=email],
 .respond-form form input[type=url],
@@ -9011,14 +8936,14 @@ COMMENT FORM STYLES
   line-height: 1.5em;
   /* form validation */
 }
-/* line 568, ../scss/_small.scss */
+/* line 577, ../scss/_small.scss */
 .respond-form form input[type=text]:focus,
 .respond-form form input[type=email]:focus,
 .respond-form form input[type=url]:focus,
 .respond-form form textarea:focus {
   background: #fff;
 }
-/* line 573, ../scss/_small.scss */
+/* line 582, ../scss/_small.scss */
 .respond-form form input[type=text]:invalid,
 .respond-form form input[type=email]:invalid,
 .respond-form form input[type=url]:invalid,
@@ -9031,14 +8956,14 @@ COMMENT FORM STYLES
   -ms-box-shadow: none;
   box-shadow: none;
 }
-/* line 586, ../scss/_small.scss */
+/* line 595, ../scss/_small.scss */
 .respond-form form input[type=text],
 .respond-form form input[type=email],
 .respond-form form input[type=url] {
   max-width: 400px;
   min-width: 250px;
 }
-/* line 591, ../scss/_small.scss */
+/* line 600, ../scss/_small.scss */
 .respond-form form textarea {
   resize: none;
   width: 97.3%;
@@ -9047,7 +8972,7 @@ COMMENT FORM STYLES
 
 /* comment submit button */
 /* comment form title */
-/* line 604, ../scss/_small.scss */
+/* line 613, ../scss/_small.scss */
 #comment-form-title {
   margin: 0 0 1.1em;
 }
@@ -9055,13 +8980,13 @@ COMMENT FORM STYLES
 /* cancel comment reply link */
 /* logged in comments */
 /* allowed tags */
-/* line 617, ../scss/_small.scss */
+/* line 626, ../scss/_small.scss */
 #allowed_tags {
   margin: 1.5em 10px 0.7335em 0;
 }
 
 /* no comments */
-/* line 622, ../scss/_small.scss */
+/* line 631, ../scss/_small.scss */
 .nocomments {
   margin: 0 20px 1.1em;
 }
@@ -9069,17 +8994,17 @@ COMMENT FORM STYLES
 /*********************
 SIDEBARS & ASIDES
 *********************/
-/* line 640, ../scss/_small.scss */
+/* line 649, ../scss/_small.scss */
 .widget ul {
   margin: 0;
 }
-/* line 643, ../scss/_small.scss */
+/* line 652, ../scss/_small.scss */
 .widget ul li {
   list-style: none;
   /* deep nesting */
 }
 
-/* line 662, ../scss/_small.scss */
+/* line 671, ../scss/_small.scss */
 #sidebar-offcanvas .widgettitle {
   color: #fff;
 }
@@ -9087,17 +9012,17 @@ SIDEBARS & ASIDES
 /*--------------------------------------------------------------
 Search Form Widget
 --------------------------------------------------------------*/
-/* line 670, ../scss/_small.scss */
+/* line 679, ../scss/_small.scss */
 .widget_search > form {
   position: relative;
 }
 
-/* line 673, ../scss/_small.scss */
+/* line 682, ../scss/_small.scss */
 #searchform > input#s {
   float: left;
 }
 
-/* line 676, ../scss/_small.scss */
+/* line 685, ../scss/_small.scss */
 .search-icon {
   background: none;
   border: 0 none;
@@ -9110,7 +9035,7 @@ Search Form Widget
 /*********************
 FOOTER STYLES
 *********************/
-/* line 689, ../scss/_small.scss */
+/* line 698, ../scss/_small.scss */
 .footer {
   clear: both;
   margin-top: 1em;
@@ -9129,7 +9054,7 @@ view.
 /*********************
 FOUNDATION STYLES
 *********************/
-/* line 719, ../scss/_small.scss */
+/* line 728, ../scss/_small.scss */
 .clearing-assembled.clearing-blackout a:hover {
   background: none;
 }
@@ -9137,159 +9062,269 @@ FOUNDATION STYLES
 /*********************
 PLUGIN STYLES
 *********************/
-/* line 727, ../scss/_small.scss */
+/* line 736, ../scss/_small.scss */
 .gform_body ul {
   list-style: none outside none;
   margin: 0;
 }
 
-/******************************************************************
+/**
+ * If you adjust the media quesries in the _settings.scss (lines 80-85),
+ * then change theme here too (and vice versa)
+ */
+@media only screen and (min-width: 40.0625em) {
+  /******************************************************************
+  
+  Stylesheet: Mediun Stylesheet
+  
+  Styles apply to 40.063em and up.
+  
+  ******************************************************************/
+  /*********************
+  NAVIGATION STYLES
+  *********************/
+  /*********************
+  POSTS & CONTENT STYLES
+  *********************/
+  /* entry content */
+  /* line 21, ../scss/_medium.scss */
+  .entry-content {
+    /* at this larger size, we can start to align images */
+  }
+  /* line 25, ../scss/_medium.scss */
+  .entry-content .alignleft, .entry-content img.alignleft {
+    margin-right: 1.5em;
+    display: inline;
+    float: left;
+  }
+  /* line 30, ../scss/_medium.scss */
+  .entry-content .alignright, .entry-content img.alignright {
+    margin-left: 1.5em;
+    display: inline;
+    float: right;
+  }
+  /* line 35, ../scss/_medium.scss */
+  .entry-content .aligncenter, .entry-content img.aligncenter {
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    clear: both;
+  }
+  /* line 43, ../scss/_medium.scss */
+  .entry-content form .search-icon {
+    right: 3%;
+  }
 
-Stylesheet: Mediun Stylesheet
+  /* end .entry-content */
+  /*********************
+  SIDEBARS & ASIDES
+  *********************/
+  /* line 54, ../scss/_medium.scss */
+  .widget {
+    padding: 0 10px;
+    margin: 2.2em 0;
+  }
 
-Styles apply to 40.063em and up.
-
-******************************************************************/
-/*********************
-NAVIGATION STYLES
-*********************/
-/*********************
-POSTS & CONTENT STYLES
-*********************/
-/* entry content */
-/* line 21, ../scss/_medium.scss */
-.entry-content {
-  /* at this larger size, we can start to align images */
-}
-/* line 25, ../scss/_medium.scss */
-.entry-content .alignleft, .entry-content img.alignleft {
-  margin-right: 1.5em;
-  display: inline;
-  float: left;
-}
-/* line 30, ../scss/_medium.scss */
-.entry-content .alignright, .entry-content img.alignright {
-  margin-left: 1.5em;
-  display: inline;
-  float: right;
-}
-/* line 35, ../scss/_medium.scss */
-.entry-content .aligncenter, .entry-content img.aligncenter {
-  margin-right: auto;
-  margin-left: auto;
-  display: block;
-  clear: both;
-}
-
-/* end .entry-content */
-/*********************
-SIDEBARS & ASIDES
-*********************/
-/* line 48, ../scss/_medium.scss */
-.widget {
-  padding: 0 10px;
-  margin: 2.2em 0;
-}
-
-/*********************
-FOOTER STYLES
-*********************/
-/*
-check your menus here. do they look good?
-do they need tweaking?
-*/
-/* end .footer-links */
-/*********************
-FOUNDATION STYLES
-*********************/
-/*********************
-PLUGIN STYLES
-*********************/
-/******************************************************************
-
-Stylesheet: Large Stylesheet
-
-Styles apply to 64.063em and up.
-
-******************************************************************/
-/*********************
-GENERAL STYLES
-*********************/
-/*********************
-LAYOUT & GRID STYLES
-*********************/
-/* line 20, ../scss/_large.scss */
-.wrap {
-  max-width: 1140px;
-}
-
-/*********************
-HEADER STYLES
-*********************/
-/*********************
-NAVIGATION STYLES
-*********************/
-/*********************
-SIDEBARS & ASIDES
-*********************/
-/* line 49, ../scss/_large.scss */
-.widget ul li {
-  margin-bottom: 0.75em;
-  /* deep nesting */
-}
-/* line 57, ../scss/_large.scss */
-.widget ul li ul {
-  margin-top: 0.75em;
-  padding-left: 1em;
-}
-
-/* links widget */
-/* meta widget */
-/* pages widget */
-/* recent-posts widget */
-/* archives widget */
-/* tag-cloud widget */
-/* calendar widget */
-/* category widget */
-/* recent-comments widget */
-/* search widget */
-/* text widget */
-/*********************
-FOOTER STYLES
-*********************/
-/*
-you'll probably need to do quite a bit
-of overriding here if you styled them for
-mobile. Make sure to double check these!
-*/
-/* line 165, ../scss/_large.scss */
-.footer-links ul li {
+  /*********************
+  FOOTER STYLES
+  *********************/
   /*
-  be careful with the depth of your menus.
-  it's very rare to have multi-depth menus in
-  the footer.
+  check your menus here. do they look good?
+  do they need tweaking?
   */
+  /* end .footer-links */
+  /*********************
+  FOUNDATION STYLES
+  *********************/
+  /*********************
+  PLUGIN STYLES
+  *********************/
+}
+@media only screen and (min-width: 64.0625em) {
+  /******************************************************************
+  
+  Stylesheet: Large Stylesheet
+  
+  Styles apply to 64.063em and up.
+  
+  ******************************************************************/
+  /*********************
+  GENERAL STYLES
+  *********************/
+  /*********************
+  LAYOUT & GRID STYLES
+  *********************/
+  /* line 20, ../scss/_large.scss */
+  .wrap {
+    max-width: 1140px;
+  }
+
+  /*********************
+  HEADER STYLES
+  *********************/
+  /*********************
+  NAVIGATION STYLES
+  *********************/
+  /*********************
+  POSTS & CONTENT STYLES
+  *********************/
+  /* entry content */
+  /* line 44, ../scss/_large.scss */
+  .entry-content form .search-icon {
+    right: 2%;
+  }
+
+  /* end .entry-content */
+  /*********************
+  SIDEBARS & ASIDES
+  *********************/
+  /* line 64, ../scss/_large.scss */
+  .widget ul li {
+    margin-bottom: 0.75em;
+    /* deep nesting */
+  }
+  /* line 72, ../scss/_large.scss */
+  .widget ul li ul {
+    margin-top: 0.75em;
+    padding-left: 1em;
+  }
+
+  /* links widget */
+  /* meta widget */
+  /* pages widget */
+  /* recent-posts widget */
+  /* archives widget */
+  /* tag-cloud widget */
+  /* calendar widget */
+  /* category widget */
+  /* recent-comments widget */
+  /* search widget */
+  /* text widget */
+  /*********************
+  FOOTER STYLES
+  *********************/
+  /*
+  you'll probably need to do quite a bit
+  of overriding here if you styled them for
+  mobile. Make sure to double check these!
+  */
+  /* line 180, ../scss/_large.scss */
+  .footer-links ul li {
+    /*
+    be careful with the depth of your menus.
+    it's very rare to have multi-depth menus in
+    the footer.
+    */
+  }
+
+  /* end .footer-links */
+  /*********************
+  FOUNDATION STYLES
+  *********************/
+  /*********************
+  PLUGIN STYLES
+  *********************/
+}
+@media only screen and (min-width: 90.0625em) {
+  /******************************************************************
+  
+  Stylesheet: X-Large Stylesheet
+  
+  Styles apply to 90.063em and up.
+  
+  
+  ******************************************************************/
+}
+@media only screen and (min-width: 120.0625em) {
+  /******************************************************************
+  
+  Stylesheet: XX-Large Stylesheet
+  
+  Styles apply to 120.063em and up.
+  
+  ******************************************************************/
+}
+@media print {
+  /******************************************************************
+  
+  Stylesheet: Print Stylesheet
+  
+  Adjust where necessary, copied verbatim from JointsWP
+  
+  ******************************************************************/
+  /* line 9, ../scss/_print.scss */
+  * {
+    background: transparent !important;
+    color: black !important;
+    text-shadow: none !important;
+    filter: none !important;
+    -ms-filter: none !important;
+  }
+
+  /* line 17, ../scss/_print.scss */
+  a, a:visited {
+    color: #444 !important;
+    text-decoration: underline;
+  }
+  /* line 22, ../scss/_print.scss */
+  a:after, a:visited:after {
+    content: " (" attr(href) ")";
+  }
+  /* line 27, ../scss/_print.scss */
+  a abbr[title]:after, a:visited abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  /* line 34, ../scss/_print.scss */
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: "";
+  }
+
+  /* line 38, ../scss/_print.scss */
+  pre, blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  /* line 43, ../scss/_print.scss */
+  thead {
+    display: table-header-group;
+  }
+
+  /* line 47, ../scss/_print.scss */
+  tr, img {
+    page-break-inside: avoid;
+  }
+
+  /* line 51, ../scss/_print.scss */
+  img {
+    max-width: 100% !important;
+  }
+
+  @page {
+    margin: 0.5cm;
 }
 
-/* end .footer-links */
-/*********************
-FOUNDATION STYLES
-*********************/
-/*********************
-PLUGIN STYLES
-*********************/
-/******************************************************************
+  /* line 59, ../scss/_print.scss */
+  p, h2, h3 {
+    orphans: 3;
+    widows: 3;
+  }
 
-Stylesheet: X-Large Stylesheet
+  /* line 65, ../scss/_print.scss */
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
 
-Styles apply to 90.063em and up.
-
-
-******************************************************************/
-/******************************************************************
-
-Stylesheet: XX-Large Stylesheet
-
-Styles apply to 120.063em and up.
-
-******************************************************************/
+  /* line 74, ../scss/_print.scss */
+  .sidebar,
+  .page-navigation,
+  .wp-prev-next,
+  .respond-form,
+  nav {
+    display: none;
+  }
+}

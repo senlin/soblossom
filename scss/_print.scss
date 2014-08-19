@@ -6,74 +6,71 @@ Adjust where necessary, copied verbatim from JointsWP
 
 ******************************************************************/
 
-@media print {
+* {
+	background: transparent !important;
+	color: black !important;
+	text-shadow: none !important;
+	filter:none !important;
+	-ms-filter: none !important;
+}
 
-  * {
-    background: transparent !important;
-    color: black !important;
-    text-shadow: none !important;
-    filter:none !important;
-    -ms-filter: none !important;
-  }
+a, a:visited {
+	color: #444 !important;
+	text-decoration: underline;
+	
+	// show links on printed pages
+	&:after {
+		content: " (" attr(href) ")";
+	}
+	
+	// show title too
+	abbr[title]:after {
+		content: " (" attr(title) ")";
+	}
+}
 
-  a, a:visited {
-    color: #444 !important;
-    text-decoration: underline;
+.ir a:after,
+a[href^="javascript:"]:after,
+a[href^="#"]:after {
+	content: "";
+}
 
-    // show links on printed pages
-    &:after {
-      content: " (" attr(href) ")";
-    }
+pre, blockquote {
+	border: 1px solid #999;
+	page-break-inside: avoid;
+}
 
-    // show title too
-    abbr[title]:after {
-      content: " (" attr(title) ")";
-    }
-  }
+thead {
+	display: table-header-group;
+}
 
-  .ir a:after,
-  a[href^="javascript:"]:after,
-  a[href^="#"]:after {
-    content: "";
-  }
+tr, img {
+	page-break-inside: avoid;
+}
 
-  pre, blockquote {
-    border: 1px solid #999;
-    page-break-inside: avoid;
-  }
+img {
+	max-width: 100% !important;
+}
 
-  thead {
-    display: table-header-group;
-  }
+@page {
+	margin: 0.5cm;
+}
 
-  tr, img {
-    page-break-inside: avoid;
-  }
+p, h2, h3 {
+	orphans: 3;
+	widows: 3;
+}
 
-  img {
-    max-width: 100% !important;
-  }
+h2,
+h3 {
+	page-break-after: avoid;
+}
 
-    @page {
-      margin: 0.5cm;
-    }
-
-    p, h2, h3 {
-      orphans: 3;
-      widows: 3;
-    }
-
-    h2,
-    h3 {
-      page-break-after: avoid;
-    }
-
-    // hide content people who print don't need to see
-    .sidebar,
-    .page-navigation,
-    .wp-prev-next,
-    .respond-form,
-    nav {
-      display: none;
-    }
+// hide content people who print don't need to see
+.sidebar,
+.page-navigation,
+.wp-prev-next,
+.respond-form,
+nav {
+	display: none;
 }

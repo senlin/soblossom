@@ -23,16 +23,49 @@ This theme, is licensed under the GPL.
 // Import soblossom_clearing_blockgrid_gallery styling
 @import "gallery";
 
-// Import styles for printed media
-@import "print";
-
-// Import styles based on different screen sizes (mobile first)
+// Import mobile first styles
 @import "small";
-@import "medium";
-@import "large";
-@import "xlarge";
-@import "xxlarge";
 
 
-// if RTL language, then add RTL styles
+/**
+ * If you adjust the media quesries in the _settings.scss (lines 80-85),
+ * then change theme here too (and vice versa)
+ */
+
+@media only screen and (min-width: 40.0625em) { // 641px
+
+	// Import medium styles
+	@import "medium";
+
+} // end of media query
+
+@media only screen and (min-width: 64.0625em) { // 1025px
+
+	// Import large styles
+	@import "large";
+
+} // end of media query
+
+@media only screen and (min-width: 90.0625em) { // 1441px
+
+	// Import xlarge styles
+	@import "xlarge";
+
+} // end of media query
+
+@media only screen and (min-width: 120.0625em) { // 1921px
+
+	// Import xxlarge styles
+	@import "xxlarge";
+
+} // end of media query
+
+// Import Print stylesheet
+@media print {
+	@import "print";
+}
+
+// if RTL language, then import RTL styles
 // @import "rtl";
+
+
