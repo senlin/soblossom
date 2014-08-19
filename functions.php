@@ -18,7 +18,7 @@
  *		- add function soblossom_remove_script_version() (get rid of the ? in the script/style URLs)
  *		- register widget areas
  *		- register navigation menus
- *		- general cleanup (incl. injected styling, rss, generator, p-tags around images, excerpt more and what not)
+ *		- general cleanup (incl. injected styling, rss, generator, excerpt more and what not)
  *		- soblossom search form
  *
  *	- add Foundation Features
@@ -121,7 +121,7 @@ $soblossom_detect = new Mobile_Detect();
 
 // topnav-menu
 function soblossom_top_nav() {
-    wp_nav_menu(array(
+    wp_nav_menu( array(
     	'container' => false,							// remove nav container
     	'container_class' => '',						// class of container (should you choose to use it)
     	'menu' => __( 'Top Navigation', 'soblossom' ),	// nav name
@@ -140,7 +140,7 @@ function soblossom_top_nav() {
 
 // social-media-menu (optional)
 function soblossom_social_media_links() {
-    wp_nav_menu(array(
+    wp_nav_menu( array(
     	'container' => '',
     	'container_class' => 'socialmedia clearfix',
     	'menu' => __( 'Social Media', 'soblossom' ),
@@ -156,7 +156,7 @@ function soblossom_social_media_links() {
 
 // footer-menu (optional)
 function soblossom_footer_nav() {
-    wp_nav_menu(array(
+    wp_nav_menu( array(
     	'container' => '',
     	'container_class' => 'footer-links clearfix',
     	'menu' => __( 'Footer Links', 'soblossom' ),
@@ -208,7 +208,7 @@ function soblossom_register_widget_areas() {
 		'name'          => __( 'Footer Widget Area', 'soblossom' ),
 		'id'            => 'footer-widget-area',
 		'description'   => __( 'Appears in the footer section of the site.', 'soblossom' ),
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s small-12 medium-3 columns">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h3 class="widget-title">',
 		'after_title'   => '</h3>',

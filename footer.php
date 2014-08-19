@@ -14,7 +14,9 @@
 						
 						<?php get_sidebar( 'footer' ); ?>
 						
-						<div class="site-info">
+						<div class="site-info row">
+							
+							<div class="credits small-12 columns">
 						
 							<?php
 								printf( __( '&copy %1$s <a href="#page" title="back to top">%2$s</a>; %3$s theme by %4$s.', 'soblossom' ),
@@ -25,9 +27,11 @@
 								);
 							?>
 							
-						</div><!-- .site-info -->
+							</div> <!-- end .credits -->
+							
+						</div><!-- end .site-info -->
 					
-					</footer><!-- #colophon -->
+					</footer><!-- end #colophon -->
 
 				</div> <!-- end #page .hfeed.site line 59 header.php -->
 

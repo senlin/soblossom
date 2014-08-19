@@ -22,6 +22,12 @@ Put the adminbar back where it belongs
 	}
 }
 
+// lower the z-index of the adminbar from 999999 to 995, so image overlays will actually overlay the entire screen.
+.single > div#wpadminbar {
+    z-index: 995;
+}
+
+
 body {}
 
 /********************
@@ -176,8 +182,6 @@ POSTS & CONTENT STYLES
 #content {
 	/*adds highlight on hover */
 	a:hover, a:focus {
-		background: $primary-color;
-		color: #fff;
 	}
 }
 
@@ -209,9 +213,25 @@ POSTS & CONTENT STYLES
 .tag-slug {}        /* style by tag (i.e. tag-news) */
 
 /* post meta */
-.byline {
-	color: #999;
-	time {}
+.entry-info {
+    margin-bottom: 1.5rem;
+
+	.byline {
+		
+		time {}
+		
+		.vcard {
+		    border: 0 none;
+		    margin: 0;
+		    padding: 0;
+		    
+		    .fn {
+				font-weight: normal;
+				font-size: 1rem;
+		    }
+		}
+	
+	}
 }
 
 /* entry content */
@@ -440,11 +460,9 @@ COMMENT STYLES
 
 	/* vcard */
 	.vcard {
-		margin-left: 50px;
+		margin: 0;
 
 		cite.fn {
-			font-weight: 700;
-			font-style: normal;
 
 			a.url {}
 

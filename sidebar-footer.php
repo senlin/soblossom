@@ -8,7 +8,7 @@
 
 <div id="supplementary">
 	
-	<div id="footer-sidebar" class="footer-sidebar widget-area" role="complementary">
+	<div id="footer-sidebar" class="footer-sidebar widget-area row" role="complementary">
 		
 		<?php //The widgets in the Footer Widegetarea start with an <aside>, just like the sidebar ?>
 		<?php dynamic_sidebar( 'footer-widget-area' ); ?>

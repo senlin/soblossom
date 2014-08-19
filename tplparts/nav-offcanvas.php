@@ -9,9 +9,9 @@
  */
 ?>
 
-<div class="small-12 columns show-for-medium-up">
+<div class="small-12 columns show-for-large-up">
 	
-	<div class="contain-to-grid"><!-- The "contain-to-grid" class can also be replaced with either "sticky" or "fixed" -->
+	<div class="contain-to-grid"><!-- The "contain-to-grid" class can also be replaced with "fixed"; if you do so and the adminbar is visible, then you need to give .fixed a z-index of 999999 to make it show on top of the adminbar. -->
 	
 		<nav class="top-bar" data-options="mobile_show_parent_link: true" data-topbar>
 
@@ -38,9 +38,9 @@
 
 	</div> <!-- end .contain-to-grid -->
 
-</div> <!-- end .show-for-medium-up -->
+</div> <!-- end .show-for-large-up -->
 
-<div class="small-12 columns show-for-small-only">
+<div class="small-12 columns show-for-medium-down">
 
 	<div class="contain-to-grid">
 
@@ -60,7 +60,7 @@
 
 </div> <!-- end .show-for-small-only -->
 						
-<aside class="left-off-canvas-menu show-for-small-only">
+<aside class="left-off-canvas-menu show-for-medium-down">
 
 	<ul class="off-canvas-list">
 	

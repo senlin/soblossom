@@ -8,7 +8,7 @@ though, go for it.
 
 ******************************************************************/
 
-
+@media print {
 
   * {
     background: transparent !important;
@@ -78,3 +78,4 @@ though, go for it.
     nav {
       display: none;
     }
+}

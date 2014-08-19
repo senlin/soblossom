@@ -5,7 +5,7 @@
  * @package soblossom
  */
 ?>
-	<div id="sidebar" class="widget-area medium-4 columns" role="complementary">
+	<div id="sidebar" class="widget-area small-12 medium-4 large-3 columns" role="complementary">
 		
 		<?php if ( is_active_sidebar( 'sidebar-widget-area' ) ) {
 			

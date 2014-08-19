@@ -62,12 +62,12 @@
 
 				<header id="masthead" class="site-header" role="banner">
 
-					<div class="site-branding">
-						<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php esc_attr( bloginfo( 'name' ) ); ?></a></h1>
-						<h2 class="site-description"><?php esc_attr( bloginfo( 'description' ) ); ?></h2>
+					<div class="site-branding row">
+						<h1 class="site-title small-12 columns"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php esc_attr( bloginfo( 'name' ) ); ?></a></h1>
+						<h2 class="site-description small-12 columns"><?php esc_attr( bloginfo( 'description' ) ); ?></h2>
 					</div>
 
-					<nav id="site-navigation" class="main-navigation" role="navigation">
+					<nav id="site-navigation" class="main-navigation row" role="navigation">
 
 						<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'soblossom' ); ?></a>
 

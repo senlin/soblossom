@@ -1,75 +1,12 @@
 /* What's left of the original Underscores.me stylesheet */
 
 /*--------------------------------------------------------------
-Navigation Menus
+Comments/Paging/Post Navigation
 --------------------------------------------------------------*/
-.main-navigation {
-	clear: both;
-	display: block;
-	float: left;
-	width: 100%;
-
-	ul {
-		list-style: none;
-		margin: 0;
-		padding-left: 0;
-
-		ul {
-			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-			float: left;
-			position: absolute;
-			top: 1.5em;
-			left: -999em;
-			z-index: 99999;
-
-			ul {
-				left: -999em;
-				top: 0;
-			}
-
-			li {
-				&:hover > ul {
-					left: 100%;
-				}
-			}
-
-			a {
-				width: 200px;
-			}
-
-			:hover > a {
-			}
-
-			a:hover {
-			}
-		}
-
-		li:hover > ul {
-			left: auto;
-		}
-	}
-	li {
-		float: left;
-		position: relative;
-
-		&:hover > a {
-		}
-	}
-	a {
-		display: block;
-		text-decoration: none;
-	}
-
-	.current_page_item a,
-	.current-menu-item a {
-	}
-}
-
 .site-main .comment-navigation,
 .site-main .paging-navigation,
 .site-main .post-navigation {
-	margin: 0 0 1.5em;
-	overflow: hidden;
+	margin: 1.5em 0;
 }
 
 .comment-navigation .nav-previous,
@@ -100,10 +37,10 @@ Accessibility
 	&:hover,
 	&:active,
 	&:focus {
-		background-color: #f1f1f1;
+		background-color: $body-bg;
 		box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
 		clip: auto !important;
-		color: #21759b;
+		color: $primary-color;
 		display: block;
 		font-size:.875rem;
 		font-weight: bold;

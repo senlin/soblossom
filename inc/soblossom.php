@@ -61,9 +61,6 @@ function soblossom_bloom() { //actions, filters and other theme setup related th
     // remove injected CSS from gallery
     add_filter( 'gallery_style', 'soblossom_remove_gallery_styling' );
 
-    // remove p-tags around images
-    add_filter( 'the_content', 'soblossom_clean_images' );
-
     // clean up excerpt more
     add_filter( 'excerpt_more', 'soblossom_clean_excerpt_more' );
 
@@ -219,13 +216,6 @@ function soblossom_supports_wp_features() {
 	}
 
 /**
- * REMOVE P-TAGS AROUND IMAGES
- */
-	function soblossom_clean_images( $content ) {
-	    return preg_replace( '/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content );
-	}
-
-/**
  * CLEAN UP EXCERPT MORE
  * edit the output to your liking
  */
@@ -271,13 +261,13 @@ function soblossom_supports_wp_features() {
 	    return $classes;
 	}
 	
-	//Deletes empty classes and changes the sub menu class name
+	// Deletes empty classes and changes the sub menu class name
 	function soblossom_change_submenu_class( $menu ) {
 	    $menu = preg_replace( '/ class="sub-menu"/', ' class="dropdown"', $menu );
 	    return $menu;
 	}
 	
-	//Use the active class of the ZURB Foundation for the current menu item. (From: https://github.com/milohuang/reverie/blob/master/functions.php)
+	// Use the active class of the ZURB Foundation for the current menu item. (From: https://github.com/milohuang/reverie/blob/master/functions.php)
 	function soblossom_active_nav_class( $classes, $item ) {
 	    if ( $item->current == 1 || $item->current_item_ancestor == true ) {
 	        $classes[] = 'active';
@@ -298,11 +288,11 @@ function soblossom_supports_wp_features() {
 		function soblossom_featured_image() {
 			
 			echo '<div class="featured-image text-center">';
-	
-			$small = wp_get_attachment_image_src( $post->id, 'thumbnail' );
-			$medium = wp_get_attachment_image_src( $post->id, 'medium' );
-			$large = wp_get_attachment_image_src( $post->id, 'large' );
-			$full = wp_get_attachment_image_src( $post->id, 'full' );
+			
+			$small = wp_get_attachment_image_src( get_post_thumbnail_id(), 'thumbnail' );
+			$medium = wp_get_attachment_image_src( get_post_thumbnail_id(), 'medium' );
+			$large = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large' );
+			$full = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full' );
 			
 			// use the built-in Foundation lightbox effect to enlarge the Featured Image to full size
 			echo '<ul class="clearing-thumbs" data-clearing><li><a href="' . $full[0] . '" title="' . the_title_attribute( 'echo=0' ) . '" itemprop="image">';
@@ -336,7 +326,7 @@ function soblossom_supports_wp_features() {
 			/* translators: used between list items, there is a space after the comma */
 			$tag_list = '<span itemprop="keywords">' . get_the_tag_list( '', __( ', ', 'soblossom' ) ) . '</span>';
 	
-			if ( ! soblossom_categorized_blog() ) {
+			if ( ! soblossom_categorized_blog() ) { // see lines 468-501 for the soblossom_categorized_blog() function
 				// This blog only has 1 category so we just need to worry about tags in the meta text
 				if ( '' != $tag_list ) {
 					$meta_text = __( 'This article was tagged %2$s. Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.', 'soblossom' );
@@ -380,7 +370,7 @@ function soblossom_supports_wp_features() {
 				return;
 			}
 			?>
-			<nav class="navigation paging-navigation" role="navigation">
+			<nav class="navigation paging-navigation clearfix" role="navigation">
 				<h1 class="screen-reader-text"><?php _e( 'Posts navigation', 'soblossom' ); ?></h1>
 				<div class="nav-links">
 		
@@ -414,7 +404,7 @@ function soblossom_supports_wp_features() {
 				return;
 			}
 			?>
-			<nav class="navigation post-navigation" role="navigation">
+			<nav class="navigation post-navigation clearfix" role="navigation">
 				<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'soblossom' ); ?></h1>
 				<div class="nav-links">
 					<?php
@@ -458,7 +448,7 @@ function soblossom_supports_wp_features() {
 				'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 			);
 		
-			echo '<span class="posted-on">' . $posted_on . '</span><span class="byline"> ' . $byline . '</span>';
+			echo '<div class="entry-info"><span class="posted-on">' . $posted_on . '</span><span class="byline"> ' . $byline . '</span></div>';
 		
 		} //end function soblossom_posted_on()
 	
