@@ -8530,73 +8530,86 @@ Adjust where necessary
 
 ******************************************************************/
 /* line 11, ../scss/_social-media.scss */
-.social-links {
+.social-media {
+  margin-top: 4rem;
+}
+/* line 14, ../scss/_social-media.scss */
+.social-media .social-links {
   float: right;
   list-style: none;
   margin-bottom: 0;
   margin-left: 0;
 }
-/* line 17, ../scss/_social-media.scss */
-.social-links li {
+/* line 20, ../scss/_social-media.scss */
+.social-media .social-links li {
   float: left;
 }
-/* line 20, ../scss/_social-media.scss */
-.social-links li a .fa-stack .fa-circle {
+/* line 23, ../scss/_social-media.scss */
+.social-media .social-links li a .fa-stack .fa-circle {
+  color: rgba(255, 255, 255, 0.5);
+}
+/* line 27, ../scss/_social-media.scss */
+.social-media .social-links li a .fa-inverse {
   color: rgba(136, 136, 136, 0.5);
 }
-/* line 26, ../scss/_social-media.scss */
-.social-links li a[href*="twitter.com"]:hover .fa-stack .fa-circle, .social-links li a[href*="twitter.com"]:focus .fa-stack .fa-circle {
-  color: #00aced;
-}
 /* line 32, ../scss/_social-media.scss */
-.social-links li a[href*="facebook.com"]:hover .fa-stack .fa-circle, .social-links li a[href*="facebook.com"]:focus .fa-stack .fa-circle {
-  color: #3b5998;
+.social-media .social-links li a:hover .fa-inverse,
+.social-media .social-links li a:focus .fa-inverse {
+  color: rgba(255, 255, 255, 0.95);
 }
 /* line 38, ../scss/_social-media.scss */
-.social-links li a[href*="plus.google.com"]:hover .fa-stack .fa-circle, .social-links li a[href*="plus.google.com"]:focus .fa-stack .fa-circle {
-  color: #dd4b39;
+.social-media .social-links li a[href*="twitter.com"]:hover .fa-stack .fa-circle, .social-media .social-links li a[href*="twitter.com"]:focus .fa-stack .fa-circle {
+  color: #00aced;
 }
 /* line 44, ../scss/_social-media.scss */
-.social-links li a[href*="linkedin.com"]:hover .fa-stack .fa-circle, .social-links li a[href*="linkedin.com"]:focus .fa-stack .fa-circle {
-  color: #007bb6;
+.social-media .social-links li a[href*="facebook.com"]:hover .fa-stack .fa-circle, .social-media .social-links li a[href*="facebook.com"]:focus .fa-stack .fa-circle {
+  color: #3b5998;
 }
 /* line 50, ../scss/_social-media.scss */
-.social-links li a[href*="youtube.com"]:hover .fa-stack .fa-circle, .social-links li a[href*="youtube.com"]:focus .fa-stack .fa-circle {
-  color: #bb0000;
+.social-media .social-links li a[href*="plus.google.com"]:hover .fa-stack .fa-circle, .social-media .social-links li a[href*="plus.google.com"]:focus .fa-stack .fa-circle {
+  color: #dd4b39;
 }
 /* line 56, ../scss/_social-media.scss */
-.social-links li a[href*="instagram.com"]:hover .fa-stack .fa-circle, .social-links li a[href*="instagram.com"]:focus .fa-stack .fa-circle {
-  color: #517fa4;
+.social-media .social-links li a[href*="linkedin.com"]:hover .fa-stack .fa-circle, .social-media .social-links li a[href*="linkedin.com"]:focus .fa-stack .fa-circle {
+  color: #007bb6;
 }
 /* line 62, ../scss/_social-media.scss */
-.social-links li a[href*="pinterest.com"]:hover .fa-stack .fa-circle, .social-links li a[href*="pinterest.com"]:focus .fa-stack .fa-circle {
-  color: #cb2027;
+.social-media .social-links li a[href*="youtube.com"]:hover .fa-stack .fa-circle, .social-media .social-links li a[href*="youtube.com"]:focus .fa-stack .fa-circle {
+  color: #bb0000;
 }
 /* line 68, ../scss/_social-media.scss */
-.social-links li a[href*="flickr.com"]:hover .fa-stack .fa-circle, .social-links li a[href*="flickr.com"]:focus .fa-stack .fa-circle {
-  color: #ff0084;
+.social-media .social-links li a[href*="instagram.com"]:hover .fa-stack .fa-circle, .social-media .social-links li a[href*="instagram.com"]:focus .fa-stack .fa-circle {
+  color: #517fa4;
 }
 /* line 74, ../scss/_social-media.scss */
-.social-links li a[href*="codepen.io"]:hover .fa-stack .fa-circle, .social-links li a[href*="codepen.io"]:focus .fa-stack .fa-circle {
-  color: #76daff;
+.social-media .social-links li a[href*="pinterest.com"]:hover .fa-stack .fa-circle, .social-media .social-links li a[href*="pinterest.com"]:focus .fa-stack .fa-circle {
+  color: #cb2027;
 }
 /* line 80, ../scss/_social-media.scss */
-.social-links li a[href*="dribble.com"]:hover .fa-stack .fa-circle, .social-links li a[href*="dribble.com"]:focus .fa-stack .fa-circle {
-  color: #ea4c89;
+.social-media .social-links li a[href*="flickr.com"]:hover .fa-stack .fa-circle, .social-media .social-links li a[href*="flickr.com"]:focus .fa-stack .fa-circle {
+  color: #ff0084;
 }
 /* line 86, ../scss/_social-media.scss */
-.social-links li a[href*="weibo.com"]:hover .fa-stack .fa-circle, .social-links li a[href*="weibo.com"]:focus .fa-stack .fa-circle {
-  color: #e9281e;
+.social-media .social-links li a[href*="codepen.io"]:hover .fa-stack .fa-circle, .social-media .social-links li a[href*="codepen.io"]:focus .fa-stack .fa-circle {
+  color: #76daff;
 }
 /* line 92, ../scss/_social-media.scss */
-.social-links li a[href*="github.com"]:hover .fa-stack .fa-circle, .social-links li a[href*="github.com"]:focus .fa-stack .fa-circle {
+.social-media .social-links li a[href*="dribble.com"]:hover .fa-stack .fa-circle, .social-media .social-links li a[href*="dribble.com"]:focus .fa-stack .fa-circle {
+  color: #ea4c89;
+}
+/* line 98, ../scss/_social-media.scss */
+.social-media .social-links li a[href*="weibo.com"]:hover .fa-stack .fa-circle, .social-media .social-links li a[href*="weibo.com"]:focus .fa-stack .fa-circle {
+  color: #e9281e;
+}
+/* line 104, ../scss/_social-media.scss */
+.social-media .social-links li a[href*="github.com"]:hover .fa-stack .fa-circle, .social-media .social-links li a[href*="github.com"]:focus .fa-stack .fa-circle {
   color: #333;
 }
-/* line 99, ../scss/_social-media.scss */
-.social-links li a[href*="wordpress.org"]:hover .fa-stack .fa-circle,
-.social-links li a[href*="wordpress.org"]:focus .fa-stack .fa-circle,
-.social-links li a[href*="wordpress.com"]:hover .fa-stack .fa-circle,
-.social-links li a[href*="wordpress.com"]:focus .fa-stack .fa-circle {
+/* line 111, ../scss/_social-media.scss */
+.social-media .social-links li a[href*="wordpress.org"]:hover .fa-stack .fa-circle,
+.social-media .social-links li a[href*="wordpress.org"]:focus .fa-stack .fa-circle,
+.social-media .social-links li a[href*="wordpress.com"]:hover .fa-stack .fa-circle,
+.social-media .social-links li a[href*="wordpress.com"]:focus .fa-stack .fa-circle {
   color: #21759b;
 }
 
