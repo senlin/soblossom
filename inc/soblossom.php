@@ -423,7 +423,7 @@ function soblossom_supports_wp_features() {
 		 * Prints HTML with meta information for the current post-date/time and author.
 		 */
 		function soblossom_posted_on() {
-			$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
+			$time_string = '<time class="entry-date published updated" datetime="%1$s" title="' . __( 'Published on ', 'soblossom' ) . '%1$s">%2$s</time>';
 			/*
 			if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
 				$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
@@ -438,17 +438,12 @@ function soblossom_supports_wp_features() {
 				//esc_html( get_the_modified_date() )
 			);
 		
-			$posted_on = sprintf(
-				_x( 'Posted on %s', 'post date', 'soblossom' ),
-				'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
-			);
+			$posted_on = '<i class="fa fa-calendar"></i> ' . $time_string;
 		
-			$byline = sprintf(
-				_x( 'by %s', 'post author', 'soblossom' ),
-				'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
-			);
+			$author_title = __( 'Articles by ', 'soblossom' ) . esc_html( get_the_author() );
+			$byline = '<span itemtype="http://schema.org/Person" itemscope="itemscope" itemprop="author" class="entry-author"><a itemprop="url" class="url fn n" rel="author" title="' . $author_title . '" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '"><i class="fa fa-user"></i> <span itemprop="name">' . esc_html( get_the_author() ) . '</span></a></span>';
 		
-			echo '<div class="entry-info"><span class="posted-on">' . $posted_on . '</span><span class="byline"> ' . $byline . '</span></div>';
+			echo '<div class="entry-info"><span class="byline"> ' . $byline . '</span> <span class="posted-on">' . $posted_on . '</span></div>';
 		
 		} //end function soblossom_posted_on()
 	

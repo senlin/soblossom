@@ -143,13 +143,12 @@ h5, .h5 {
 HEADER STYLES
 *********************/
 
-.header {
-	margin-bottom: 20px;
-		#inner-header {
-			li {
-				list-style: none;
-			}
+.site-header {
+	#inner-header {
+		li {
+			list-style: none;
 		}
+	}
 }
     
 /*********************
@@ -227,6 +226,10 @@ POSTS & CONTENT STYLES
 		    }
 		}
 	
+	}
+	
+	.posted-on {
+	    color: #888;
 	}
 }
 
@@ -367,7 +370,11 @@ PAGE NAVI STYLES
 /******************************************************************
 COMMENT STYLES
 ******************************************************************/
-
+.vcard {
+    border: 0 none;
+    margin: 0;
+    padding: 0;
+}
 /* h3 comment title */
 #comments {
 
