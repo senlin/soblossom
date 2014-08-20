@@ -130,19 +130,16 @@ require get_template_directory() . '/inc/classes/gallery.php';
 // topnav-menu
 function soblossom_top_nav() {
     wp_nav_menu( array(
-    	'container' => false,							// remove nav container
-    	'container_class' => '',						// class of container (should you choose to use it)
-    	'menu' => __( 'Top Navigation', 'soblossom' ),	// nav name
-    	'menu_class' => '',								// adding custom nav class
-    	'theme_location' => 'topnav',					// where it's located in the theme
-    	'before' => '',                                 // before the menu
-        'after' => '',                                  // after the menu
-        'link_before' => '',                            // before each link
-        'link_after' => '',                             // after each link
-    	'fallback_cb' => 'soblossom_topnav_fallback'	// fallback function
-    	// if you want to use icons in the navigation; uncomment the following line and add a comma to the line above
-    	// 'walker' => new iconfont_walker() // custom walker located in inc/iconfont-walker.php
-    	
+    	'container' => false,
+    	'container_class' => '',
+    	'menu' => __( 'Top Navigation', 'soblossom' ),
+    	'menu_class' => '',
+    	'theme_location' => 'topnav',
+    	'before' => '',
+        'after' => '',
+        'link_before' => '',
+        'link_after' => '',
+        'fallback_cb' => 'soblossom_topnav_fallback', // workaround to show a message to set up a menu (copied from required)
 	));
 } /* end soblossom_top_nav */
 
@@ -152,49 +149,84 @@ function soblossom_social_media_links() {
     	'container' => '',
     	'container_class' => 'socialmedia clearfix',
     	'menu' => __( 'Social Media', 'soblossom' ),
-       	'menu_class' => 'sub-nav',
+       	'menu_class' => 'social-links',
     	'theme_location' => 'social',
     	'before' => '',
         'after' => '',
         'link_before' => '',
         'link_after' => '',
-        'walker' => new iconfont_walker() // custom walker located in inc/walkers/iconfont-walker.php - add social media name to description
+        'walker' => new iconfont_walker(), // custom walker located in inc/walkers/iconfont-walker.php - add social media name to description
+        'fallback_cb' => 'soblossom_socialmedia_fallback' // workaround to show a message to set up a menu (copied from required)
 	));
 } /* end soblossom_social_media_links */
 
 // footer-menu (optional)
 function soblossom_footer_nav() {
     wp_nav_menu( array(
-    	'container' => '',
-    	'container_class' => 'footer-links clearfix',
+    	'container' => false,
+    	'container_class' => '',
     	'menu' => __( 'Footer Links', 'soblossom' ),
-    	'menu_class' => 'sub-nav',
+    	'menu_class' => 'footer-nav',
     	'theme_location' => 'footer',
     	'before' => '',
         'after' => '',
         'link_before' => '',
         'link_after' => '',
         'depth' => 0,
-    	'fallback_cb' => 'soblossom_footernav_fallback'
+        'fallback_cb' => 'soblossom_footer_fallback', // workaround to show a message to set up a menu (copied from required)
 	));
 } /* end soblossom_footer_nav */
 
-// fallback for header menu
-function soblossom_topnav_fallback() {
-	wp_page_menu( array(
-		'show_home' => true,
-    	'menu_class' => 'fallback',	// adding custom nav class
-		'include'     => '',
-		'exclude'     => '',
-		'echo'        => true,
-        'link_before' => '',
-        'link_after' => ''
-	) );
+/**
+ * A fallback when no navigation is selected by default, otherwise it throws some nasty errors.
+ * From required+ Foundation http://themes.required.ch
+ */
+if( ! function_exists( 'soblossom_topnav_fallback' ) ) {
+	function soblossom_topnav_fallback() {
+		echo '<div class="alert-box warning">';
+		// Translators 1: Link to Menus, 2: Link to Customize
+	  	printf( __( 'Add your Top Navigation Menu by adding a %1$s or %2$s the design.', 'soblossom' ),
+	  		sprintf(  __( '<a href="%s">Menu</a>', 'soblossom' ),
+	  			get_admin_url( get_current_blog_id(), 'nav-menus.php' )
+	  		),
+	  		sprintf(  __( '<a href="%s">Customizing</a>', 'soblossom' ),
+	  			get_admin_url( get_current_blog_id(), 'customize.php' )
+	  		)
+	  	);
+	  	echo '</div>';
+	}
 }
 
-// fallback for footer menu
-function soblossom_footernav_fallback() {
-	/* optional, add default, see soblossom_topnav_fallback as example */
+if( ! function_exists( 'soblossom_socialmedia_fallback' ) ) {
+	function soblossom_socialmedia_fallback() {
+		echo '<div class="alert-box info">';
+		// Translators 1: Link to Menus, 2: Link to Customize
+	  	printf( __( 'Add a %1$s and use FontAwesome names for the descriptions to show your own Social Links. Alternatively use the %2$s.', 'soblossom' ),
+	  		sprintf(  __( '<a href="%s">Social Media menu</a>', 'soblossom' ),
+	  			get_admin_url( get_current_blog_id(), 'nav-menus.php' )
+	  		),
+	  		sprintf(  __( '<a href="%s">Customizer</a>', 'soblossom' ),
+	  			get_admin_url( get_current_blog_id(), 'customize.php' )
+	  		)
+	  	);
+	  	echo '</div>';
+	}
+}
+
+if( ! function_exists( 'soblossom_footer_fallback' ) ) {
+	function soblossom_footer_fallback() {
+		echo '<div class="alert-box alert">';
+		// Translators 1: Link to Menus, 2: Link to Customize
+	  	printf( __( 'Add your own Footer Links by adding a %1$s or %2$s the design.', 'soblossom' ),
+	  		sprintf(  __( '<a href="%s">Menu</a>', 'soblossom' ),
+	  			get_admin_url( get_current_blog_id(), 'nav-menus.php' )
+	  		),
+	  		sprintf(  __( '<a href="%s">Customizing</a>', 'soblossom' ),
+	  			get_admin_url( get_current_blog_id(), 'customize.php' )
+	  		)
+	  	);
+	  	echo '</div>';
+	}
 }
 
 /**
