@@ -34,6 +34,7 @@
  *
  * 	- soblossom_body_classes
  * 	- add functions soblossom_add_favicon
+ *	- add filter soblossom_adjust_title_home
  */
 require get_template_directory() . '/inc/soblossom.php';
 

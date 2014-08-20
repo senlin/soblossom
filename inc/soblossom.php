@@ -603,7 +603,6 @@ function soblossom_supports_wp_features() {
  * @sizes: graphicdesign.stackexchange.com/a/27142
  * @cheatsheet: github.com/audreyr/favicon-cheat-sheet
  */
-// add favicon
 	add_action( 'wp_head', 'soblossom_add_favicon' );
 
 	function soblossom_add_favicon() {
@@ -613,4 +612,19 @@ function soblossom_supports_wp_features() {
 	
 	}
 	
+/**
+ * Adjust Title output for homepage
+ *
+ * @source: //codex.wordpress.org/Function_Reference/wp_title#Covering_Homepage
+ */
+	add_filter( 'wp_title', 'soblossom_adjust_title_home' );
+	
+	function soblossom_adjust_title_home( $title ) {
+		
+		if( empty( $title ) && ( is_home() || is_front_page() ) && ! class_exists( 'wpseo_admin' ) ) {
+			return __( 'Home', 'theme_domain' ) . ' | ' . get_bloginfo( 'description' );
+		}
+		
+		return $title;
+	} 
 
