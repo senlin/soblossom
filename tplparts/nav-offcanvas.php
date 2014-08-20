@@ -19,7 +19,7 @@
 
 				<!-- Title Area -->
 				<li class="name">
-					<h1><a href="<?php echo esc_url( home_url() ); ?>" rel="nofollow"><?php esc_attr( bloginfo( 'name' ) ); ?></a></h1>
+					<h1><a href="<?php echo esc_url( home_url() ); ?>" rel="nofollow"><?php _e( 'Home', 'soblossom' ); ?></a></h1>
 				</li>
 
 				<li class="toggle-topbar menu-icon">
@@ -47,7 +47,7 @@
 		<nav class="tab-bar">
 
 			<section class="middle tab-bar-section">
-				<h1 class="title"><?php bloginfo( 'name' );?></h1>
+				<h1 class="title"><?php esc_attr( bloginfo( 'name' ) ); ?></h1>
 			</section>
 
 			<section class="left-small">
