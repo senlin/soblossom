@@ -14,7 +14,11 @@
 						
 						<div class="site-info row">
 							
-							<div class="credits small-12 columns">
+							<nav class="footer-links small-12 medium-6 medium-push-6 columns">
+								<?php soblossom_footer_nav(); ?>
+							</nav>
+							
+							<div class="credits small-12 medium-6 medium-pull-6 columns">
 						
 							<?php
 								printf( __( '&copy %1$s <a href="#page" title="back to top">%2$s</a>; %3$s theme by %4$s.', 'soblossom' ),
