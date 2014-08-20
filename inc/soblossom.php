@@ -221,7 +221,7 @@ function soblossom_supports_wp_features() {
  */
 	function soblossom_clean_excerpt_more() {
 		global $post;
-		return ' <a class="excerpt-read-more" href="' . get_permalink( $post->ID ) . '" title="' . __( 'Read the rest of ', 'soblossom' ) . get_the_title( $post->ID ) .'">' .  __( 'Read more <i class="fa fa-long-arrow-right"></i>', 'soblossom' ) . '</a>';
+		return '&hellip; <a class="excerpt-read-more" href="' . get_permalink( $post->ID ) . '" title="' . __( 'Read the rest of ', 'soblossom' ) . get_the_title( $post->ID ) .'">' .  __( ' Read more <i class="fa fa-long-arrow-right"></i>', 'soblossom' ) . '</a>';
 			
 	}
 
