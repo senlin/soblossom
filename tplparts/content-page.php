@@ -8,7 +8,13 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'clearfix' ); ?> itemscope itemtype="http://schema.org/WebPage">
 
-	<?php the_title( '<header class="entry-header"><h1 class="page-title">', '</h1></header><!-- .entry-header -->' ); ?>
+	<?php
+		the_title( '<header class="entry-header"><h1 class="page-title">', '</h1></header><!-- .entry-header -->' );
+
+		if ( function_exists( 'yoast_breadcrumb' ) ) {
+			yoast_breadcrumb( '<div class="breadcrumbs clearfix">', '</div>' );
+		}
+	?>
 
 	<section class="entry-content" itemprop="articleBody">
 

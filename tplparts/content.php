@@ -11,10 +11,12 @@
 			the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' );
 
 			if ( 'post' == get_post_type() ) {
-				
 				soblossom_posted_on( '<div class="entry-meta">', '</div>' );
-			
 			} //endif
+
+			if ( function_exists( 'yoast_breadcrumb' ) ) {
+				yoast_breadcrumb( '<div class="breadcrumbs clearfix">', '</div>' );
+			}
 		?>
 	</header><!-- .entry-header -->
 

@@ -730,3 +730,7 @@ PLUGIN STYLES
     list-style: none outside none;
     margin: 0;
 }
+// give WordPress SEO breadcrumbs some bottom margin
+.breadcrumbs {
+	margin-bottom: 1rem;
+}

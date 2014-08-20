@@ -13,6 +13,11 @@
 			the_title( '<h1 class="entry-title single-title" itemprop="headline">', '</h1>' );
 
 			soblossom_posted_on( '<div class="entry-meta">', '</div>' ); // defined in inc/soblossom.php
+			
+			if ( function_exists( 'yoast_breadcrumb' ) ) {
+				yoast_breadcrumb( '<div class="breadcrumbs clearfix">', '</div>' );
+			}
+
 		?>
 	</header><!-- .entry-header -->
 

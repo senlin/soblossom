@@ -9186,6 +9186,11 @@ PLUGIN STYLES
   margin: 0;
 }
 
+/* line 734, ../scss/_small.scss */
+.breadcrumbs {
+  margin-bottom: 1rem;
+}
+
 /**
  * If you adjust the media quesries in the _settings.scss (lines 80-85),
  * then change theme here too (and vice versa)

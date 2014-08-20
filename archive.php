@@ -53,6 +53,12 @@ get_header(); ?>
 						?>
 					</header><!-- .page-header -->
 		
+					<?php
+						if ( function_exists( 'yoast_breadcrumb' ) ) {
+							yoast_breadcrumb( '<div class="breadcrumbs clearfix">', '</div>' );
+						}
+					?>
+
 					<?php /* Start the Loop */
 					while ( have_posts() ) { the_post();
 		

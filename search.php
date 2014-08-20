@@ -19,6 +19,12 @@ get_header(); ?>
 						<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'soblossom' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
 					</header><!-- .page-header -->
 		
+					<?php
+						if ( function_exists( 'yoast_breadcrumb' ) ) {
+							yoast_breadcrumb( '<div class="breadcrumbs clearfix">', '</div>' );
+						}
+					?>
+
 					<?php /* Start the Loop */
 					while ( have_posts() ) { the_post();
 		
