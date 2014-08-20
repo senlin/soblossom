@@ -40,6 +40,9 @@ POSTS & CONTENT STYLES
 /* entry content */
 .entry-content {
 	
+	.featured-image .clearing-thumbs img {
+	    max-width: 70%;
+	}
 	form {
 		.search-icon {
 			right: 2%;

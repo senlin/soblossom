@@ -185,13 +185,9 @@ POSTS & CONTENT STYLES
 	}
 }
 
-.hentry {
-
-	header {}
-
-	footer {}
-
-} /* end .hentry */
+.contentarea-wrap {
+    padding-top: 2rem;
+}
 
 .single-title,
 .page-title {}
@@ -202,11 +198,11 @@ POSTS & CONTENT STYLES
 
 .archive-title { }
 
-/* want to style individual post classes? Booya! */
+/* style individual post classes */
 .post-id {}         /* post by id (i.e. post-3) */
 .post {}            /* general post style */
 .page {}            /* general article on a page style */
-.attachment {}      /* general style on an attatchment */
+.attachment {}      /* general style on an attachment */
 .sticky {}          /* sticky post style */
 .hentry {}          /* hentry class */
 .category-slug {}   /* style by category (i.e. category-videos) */
@@ -299,6 +295,7 @@ POSTS & CONTENT STYLES
 	pre {
 		background: #eee;
 		border: 1px solid #cecece;
+		overflow: auto;
 		padding: 10px;
 		}
 	
@@ -316,7 +313,7 @@ POSTS & CONTENT STYLES
 .wp-caption {
 	max-width: 100%;
 	background: #eee;
-	padding: 5px;
+	padding: .25rem;
 
 	/* images inside wp-caption */
 	img {
@@ -327,7 +324,7 @@ POSTS & CONTENT STYLES
 
 	p.wp-caption-text {
 		font-size: 0.85em;
-		margin: 4px 0 7px;
+		margin: .25rem 0 .5rem;
 		text-align: center;
 		}
 
