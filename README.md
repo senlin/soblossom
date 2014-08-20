@@ -4,15 +4,17 @@ SOBLOSSOM
 ###### Last updated on 2014.8.19
 ###### Author: [Piet Bos](https://github.com/senlin)
 
-SOBLOSSOM is a starter framework that is based on [Foundation](http://foundation.zurb.com) (5.3.3 at time of writing) on the frontend and [Underscores.me](http://underscores.me) on the backend. 
+soblossom is a starter framework that is based on [Foundation](http://foundation.zurb.com) (5.3.3 at time of writing) on the frontend and [Underscores sass](http://underscores.me) on the backend. 
 
 We first started developing soblossom in 2013 under a few different names (with Foundation 3 and 4). Then when Foundation 5 was released, instead of updating the lot, we started over and in August 2014 we went through another of those quite extreme makeovers/reorganisations...
 
 ## Built in Features
 
-
-
 ### Navigation
+
+The default mobile navigation is with the off canvas. We have kept the navigation as flexible as possible though, so you can also choose the "conventional" topbar navigation (where the menu slides down) or any variation you might think of.
+
+soblossom also comes with a footer navigation menu and a social media menu which comes with an iconfont walker (`inc/walkers/iconfont-walker.php`) that has the [FontAwesome](https://fontawesome.io/) font-icon-set integrated.
 
 ### Featured Images
 
@@ -46,7 +48,7 @@ The soblossom theme comes optimised for the following plugins:
 
 ## Credits
 
-Nowadays there are plenty of WordPress themes built on Foundation and we have looked at all of them. To name a few: [Reverie](https://github.com/milohuang/reverie) by [Zhen Huang](https://github.com/milohuang), [WPForge](http://wpforge.themeawesome.com/) by [Thomas Vasquez](https://twitter.com/tsquez) and last but not least [JointsWP](http://jointswp.com/) by [Jeremy Englert](http://twitter.com/jeremyenglert). Thanks all for your guidance, tips and inspiration!
+Nowadays there are plenty of WordPress themes built on Foundation and we have looked at a few of them: [Reverie](https://github.com/milohuang/reverie) by [Zhen Huang](https://github.com/milohuang), [WPForge](http://wpforge.themeawesome.com/) by [Thomas Vasquez](https://twitter.com/tsquez) and last but not least [JointsWP](http://jointswp.com/) by [Jeremy Englert](http://twitter.com/jeremyenglert). Thanks all for your guidance, tips and inspiration!
 
 ## License
 
@@ -68,6 +70,10 @@ Nowadays there are plenty of WordPress themes built on Foundation and we have lo
 [Website](http://senlinonline.com)
 
 ## Changelog
+
+### 140820
+
+* more tweaking
 
 ### 140819
 
