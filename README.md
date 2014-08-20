@@ -1,24 +1,52 @@
 SOBLOSSOM
 =========
 
-###### Last updated on 2014.8.10
+###### Last updated on 2014.8.19
 ###### Author: [Piet Bos](https://github.com/senlin)
 
 SOBLOSSOM is a starter framework that is based on [Foundation](http://foundation.zurb.com) (5.3.3 at time of writing) on the frontend and [Underscores.me](http://underscores.me) on the backend. 
 
-Early August 2014 I have completely reorganised SOBLOSSOM and actually looked quite close at how [JointsWP](http://jointswp.com/) (another awesome Foundation 5 WordPress theme) does things under the hood. Therefore no specific accreditation for every line I copied, but a more general accredition: Thanks [Jeremy](http://twitter.com/jeremyenglert)!
+We first started developing soblossom in 2013 under a few different names (with Foundation 3 and 4). Then when Foundation 5 was released, instead of updating the lot, we started over and in August 2014 we went through another of those quite extreme makeovers/reorganisations...
 
-To add your own functions and filters to the theme and at the same time to ensure portability if you ever want to switch themes, I have included an empty `functionality.php` file that you will find in the `soblossom/inc/` folder. Of course you can also get rid of that file and start hacking away in the `inc/soblossom.php` file or any of the other files that add functionality to the theme.
+## Built in Features
+
+
+
+### Navigation
 
 ### Featured Images
 
-All Featured Images, for example those on a Single Post, come with the builtin Foundation lightbox effect (called clearing thumbs). Also builtin is Foundation Interchange. The main advantage of this is that the image shown (AND loaded) is different per device: thumbs for small devices, medium sized images for tablets and laptops and the large image for everything wider than 1280px. You can customise the code by adding your own image sizes and call those instead.
+All Featured Images, for example those on a Single Post, come with the builtin [Foundation Clearing Thumbs]((http://foundation.zurb.com/docs/components/clearing.html)) (lightbox effect). Also builtin is [Foundation Interchange](http://foundation.zurb.com/docs/components/interchange.html). The main advantage of this is that the image shown (AND loaded) is different per device: thumbs for small devices, medium sized images for tablets and laptops and the large image for everything wider than 1280px. You can customise the code by adding your own image sizes and call those instead. The function that deals with this is the `soblossom_featured_image()` function on lines 278-313 of `inc/soblossom.php`.
 
 ### Gallery Shortcode
 
 For the soblossom theme we have completely overhauled the default WordPress Gallery shortcode. You won't find any inline styling either. We have replaced the functionality with [Foundation Blockgrid](http://foundation.zurb.com/docs/components/block_grid.html) **and** clearing lightbox so you won't need an additional plugin for that either.
-By default the blockgrid shows `small-block-grid-2 medium-block-grid-3 large-block-grid-4`, which means that on small devices (up to 640px wide) it shows 2 thumbs; on medium devices (640-1024px wide) it shows 3 thumbs and on large devices (anything over 1024px) it will show 4 thumbs. Clicking on a thumb will show the [Foundation Clearing](http://foundation.zurb.com/docs/components/clearing.html) effect.
+By default the blockgrid shows `small-block-grid-2 medium-block-grid-3 large-block-grid-4`, which means that on small devices (up to 640px wide) it shows 2 thumbs; on medium devices (640-1024px wide) it shows 3 thumbs and on large devices (anything over 1024px) it will show 4 thumbs. Clicking on a thumb will show the Foundation Clearing effect.
 If you want to adjust anything, you can do so in `inc/classes/gallery.php` and the `scss/_gallery.scss` files.
+
+### Other Foundation Features
+
+Foundation comes packed with features and although we have not actively implemented all of them, they are all readily available to you. You can ready all about them via the [Foundation Documentation](http://foundation.zurb.com/docs/).
+
+### Functions
+
+We have tried to keep most of the functions together. The main `functions.php` file in the theme root is where we do all the inclusions of other files as well as registering the 3 navigation menus and the 2 widget areas.
+Then there is the `inc/soblossom.php` file, the core functions file and without it the blossom cannot bloom :)
+The rest of the functions files you can find in the `inc/functions` folder. There are the `dashboard-functions.php` for functions and filters that have to do with the admin or backend of the site, there are sample `cmb.php` and `cpt.php` files for Custom Meta Boxes and Custom Post Types resp. and you will also find the `functionality.php` file in the `inc/functions` folder. 
+The purpose of this file is to add your own functions and filters to the theme and at the same time to ensure portability if you ever want to switch themes. Of course you can also get rid of that file and start hacking away in the `inc/soblossom.php` file or any of the other files that add functionality to the theme.
+
+### Plugins
+
+The soblossom theme comes optimised for the following plugins:
+
+* [Gravity Forms](http://senl.in/gRaVitY) - turn off the CSS output of the plugin to fully enjoy the Foundation Forms styling
+* [Meta Box](http://wordpress.org/plugins/meta-box/) - the `inc/functions/cmb.php` file has been generated with the [demo code](github.com/rilwis/meta-box/blob/master/demo/demo.php) of this plugin.
+* [WordPress SEO](http://wordpress.org/plugins/wordpress-seo/) - title tags in the head section, breadcrumb code already added, admin columns removed via filter in `inc/functions/dashboard-functions.php`
+* [WPML](http://senl.in/WPMLorg) - language code is added to the body class if WPML is active (filter in `inc/soblossom.php`)
+
+## Credits
+
+Nowadays there are plenty of WordPress themes built on Foundation and we have looked at all of them. To name a few: [Reverie](https://github.com/milohuang/reverie) by [Zhen Huang](https://github.com/milohuang), [WPForge](http://wpforge.themeawesome.com/) by [Thomas Vasquez](https://twitter.com/tsquez) and last but not least [JointsWP](http://jointswp.com/) by [Jeremy Englert](http://twitter.com/jeremyenglert). Thanks all for your guidance, tips and inspiration!
 
 ## License
 
