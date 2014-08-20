@@ -24,7 +24,7 @@ class iconfont_walker extends Walker_Nav_Menu {
 		
 		$output .= $indent . '<li' . $id . $value . $class_names .'>';
 		
-		$attributes  = ! empty( $item->attr_title ) ? ' title="'  . esc_attr( $item->attr_title ) .'"' : '';
+		$attributes  = ' title="'  . apply_filters( 'the_title', $item->title, $item->ID ) . '"';
 		$attributes .= ! empty( $item->target )     ? ' target="' . esc_attr( $item->target     ) .'"' : '';
 		$attributes .= ! empty( $item->xfn )        ? ' rel="'    . esc_attr( $item->xfn        ) .'"' : '';
 		$attributes .= ! empty( $item->url )        ? ' href="'   . esc_attr( $item->url        ) .'"' : '';
@@ -32,8 +32,7 @@ class iconfont_walker extends Walker_Nav_Menu {
 		$description  = ! empty( $item->description ) ? esc_attr( $item->description ) : '';
 		
 		$item_output = $args->before;
-		$item_output .= '<a'. $attributes .'><i class="fa fa-lg fa-fw fa-' . $description . '"></i> ';
-		$item_output .= $args->link_before . apply_filters( 'the_title', $item->title, $item->ID ) . $args->link_after;
+		$item_output .= '<a' . $attributes . '><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-stack-1x fa-inverse fa-' . $description . '"></i></span> ';
 		$item_output .= '</a>';
 		$item_output .= $args->after;
 		
