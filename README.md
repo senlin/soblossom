@@ -1,7 +1,8 @@
 soblossom WordPress theme
 =========
 
-###### Last updated on 2014.8.19
+###### Last updated on 2014.8.20
+###### [DEMO SITE](http://so-wp.com/themes/soblossom/)
 ###### Author: [Piet Bos](https://github.com/senlin)
 
 soblossom is a WordPress starter framework that is based on [Foundation](http://foundation.zurb.com) (5.3.3 at time of writing) on the frontend and [Underscores sass](http://underscores.me) on the backend. 
