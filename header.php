@@ -64,7 +64,7 @@
 
 					<div class="inner-header row">
 						
-						<div class="site-branding small-12 columns">
+						<div class="site-branding small-12 medium-6 columns">
 						
 							<h1 class="site-title">
 								<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php esc_attr( bloginfo( 'name' ) ); ?></a>
@@ -74,7 +74,28 @@
 						
 						</div> <!-- end .site-branding -->
 					
+						<div class="social-media small-12 medium-6 columns">
+							<?php soblossom_social_media_links(); ?>
+						</div> <!-- end .social-media -->
+						
 					</div> <!-- end .inner-header -->
+
+					<?php /** Select which setup works best for your site and remove the redundant one.
+					<div class="inner-header row">
+						
+						<div class="site-branding small-12 medium-6 columns">
+							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php esc_attr( bloginfo( 'name' ) ); ?>, <?php  esc_attr( bloginfo( 'description' ) ); ?>" rel="home">
+								<img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" width="300" height="60" alt="soblossom logo" />
+							</a>
+							<h2 class="site-description"><?php esc_attr( bloginfo( 'description' ) ); ?></h2>
+						</div> <!-- end .site-branding -->
+						
+						<div class="social-media small-12 medium-6 columns">
+							<?php soblossom_social_media_links(); ?>
+						</div> <!-- end .social-media -->
+						
+					</div><!-- end .inner-header -->
+					*/?>
 
 					<nav id="site-navigation" class="main-navigation row" role="navigation">
 
