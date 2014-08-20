@@ -8,8 +8,6 @@
  */
 ?>
 
-					</div><!-- end #content.contentarea-wrap (on each template right after header call) --> 
-		
 					<footer id="colophon" class="site-footer" role="contentinfo">
 						
 						<?php get_sidebar( 'footer' ); ?>
