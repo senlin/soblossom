@@ -5,7 +5,7 @@
  * cannot bloom :)
  *
  * To include any additional functions we recommend to add them to the
- * inc/functionality.php file or the inc/dashboard-functions.php file
+ * inc/functions/functionality.php file or the inc/functions/dashboard-functions.php file
  *
  * @package soblossom
  */
@@ -22,7 +22,7 @@ function soblossom_bloom() { //actions, filters and other theme setup related th
 
 	/**
 	 * Make theme available for translation.
-	 * Translations can be filed in the /inc/languages/ directory.
+	 * Translations can be filed in the /languages/ directory.
 	 * If you're building a theme based on soblossom, use a find and replace
 	 * to change 'soblossom' to the name of your theme in all the template files
 	 */
@@ -135,6 +135,8 @@ function soblossom_supports_wp_features() {
 		wp_enqueue_style( 'fontawesome', soblossom_fontawesome_url(), array(), null );
 	
 		/* SCRIPTS */
+		wp_enqueue_script( 'jquery' );
+		
 		wp_enqueue_script( 'modernizer', get_template_directory_uri() . '/bower_components/modernizr/modernizr.js', array(), null );
 		
 		wp_enqueue_script( 'foundation', get_template_directory_uri() . '/bower_components/foundation/js/foundation.min.js', array(), null, true );
@@ -243,7 +245,7 @@ function soblossom_supports_wp_features() {
  * ADD FOUNDATION FEATURES TO SOBLOSSOM
  */
  	add_filter( 'nav_menu_css_class', 'soblossom_nav_menu_item_parent_classing', 10, 2 );
- 	add_filter ( 'wp_nav_menu','soblossom_change_submenu_class' );
+ 	add_filter( 'wp_nav_menu','soblossom_change_submenu_class' );
  	add_filter( 'nav_menu_css_class', 'soblossom_active_nav_class', 10, 2 );
 
 	// Add "has-dropdown" CSS class to navigation menu items that have children in a submenu.
@@ -285,7 +287,7 @@ function soblossom_supports_wp_features() {
 		 */
 		function soblossom_featured_image() {
 			
-			echo '<div class="featured-image text-center">';
+			echo '<div class="featured-image">';
 			
 			$small = wp_get_attachment_image_src( get_post_thumbnail_id(), 'thumbnail' );
 			$medium = wp_get_attachment_image_src( get_post_thumbnail_id(), 'medium' );
