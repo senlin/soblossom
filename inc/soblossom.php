@@ -294,8 +294,11 @@ function soblossom_supports_wp_features() {
 			$large = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large' );
 			$full = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full' );
 			
-			// use the built-in Foundation lightbox effect to enlarge the Featured Image to full size
-			echo '<ul class="clearing-thumbs" data-clearing><li><a href="' . $full[0] . '" title="' . the_title_attribute( 'echo=0' ) . '" itemprop="image">';
+			/**
+			 * To use the built-in Foundation lightbox effect to enlarge the Featured Image to full size,
+			 * uncomment the following line and the one below at line 314
+			 */
+			//echo '<ul class="clearing-thumbs" data-clearing><li><a href="' . $full[0] . '" title="' . the_title_attribute( 'echo=0' ) . '" itemprop="image">';
 			
 			/**
 			 * use the built-in Foundation Interchange to load different sized image depending on device
@@ -306,9 +309,9 @@ function soblossom_supports_wp_features() {
 			 *
 			 * @source: zurb.com/playground/foundation-interchange
 			 */
-			echo '<img src="' . $small[0] . '" data-interchange="[' . $small[0] . ', (default)], [' . $small[0] . ', (small)], [' . $medium[0] . ', (medium)], [' . $large[0] . ', (large)]" itemprop="thumbnailUrl">';
+			echo '<img src="' . $small[0] . '" data-interchange="[' . $small[0] . ', (default)], [' . $medium[0] . ', (small)], [' . $medium[0] . ', (medium)], [' . $large[0] . ', (large)]" itemprop="thumbnailUrl">';
 			
-			echo '</a></li></ul></div>';
+			//echo '</a></li></ul></div>';
 			
 		} //end function soblossom_featured_image()
 	
