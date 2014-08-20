@@ -18,11 +18,11 @@ soblossom also comes with a footer navigation menu and a social media menu which
 
 ### Featured Images
 
-All Featured Images, for example those on a Single Post, come with the builtin [Foundation Clearing Thumbs]((http://foundation.zurb.com/docs/components/clearing.html)) (lightbox effect). Also builtin is [Foundation Interchange](http://foundation.zurb.com/docs/components/interchange.html). The main advantage of this is that the image shown (AND loaded) is different per device: thumbs for small devices, medium sized images for tablets and laptops and the large image for everything wider than 1280px. You can customise the code by adding your own image sizes and call those instead. The function that deals with this is the `soblossom_featured_image()` function on lines 278-313 of `inc/soblossom.php`.
+All Featured Images, for example those on a Single Post, come with the builtin [Foundation Interchange](http://foundation.zurb.com/docs/components/interchange.html). The main advantage of this is that the image shown (AND loaded) is different per device: medium sized for small devices, tablets and laptops and the large image for everything wider than 1280px. You can customise the code by adding your own image sizes and call those instead. The function that deals with this is the `soblossom_featured_image()` function on lines 278-313 of `inc/soblossom.php`.
 
 ### Gallery Shortcode
 
-For the soblossom theme we have completely overhauled the default WordPress Gallery shortcode. You won't find any inline styling either. We have replaced the functionality with [Foundation Blockgrid](http://foundation.zurb.com/docs/components/block_grid.html) **and** clearing lightbox so you won't need an additional plugin for that either.
+For the soblossom theme we have completely overhauled the default WordPress Gallery shortcode. You won't find any inline styling either. We have replaced the functionality with [Foundation Blockgrid](http://foundation.zurb.com/docs/components/block_grid.html) **and** [Foundation Clearing Thumbs]((http://foundation.zurb.com/docs/components/clearing.html), which shows the images with a cool lightbox effect, so you won't need an additional plugin for that either.
 By default the blockgrid shows `small-block-grid-2 medium-block-grid-3 large-block-grid-4`, which means that on small devices (up to 640px wide) it shows 2 thumbs; on medium devices (640-1024px wide) it shows 3 thumbs and on large devices (anything over 1024px) it will show 4 thumbs. Clicking on a thumb will show the Foundation Clearing effect.
 If you want to adjust anything, you can do so in `inc/classes/gallery.php` and the `scss/_gallery.scss` files.
 
