@@ -188,6 +188,11 @@ POSTS & CONTENT STYLES
     padding-top: 2rem;
 }
 
+.archive article {
+    border-bottom: 1px solid rgba(136, 136, 136, 0.2); //#888
+    padding: 1rem 0;
+}
+
 .single-title,
 .page-title {}
 
@@ -471,64 +476,27 @@ COMMENT STYLES
 	.thread-odd {}
 	.thread-even {}
 
-	/* vcard */
-	.vcard {
-		margin: 0;
-
-		cite.fn {
-
-			a.url {}
-
+	/* comment-header */
+	.comment-header {
+		
+		.avatar {
+		    float: left;
+		    margin-right: 5%;
 		}
-
+		cite .fa {
+			color: #888;
+		}
 		time {
-			float: right;
-
-			a {
-				color: #999;
-				text-decoration: none;
-
-				&:hover {
-					text-decoration: underline;
-				}
-
-			}
-
+		    color: #888;
+		    font-size: 0.75rem;
+		    font-style: italic;
 		}
-
-		img.photo {}
-
-		img.avatar {
-			position: absolute;
-			left: 10px;
-			padding: 2px;
-			border: 1px solid #cecece;
-			background: #fff;
-		}
-
-	} /* end .commentlist .vcard */
-
-
-	/* comment meta */
-	.comment-meta {
-
-		a {}
-
-	}
-
-	.commentmetadata {
-
-		a {}
-
 	}
 
 	/* comment content */
 	.comment_content {
-
+		margin-top: 0.75rem;
 		p {
-			margin: 0.7335em 0 1.5em;
-			font-size: 1em;
-			line-height: 1.5em;
 		}
 
 	} /* end .commentlist .comment_content */
@@ -552,16 +520,16 @@ COMMENT FORM STYLES
 ******************************************************************/
 
 .respond-form {
-	margin: 1.5em 10px;
-	padding-bottom: 2.2em;
+	margin: 1.5rem .625rem;
+	padding-bottom: 2.2rem;
 
 	form {
-		margin: 0.75em 0;
+		margin: 0.75rem 0;
 
 		li {
 			list-style-type: none;
 			clear: both;
-			margin-bottom: 0.7335em;
+			margin-bottom: 0.7335rem;
 
 			label,
 			small {
@@ -573,10 +541,10 @@ COMMENT FORM STYLES
 		input[type=email],
 		input[type=url],
 		textarea {
-			padding: 3px 6px;
+			padding: rem-calc(3) rem-calc(6);
 			background: #efefef;
-			border: 2px solid #cecece;
-			line-height: 1.5em;
+			border: rem-calc(2) solid #cecece;
+			line-height: 1.5;
 
 			&:focus {
 				background: #fff;
@@ -597,14 +565,14 @@ COMMENT FORM STYLES
 		input[type=text],
 		input[type=email],
 		input[type=url] {
-			max-width: 400px;
-			min-width: 250px;
+			max-width: 25rem;
+			min-width: 15.625rem;
 		}
 
 		textarea {
 			resize: none;
 			width: 97.3%;
-			height: 150px;
+			height: 9.375rem;
 		}
 
 	}
@@ -615,7 +583,7 @@ COMMENT FORM STYLES
 
 	/* comment form title */
 	#comment-form-title {
-		margin: 0 0 1.1em;
+		margin: 0 0 1.1rem;
 	}
 
 	/* cancel comment reply link */
@@ -628,12 +596,12 @@ COMMENT FORM STYLES
 
 	/* allowed tags */
 	#allowed_tags {
-		margin: 1.5em 10px 0.7335em 0;
+		margin: 1.5rem rem-calc(10) 0.7335rem 0;
 	}
 
 	/* no comments */
 	.nocomments {
-		margin: 0 20px 1.1em;
+		margin: 0 rem-calc(20) 1.1rem;
 	}
 
 /*********************

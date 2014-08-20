@@ -512,26 +512,29 @@ function soblossom_supports_wp_features() {
 		    ?>
 		    <li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
 		        <article id="comment-<?php comment_ID(); ?>" class="comment">
-		            <footer>
-		                <div class="comment-author vcard">
-		                    <?php echo get_avatar( $comment, 40 ); ?>
-		                    <?php printf( __( '%s <span class="says">says:</span>', 'soblossom' ), sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?>
-		                </div><!-- .comment-author .vcard -->
+
+		            <header class="comment-header comment-meta commentmetadata clearfix">
+	                    <?php echo get_avatar( $comment, 45 ); ?>
+	                    <cite class="fn"><i class="fa fa-user"></i> <?php echo get_comment_author_link(); ?></cite>
+	                    <br />
 		                <?php if ( $comment->comment_approved == '0' ) : ?>
 		                    <em><?php _e( 'Your comment is awaiting moderation.', 'soblossom' ); ?></em>
-		                    <br />
 		                <?php endif; ?>
-		 
-		                <div class="comment-meta commentmetadata">
-		                    <a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>"><time pubdate datetime="<?php comment_time( 'c' ); ?>">
-		                    <?php
-		                        /* translators: 1: date, 2: time */
-		                        printf( __( '%1$s at %2$s', 'soblossom' ), get_comment_date(), get_comment_time() ); ?>
-		                    </time></a>
-		                    <?php edit_comment_link( __( '(Edit)', 'soblossom' ), ' ' );
-		                    ?>
-		                </div><!-- .comment-meta .commentmetadata -->
-		            </footer>
+								 
+						<time pubdate datetime="<?php comment_time( 'c' ); ?>">
+							<?php
+								/* translators: 1: date, 2: time */
+								printf( __( '%1$s at %2$s', 'soblossom' ), get_comment_date(), get_comment_time() );
+							?>
+						</time>
+
+						<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>" title="<?php _e( 'Link to this comment.', 'soblossom' ); ?>">
+							<i class="fa fa-link"></i>
+						</a>						
+	                    
+						<?php edit_comment_link( __( '(Edit)', 'soblossom' ), ' ' ); ?>
+		            
+		            </header>
 		 
 		            <div class="comment-content"><?php comment_text(); ?></div>
 		 
