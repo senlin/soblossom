@@ -1,10 +1,10 @@
-SOBLOSSOM
+soblossom WordPress theme
 =========
 
 ###### Last updated on 2014.8.19
 ###### Author: [Piet Bos](https://github.com/senlin)
 
-soblossom is a starter framework that is based on [Foundation](http://foundation.zurb.com) (5.3.3 at time of writing) on the frontend and [Underscores sass](http://underscores.me) on the backend. 
+soblossom is a WordPress starter framework that is based on [Foundation](http://foundation.zurb.com) (5.3.3 at time of writing) on the frontend and [Underscores sass](http://underscores.me) on the backend. 
 
 We first started developing soblossom in 2013 under a few different names (with Foundation 3 and 4). Then when Foundation 5 was released, instead of updating the lot, we started over and in August 2014 we went through another of those quite extreme makeovers/reorganisations...
 
@@ -41,10 +41,10 @@ The purpose of this file is to add your own functions and filters to the theme a
 
 The soblossom theme comes optimised for the following plugins:
 
-* [Gravity Forms](http://senl.in/gRaVitY) - turn off the CSS output of the plugin to fully enjoy the Foundation Forms styling
+* [Gravity Forms](http://senl.in/gRaVitY) (aff.link) - turn off the CSS output of the plugin to fully enjoy the Foundation Forms styling
 * [Meta Box](http://wordpress.org/plugins/meta-box/) - the `inc/functions/cmb.php` file has been generated with the [demo code](github.com/rilwis/meta-box/blob/master/demo/demo.php) of this plugin.
 * [WordPress SEO](http://wordpress.org/plugins/wordpress-seo/) - title tags in the head section, breadcrumb code already added, admin columns removed via filter in `inc/functions/dashboard-functions.php`
-* [WPML](http://senl.in/WPMLorg) - language code is added to the body class if WPML is active (filter in `inc/soblossom.php`)
+* [WPML](http://senl.in/WPMLorg) (aff.link) - language code is added to the body class if WPML is active (filter in `inc/soblossom.php`)
 
 ## Credits
 
