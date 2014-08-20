@@ -417,11 +417,21 @@ COMMENT STYLES
 		&:last-child {
 			margin-bottom: 0;
 		}
+		
+		&.bypostauthor {
+		    background-color: #e6f7fd; // tried lighten($primary-color, 50%), but not light enough
+		}
 
 		ul.children {
 			margin: 0;
 
-			li {}
+			li {
+				
+				&.bypostauthor {
+				    background-color: #e6f7fd;
+				}
+
+			}
 
 			/* variations */
 			.comment {}

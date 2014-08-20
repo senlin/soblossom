@@ -8823,51 +8823,59 @@ COMMENT STYLES
   margin-bottom: 0;
 }
 /* line 421, ../scss/_small.scss */
+.commentlist li.bypostauthor {
+  background-color: #e6f7fd;
+}
+/* line 425, ../scss/_small.scss */
 .commentlist li ul.children {
   margin: 0;
   /* variations */
   /* change number for different depth */
 }
-/* line 439, ../scss/_small.scss */
+/* line 430, ../scss/_small.scss */
+.commentlist li ul.children li.bypostauthor {
+  background-color: #e6f7fd;
+}
+/* line 449, ../scss/_small.scss */
 .commentlist li[class*=depth-] {
   margin-top: 1.1em;
 }
-/* line 443, ../scss/_small.scss */
+/* line 453, ../scss/_small.scss */
 .commentlist li.depth-1 {
   margin-left: 0;
   margin-top: 0;
 }
-/* line 448, ../scss/_small.scss */
+/* line 458, ../scss/_small.scss */
 .commentlist li:not(.depth-1) {
   margin-left: 10px;
   margin-top: 0;
   padding-bottom: 0;
   background: #e7e7e7;
 }
-/* line 456, ../scss/_small.scss */
+/* line 466, ../scss/_small.scss */
 .commentlist li.depth-3 {
   background: #dadada;
 }
-/* line 482, ../scss/_small.scss */
+/* line 492, ../scss/_small.scss */
 .commentlist .comment-header .avatar {
   float: left;
   margin-right: 5%;
 }
-/* line 486, ../scss/_small.scss */
+/* line 496, ../scss/_small.scss */
 .commentlist .comment-header cite .fa {
   color: #888;
 }
-/* line 489, ../scss/_small.scss */
+/* line 499, ../scss/_small.scss */
 .commentlist .comment-header time {
   color: #888;
   font-size: 0.75rem;
   font-style: italic;
 }
-/* line 497, ../scss/_small.scss */
+/* line 507, ../scss/_small.scss */
 .commentlist .comment_content {
   margin-top: 0.75rem;
 }
-/* line 505, ../scss/_small.scss */
+/* line 515, ../scss/_small.scss */
 .commentlist .comment-reply-link {
   border-style: solid;
   border-width: 0px;
@@ -8909,27 +8917,27 @@ COMMENT STYLES
 /******************************************************************
 COMMENT FORM STYLES
 ******************************************************************/
-/* line 522, ../scss/_small.scss */
+/* line 532, ../scss/_small.scss */
 .respond-form {
   margin: 1.5rem .625rem;
   padding-bottom: 2.2rem;
 }
-/* line 526, ../scss/_small.scss */
+/* line 536, ../scss/_small.scss */
 .respond-form form {
   margin: 0.75rem 0;
 }
-/* line 529, ../scss/_small.scss */
+/* line 539, ../scss/_small.scss */
 .respond-form form li {
   list-style-type: none;
   clear: both;
   margin-bottom: 0.7335rem;
 }
-/* line 535, ../scss/_small.scss */
+/* line 545, ../scss/_small.scss */
 .respond-form form li label,
 .respond-form form li small {
   display: none;
 }
-/* line 543, ../scss/_small.scss */
+/* line 553, ../scss/_small.scss */
 .respond-form form input[type=text],
 .respond-form form input[type=email],
 .respond-form form input[type=url],
@@ -8940,14 +8948,14 @@ COMMENT FORM STYLES
   line-height: 1.5;
   /* form validation */
 }
-/* line 549, ../scss/_small.scss */
+/* line 559, ../scss/_small.scss */
 .respond-form form input[type=text]:focus,
 .respond-form form input[type=email]:focus,
 .respond-form form input[type=url]:focus,
 .respond-form form textarea:focus {
   background: #fff;
 }
-/* line 554, ../scss/_small.scss */
+/* line 564, ../scss/_small.scss */
 .respond-form form input[type=text]:invalid,
 .respond-form form input[type=email]:invalid,
 .respond-form form input[type=url]:invalid,
@@ -8960,14 +8968,14 @@ COMMENT FORM STYLES
   -ms-box-shadow: none;
   box-shadow: none;
 }
-/* line 567, ../scss/_small.scss */
+/* line 577, ../scss/_small.scss */
 .respond-form form input[type=text],
 .respond-form form input[type=email],
 .respond-form form input[type=url] {
   max-width: 25rem;
   min-width: 15.625rem;
 }
-/* line 572, ../scss/_small.scss */
+/* line 582, ../scss/_small.scss */
 .respond-form form textarea {
   resize: none;
   width: 97.3%;
@@ -8976,7 +8984,7 @@ COMMENT FORM STYLES
 
 /* comment submit button */
 /* comment form title */
-/* line 585, ../scss/_small.scss */
+/* line 595, ../scss/_small.scss */
 #comment-form-title {
   margin: 0 0 1.1rem;
 }
@@ -8984,13 +8992,13 @@ COMMENT FORM STYLES
 /* cancel comment reply link */
 /* logged in comments */
 /* allowed tags */
-/* line 598, ../scss/_small.scss */
+/* line 608, ../scss/_small.scss */
 #allowed_tags {
   margin: 1.5rem 0.625rem 0.7335rem 0;
 }
 
 /* no comments */
-/* line 603, ../scss/_small.scss */
+/* line 613, ../scss/_small.scss */
 .nocomments {
   margin: 0 1.25rem 1.1rem;
 }
@@ -8998,17 +9006,17 @@ COMMENT FORM STYLES
 /*********************
 SIDEBARS & ASIDES
 *********************/
-/* line 621, ../scss/_small.scss */
+/* line 631, ../scss/_small.scss */
 .widget ul {
   margin: 0;
 }
-/* line 624, ../scss/_small.scss */
+/* line 634, ../scss/_small.scss */
 .widget ul li {
   list-style: none;
   /* deep nesting */
 }
 
-/* line 643, ../scss/_small.scss */
+/* line 653, ../scss/_small.scss */
 #sidebar-offcanvas .widgettitle {
   color: #fff;
 }
@@ -9016,17 +9024,17 @@ SIDEBARS & ASIDES
 /*--------------------------------------------------------------
 Search Form Widget
 --------------------------------------------------------------*/
-/* line 651, ../scss/_small.scss */
+/* line 661, ../scss/_small.scss */
 .widget_search > form {
   position: relative;
 }
 
-/* line 654, ../scss/_small.scss */
+/* line 664, ../scss/_small.scss */
 #searchform > input#s {
   float: left;
 }
 
-/* line 657, ../scss/_small.scss */
+/* line 667, ../scss/_small.scss */
 .search-icon {
   background: none;
   border: 0 none;
@@ -9039,7 +9047,7 @@ Search Form Widget
 /*********************
 FOOTER STYLES
 *********************/
-/* line 670, ../scss/_small.scss */
+/* line 680, ../scss/_small.scss */
 .footer {
   clear: both;
   margin-top: 1em;
@@ -9058,7 +9066,7 @@ view.
 /*********************
 FOUNDATION STYLES
 *********************/
-/* line 700, ../scss/_small.scss */
+/* line 710, ../scss/_small.scss */
 .clearing-assembled.clearing-blackout a:hover {
   background: none;
 }
@@ -9066,7 +9074,7 @@ FOUNDATION STYLES
 /*********************
 PLUGIN STYLES
 *********************/
-/* line 708, ../scss/_small.scss */
+/* line 718, ../scss/_small.scss */
 .gform_body ul {
   list-style: none outside none;
   margin: 0;

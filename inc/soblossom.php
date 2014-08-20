@@ -514,7 +514,7 @@ function soblossom_supports_wp_features() {
 		        <article id="comment-<?php comment_ID(); ?>" class="comment">
 
 		            <header class="comment-header comment-meta commentmetadata clearfix">
-	                    <?php echo get_avatar( $comment, 45 ); ?>
+	                    <?php echo get_avatar( $comment, 60 ); ?>
 	                    <cite class="fn"><i class="fa fa-user"></i> <?php echo get_comment_author_link(); ?></cite>
 	                    <br />
 		                <?php if ( $comment->comment_approved == '0' ) : ?>
