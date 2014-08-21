@@ -27,6 +27,10 @@ get_header(); ?>
 	
 						<div class="banded-thumb large-4 columns">
 							<?php
+								/**
+								 * this is also an excellent place to use the aqua resizer script
+								 * more info at inc/classes/aq_resizer.php
+								 */
 								the_post_thumbnail( array( 400, 300 ) );
 							?>
 						</div> <!-- end .banded-thumb -->
@@ -78,7 +82,7 @@ get_header(); ?>
 					
 							<?php the_title( '<h3 class="banded-secondary-title">', '</h3>' ); ?>
 					
-							<p><?php the_excerpt(); ?></p>
+							<?php the_excerpt(); ?>
 							
 							<a class="button small right" href="<?php echo esc_url( get_the_permalink() ); ?>" title="<?php _e( 'Find out more', 'soblossom' ); ?>">
 								<?php _e( 'Find out more', 'soblossom' ); ?>
@@ -88,6 +92,10 @@ get_header(); ?>
 												
 						<div class="banded-secondary-thumb large-4 columns">
 							<?php
+								/**
+								 * this is also an excellent place to use the aqua resizer script
+								 * more info at inc/classes/aq_resizer.php
+								 */
 								the_post_thumbnail( array( 400, 300 ) );
 							?>
 						</div> <!-- end .banded-secondary-thumb -->
