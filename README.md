@@ -58,7 +58,7 @@ Nowadays there are plenty of WordPress themes built on Foundation and we have lo
 
 ## Donations
 
-* Donate link: http://so-wp.com/donations
+* Donate link: [http://so-wp.com/donations](http://so-wp.com/donations)
 
 ## Connect with me through
 
