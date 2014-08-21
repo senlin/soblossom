@@ -134,7 +134,7 @@ function soblossom_top_nav() {
     	'container' => false,
     	'container_class' => '',
     	'menu' => __( 'Top Navigation', 'soblossom' ),
-    	'menu_class' => '',
+    	'menu_class' => 'right',
     	'theme_location' => 'topnav',
     	'before' => '',
         'after' => '',
