@@ -167,7 +167,7 @@ function soblossom_footer_nav() {
     	'container' => false,
     	'container_class' => '',
     	'menu' => __( 'Footer Links', 'soblossom' ),
-    	'menu_class' => 'footer-nav',
+    	'menu_class' => 'footer-nav inline-list right',
     	'theme_location' => 'footer',
     	'before' => '',
         'after' => '',

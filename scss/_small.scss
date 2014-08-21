@@ -185,6 +185,10 @@ NAVIGATION STYLES
     }
 }
 
+.inline-list > li:first-child {
+    margin-left: 0;
+}
+
 /*********************
 POSTS & CONTENT STYLES
 *********************/
