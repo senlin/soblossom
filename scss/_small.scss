@@ -334,6 +334,14 @@ POSTS & CONTENT STYLES
 
 } /* end .entry-content */
 
+.error-404.not-found {
+	form {
+		.search-icon {
+			right: 4%;
+		}
+	}
+}
+
 .wp-caption {
 	max-width: 100%;
 	background: #eee;
