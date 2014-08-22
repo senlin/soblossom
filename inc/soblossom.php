@@ -106,9 +106,6 @@ function soblossom_supports_wp_features() {
 	);
 	*/
 	
-	// Enable Page Excerpts
-	add_post_type_support( 'page', 'excerpt' );
-	
 } // end function soblossom_supports_wp_features()
 
 
