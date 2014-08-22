@@ -79,14 +79,18 @@ get_header(); ?>
 					<article id="post-<?php the_ID(); ?>" <?php post_class( 'banded-secondary row' ); ?>>
 						
 						<section class="entry-content large-8 columns">
+						
+							<div class="panel">
 					
-							<?php the_title( '<h3 class="banded-secondary-title">', '</h3>' ); ?>
-					
-							<?php the_excerpt(); ?>
+								<?php the_title( '<h3 class="banded-secondary-title">', '</h3>' ); ?>
+						
+								<?php the_excerpt(); ?>
+								
+								<a class="button small right" href="<?php echo esc_url( get_the_permalink() ); ?>" title="<?php _e( 'Find out more', 'soblossom' ); ?>">
+									<?php _e( 'Find out more', 'soblossom' ); ?>
+								</a>
 							
-							<a class="button small right" href="<?php echo esc_url( get_the_permalink() ); ?>" title="<?php _e( 'Find out more', 'soblossom' ); ?>">
-								<?php _e( 'Find out more', 'soblossom' ); ?>
-							</a>
+							</div> <!-- end .panel -->
 					
 						</section><!-- .entry-content -->
 												
