@@ -4,8 +4,8 @@ Theme Name: soblossom
 Theme URI: http://so-wp.com/themes/soblossom/
 Author: Piet Bos
 Author URI: http://senlinonline.com/
-Description: soblossom is a starter framework that is based on [Foundation](http://foundation.zurb.com) (5.3.3 at time of writing) on the frontend and [Underscores.me](http://underscores.me) on the backend.
-Version: 140817
+Description: soblossom is a starter theme that is based on [Foundation](http://foundation.zurb.com) (5.3.3 at time of writing) on the frontend and [Underscores.me](http://underscores.me) on the backend.
+Version: 140822
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: soblossom
@@ -9203,7 +9203,7 @@ PLUGIN STYLES
 }
 
 /**
- * If you adjust the media quesries in the _settings.scss (lines 80-85),
+ * If you adjust the media queries in the _settings.scss (lines 80-85),
  * then change theme here too (and vice versa)
  */
 @media only screen and (min-width: 40.0625em) {
