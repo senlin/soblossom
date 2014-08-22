@@ -43,6 +43,8 @@ The purpose of this file is to add your own functions and filters to the theme a
 
 Apart from the default ones soblossom comes with 4 additional page templates. One is the full width template. Two are based on [Foundation templates](http://foundation.zurb.com/templates.html), Banded and Workspace. There is also a sample template which you can use to build a new template from/on.
 
+The [homepage of the demo site](http://so-wp.com/themes/soblossom/) uses the banded template, so you can have a look and decide whether you can use that on your own site(s) too.
+
 In the `templates` folder you can find these 4 page templates.
 
 ### Plugins
