@@ -1,7 +1,7 @@
 soblossom WordPress theme
 =========
 
-###### Last updated on 2014.8.20
+###### Last updated on 2014.8.22
 ###### [DEMO SITE](http://so-wp.com/themes/soblossom/)
 ###### Author: [Piet Bos](https://github.com/senlin)
 
@@ -78,6 +78,11 @@ Nowadays there are plenty of WordPress themes built on Foundation and we have lo
 [Website](http://senlinonline.com)
 
 ## Changelog
+
+### 140822
+
+* update readme.md
+* add page templates banded and workspace
 
 ### 140820
 
