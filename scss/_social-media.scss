@@ -9,7 +9,6 @@ Adjust where necessary
 
 ******************************************************************/
 .social-media {
-    margin-top: 4rem;
 
 	.social-links {
 	    float: right;
@@ -114,3 +113,11 @@ Adjust where necessary
 	    }
 	}
 }
+
+@media only screen and (min-width: 40.0625em) { // 641px medium up
+
+	// Import medium styles
+	.social-media {
+		margin-top: 4rem;
+	}
+} // end of media query

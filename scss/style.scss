@@ -64,9 +64,7 @@ This theme, is licensed under the GPL.
 } // end of media query
 
 // Import Print stylesheet
-@media print {
-	@import "print";
-}
+@import "print";
 
 // if RTL language, then import RTL styles
 // @import "rtl";
