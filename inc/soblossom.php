@@ -147,18 +147,6 @@ function soblossom_supports_wp_features() {
 		
 	}
 
-	/**
-	 * Remove Query strings from Static Resources (get rid of the ? in the script/style URLs.
-	 * @source: digitalskydesign.com/how-to-remove-query-strings-from-static-resources-in-wordpress/
-	 */
-	function soblossom_remove_script_version( $src ) {
-	    $parts = explode( '?', $src );
-	    return $parts[0];
-	}
-	add_filter( 'script_loader_src', 'soblossom_remove_script_version', 15, 1 );
-	add_filter( 'style_loader_src', 'soblossom_remove_script_version', 15, 1 );
-	
-	
 /**
  * WP_HEAD CLEANUP
  * all cleaning related functions
