@@ -1,11 +1,11 @@
 soblossom WordPress theme
 =========
 
-###### Last updated on 2014.8.22
+###### Last updated on 2014.8.25
 ###### [DEMO SITE](http://so-wp.com/themes/soblossom/)
 ###### Author: [Piet Bos](https://github.com/senlin)
 
-soblossom is a WordPress starter theme that is based on [Foundation](http://foundation.zurb.com) (5.3.3 at time of writing) on the frontend and [Underscores sass](http://underscores.me) on the backend. 
+soblossom is a WordPress starter theme that is based on [Foundation](http://foundation.zurb.com) (5.4.0 at time of writing) on the frontend and [Underscores sass](http://underscores.me) on the backend. 
 
 We first started developing soblossom in 2013 under a few different names (with Foundation 3 and 4). Then when Foundation 5 was released, instead of updating the lot, we started over and in August 2014 we went through another of those quite extreme makeovers/reorganisations...
 
@@ -41,7 +41,7 @@ The purpose of this file is to add your own functions and filters to the theme a
 
 ### Page Templates
 
-Apart from the default ones soblossom comes with 4 additional page templates. One is the full width template. Two are based on [Foundation templates](http://foundation.zurb.com/templates.html), Banded and Workspace. There is also a sample template which you can use to build a new template from/on.
+Apart from the default ones, soblossom comes with 4 additional page templates. One is the full width template. Two are based on [Foundation templates](http://foundation.zurb.com/templates.html), Banded and Workspace. There is also a sample template which you can use to build a new template from/on.
 
 The [homepage of the demo site](http://so-wp.com/themes/soblossom/) uses the banded template, so you can have a look and decide whether you can use that on your own site(s) too.
 
@@ -80,6 +80,13 @@ Nowadays there are plenty of WordPress themes built on Foundation and we have lo
 [Website](http://senlinonline.com)
 
 ## Changelog
+
+### 140825
+
+* update to Foundation 5.4.0
+* remove function "Remove Query strings from Static Resources" as number of caching plugins already have that builtin
+* rewrite inclusion print stylesheet
+* add #link to off-canvas-toggle to enable for iOS
 
 ### 140822
 
