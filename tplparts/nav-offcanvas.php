@@ -51,7 +51,7 @@
 			</section>
 
 			<section class="left-small">
-				<a class="left-off-canvas-toggle menu-icon" ><span></span></a>
+				<a class="left-off-canvas-toggle menu-icon" href="#"><span></span></a>
 			</section>
 
 		</nav> <!-- end .tab-bar -->
