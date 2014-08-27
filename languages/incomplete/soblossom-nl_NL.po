@@ -2,10 +2,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: soblossom\n"
 "POT-Creation-Date: 2014-08-26 12:59+0800\n"
-"PO-Revision-Date: 2014-08-26 13:03+0800\n"
+"PO-Revision-Date: 2014-08-26 13:11+0800\n"
 "Last-Translator: Piet Bos <piet@senlinonline.com>\n"
 "Language-Team: Piet Bos <piet@senlinonline.com>\n"
-"Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -16,6 +15,7 @@ msgstr ""
 "esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
 "_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: nl_NL\n"
 "X-Poedit-SearchPath-0: .\n"
 
 #: 404.php:19
@@ -30,41 +30,41 @@ msgstr ""
 
 #: 404.php:34
 msgid "Pages"
-msgstr ""
+msgstr "Pagina's"
 
 #: archive.php:30
 #, php-format
 msgid "Author: %s"
-msgstr ""
+msgstr "Auteur: %s"
 
 #: archive.php:33
 #, php-format
 msgid "Day: %s"
-msgstr ""
+msgstr "Dag: %s"
 
 #: archive.php:36
 #, php-format
 msgid "Month: %s"
-msgstr ""
+msgstr "Maand: %s"
 
 #: archive.php:36
 msgctxt "monthly archives date format"
 msgid "F Y"
-msgstr ""
+msgstr "F Y"
 
 #: archive.php:39
 #, php-format
 msgid "Year: %s"
-msgstr ""
+msgstr "Jaar: %s"
 
 #: archive.php:39
 msgctxt "yearly archives date format"
 msgid "Y"
-msgstr ""
+msgstr "Y"
 
 #: archive.php:42
 msgid "Archives"
-msgstr ""
+msgstr "Archieven"
 
 #: comments.php:32
 #, php-format
@@ -98,11 +98,11 @@ msgstr ""
 
 #: functions.php:136
 msgid "Top Navigation"
-msgstr ""
+msgstr "Top Navigatie"
 
 #: functions.php:152
 msgid "Social Media"
-msgstr ""
+msgstr "Sociale Media"
 
 #: functions.php:169
 msgid "Footer Links"
@@ -543,12 +543,12 @@ msgstr ""
 
 #: inc/soblossom.php:613 tplparts/nav-offcanvas.php:22
 msgid "Home"
-msgstr ""
+msgstr "Home"
 
 #: search.php:19
 #, php-format
 msgid "Search Results for: %s"
-msgstr ""
+msgstr "Zoek Resultaten voor: %s"
 
 #: sidebar.php:16
 msgid ""
@@ -570,7 +570,7 @@ msgstr ""
 
 #: templates/workspace.php:128
 msgid "More Information"
-msgstr ""
+msgstr "Meer Informatie"
 
 #: templates/workspace.php:133
 msgid "Download Brochure"
@@ -590,11 +590,11 @@ msgstr ""
 
 #: templates/workspace.php:157
 msgid "Contact Us"
-msgstr ""
+msgstr "Neem contact met ons op"
 
 #: tplparts/content-none.php:14
 msgid "Nothing Found"
-msgstr ""
+msgstr "Niets Gevonden"
 
 #: tplparts/content-none.php:21
 #, php-format
@@ -617,11 +617,11 @@ msgstr ""
 #: tplparts/content-page.php:25 tplparts/content-single.php:33
 #: tplparts/content.php:27
 msgid "Pages:"
-msgstr ""
+msgstr "Pagina's:"
 
 #: tplparts/content-page.php:32 tplparts/content-single.php:44
 msgid "Edit"
-msgstr ""
+msgstr "Bewerk"
 
 #: tplparts/content.php:24
 msgid "Continue reading <i class=\"fa fa-long-arrow-right\"></i>"
@@ -633,4 +633,4 @@ msgstr ""
 
 #: tplparts/nav-offcanvas.php:68
 msgid "Navigation"
-msgstr ""
+msgstr "Navigatie"
