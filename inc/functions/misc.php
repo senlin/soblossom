@@ -27,7 +27,24 @@ add_post_type_support( 'page', 'excerpt' );
 // Enable shortcode in text widgets
 add_filter( 'widget_text', 'do_shortcode' );
 
+/**
+ * Snippet taken from Remove Widget Titles plugin by Stephen Cronin
+ * (because I think it is nonsense to install a plugin for a simple function like this)
+ * 
+ * Removes the title from any widget that has a title starting with the "!" character.
+ *
+ * @source: wordpress.org/plugins/remove-widget-titles/
+ */
+ 
+// Add the filter and function, returning the widget title only if the first character is not "!"
+add_filter( 'widget_title', 'soblossom_remove_widget_title' );
 
+function soblossom_remove_widget_title( $widget_title ) {
+	if ( substr ( $widget_title, 0, 1 ) == '!' )
+		return;
+	else 
+		return ( $widget_title );
+}
 
 /**
  * Sets the authordata global when viewing an author archive.
