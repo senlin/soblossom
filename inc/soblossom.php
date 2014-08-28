@@ -119,7 +119,7 @@ function soblossom_supports_wp_features() {
 	 * @link: fontawesome.io/get-started/
 	 */
 	function soblossom_fontawesome_url() {
-		$fontawesome_url = '//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css';
+		$fontawesome_url = '//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css';
 	
 		return $fontawesome_url;
 	}
