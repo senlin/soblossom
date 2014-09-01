@@ -1,7 +1,7 @@
 soblossom WordPress theme
 =========
 
-###### Last updated on 2014.8.25
+###### Last updated on 2014.9.1
 ###### [DEMO SITE](http://so-wp.com/themes/soblossom/)
 ###### Author: [Piet Bos](https://github.com/senlin)
 
