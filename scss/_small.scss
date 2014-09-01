@@ -299,7 +299,6 @@ POSTS & CONTENT STYLES
 	img {
 		max-width: 100%;
 		height: auto;
-		display: block;
 		}
 
 		/*
@@ -393,6 +392,11 @@ PAGE TEMPLATES STYLES
 .banded-secondary .panel {
 	overflow-y: auto;
 }
+// override global scss img: inline-block for workspace page template
+.page-template-templatesworkspace-php ul > li > img {
+	display: block;
+}
+
 
 /******************************************************************
 PAGE NAVI STYLES

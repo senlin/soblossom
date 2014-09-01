@@ -9315,50 +9315,49 @@ POSTS & CONTENT STYLES
 .entry-content img {
   max-width: 100%;
   height: auto;
-  display: block;
 }
-/* line 315, ../scss/_small.scss */
+/* line 314, ../scss/_small.scss */
 .entry-content video, .entry-content object {
   max-width: 100%;
   height: auto;
 }
-/* line 320, ../scss/_small.scss */
+/* line 319, ../scss/_small.scss */
 .entry-content pre {
   background: #eee;
   border: 1px solid #cecece;
   overflow: auto;
   padding: 10px;
 }
-/* line 327, ../scss/_small.scss */
+/* line 326, ../scss/_small.scss */
 .entry-content form {
   display: block;
   min-height: 2.5rem;
 }
-/* line 331, ../scss/_small.scss */
+/* line 330, ../scss/_small.scss */
 .entry-content form .search-icon {
   right: 4%;
 }
 
 /* end .entry-content */
-/* line 340, ../scss/_small.scss */
+/* line 339, ../scss/_small.scss */
 .error-404.not-found form .search-icon {
   right: 4%;
 }
 
-/* line 346, ../scss/_small.scss */
+/* line 345, ../scss/_small.scss */
 .wp-caption {
   max-width: 100%;
   background: #eee;
   padding: .25rem;
   /* images inside wp-caption */
 }
-/* line 352, ../scss/_small.scss */
+/* line 351, ../scss/_small.scss */
 .wp-caption img {
   max-width: 100%;
   margin-bottom: 0;
   width: 100%;
 }
-/* line 358, ../scss/_small.scss */
+/* line 357, ../scss/_small.scss */
 .wp-caption p.wp-caption-text {
   font-size: 0.85em;
   margin: .25rem 0 .5rem;
@@ -9372,15 +9371,20 @@ POSTS & CONTENT STYLES
 /*********************
 PAGE TEMPLATES STYLES
 *********************/
-/* line 393, ../scss/_small.scss */
+/* line 392, ../scss/_small.scss */
 .banded-secondary .panel {
   overflow-y: auto;
+}
+
+/* line 396, ../scss/_small.scss */
+.page-template-templatesworkspace-php ul > li > img {
+  display: block;
 }
 
 /******************************************************************
 PAGE NAVI STYLES
 ******************************************************************/
-/* line 402, ../scss/_small.scss */
+/* line 406, ../scss/_small.scss */
 .pagination a:hover {
   color: black;
 }
@@ -9388,7 +9392,7 @@ PAGE NAVI STYLES
 /******************************************************************
 COMMENT STYLES
 ******************************************************************/
-/* line 410, ../scss/_small.scss */
+/* line 414, ../scss/_small.scss */
 .vcard {
   border: 0 none;
   margin: 0;
@@ -9396,17 +9400,17 @@ COMMENT STYLES
 }
 
 /* h3 comment title */
-/* line 416, ../scss/_small.scss */
+/* line 420, ../scss/_small.scss */
 #comments {
   /* number of comments span */
 }
 
-/* line 424, ../scss/_small.scss */
+/* line 428, ../scss/_small.scss */
 #respond ul {
   margin-left: 0px;
 }
 
-/* line 439, ../scss/_small.scss */
+/* line 443, ../scss/_small.scss */
 .commentlist {
   /* general comment classes */
   /* comment-header */
@@ -9415,7 +9419,7 @@ COMMENT STYLES
   /* comment reply link */
   /* end .commentlist .comment-reply-link */
 }
-/* line 441, ../scss/_small.scss */
+/* line 445, ../scss/_small.scss */
 .commentlist li {
   position: relative;
   clear: both;
@@ -9425,64 +9429,64 @@ COMMENT STYLES
   padding: 0.7335em 10px;
   /* end .commentlist li ul.children */
 }
-/* line 449, ../scss/_small.scss */
+/* line 453, ../scss/_small.scss */
 .commentlist li:last-child {
   margin-bottom: 0;
 }
-/* line 453, ../scss/_small.scss */
+/* line 457, ../scss/_small.scss */
 .commentlist li.bypostauthor {
   background-color: #e6f7fd;
 }
-/* line 457, ../scss/_small.scss */
+/* line 461, ../scss/_small.scss */
 .commentlist li ul.children {
   margin: 0;
   /* variations */
   /* change number for different depth */
 }
-/* line 462, ../scss/_small.scss */
+/* line 466, ../scss/_small.scss */
 .commentlist li ul.children li.bypostauthor {
   background-color: #e6f7fd;
 }
-/* line 481, ../scss/_small.scss */
+/* line 485, ../scss/_small.scss */
 .commentlist li[class*=depth-] {
   margin-top: 1.1em;
 }
-/* line 485, ../scss/_small.scss */
+/* line 489, ../scss/_small.scss */
 .commentlist li.depth-1 {
   margin-left: 0;
   margin-top: 0;
 }
-/* line 490, ../scss/_small.scss */
+/* line 494, ../scss/_small.scss */
 .commentlist li:not(.depth-1) {
   margin-left: 10px;
   margin-top: 0;
   padding-bottom: 0;
   background: #e7e7e7;
 }
-/* line 498, ../scss/_small.scss */
+/* line 502, ../scss/_small.scss */
 .commentlist li.depth-3 {
   background: #dadada;
 }
-/* line 524, ../scss/_small.scss */
+/* line 528, ../scss/_small.scss */
 .commentlist .comment-header .avatar {
   float: left;
   margin-right: 5%;
 }
-/* line 528, ../scss/_small.scss */
+/* line 532, ../scss/_small.scss */
 .commentlist .comment-header cite .fa {
   color: #888;
 }
-/* line 531, ../scss/_small.scss */
+/* line 535, ../scss/_small.scss */
 .commentlist .comment-header time {
   color: #888;
   font-size: 0.75rem;
   font-style: italic;
 }
-/* line 539, ../scss/_small.scss */
+/* line 543, ../scss/_small.scss */
 .commentlist .comment_content {
   margin-top: 0.75rem;
 }
-/* line 547, ../scss/_small.scss */
+/* line 551, ../scss/_small.scss */
 .commentlist .comment-reply-link {
   border-style: solid;
   border-width: 0px;
@@ -9524,27 +9528,27 @@ COMMENT STYLES
 /******************************************************************
 COMMENT FORM STYLES
 ******************************************************************/
-/* line 564, ../scss/_small.scss */
+/* line 568, ../scss/_small.scss */
 .respond-form {
   margin: 1.5rem .625rem;
   padding-bottom: 2.2rem;
 }
-/* line 568, ../scss/_small.scss */
+/* line 572, ../scss/_small.scss */
 .respond-form form {
   margin: 0.75rem 0;
 }
-/* line 571, ../scss/_small.scss */
+/* line 575, ../scss/_small.scss */
 .respond-form form li {
   list-style-type: none;
   clear: both;
   margin-bottom: 0.7335rem;
 }
-/* line 577, ../scss/_small.scss */
+/* line 581, ../scss/_small.scss */
 .respond-form form li label,
 .respond-form form li small {
   display: none;
 }
-/* line 585, ../scss/_small.scss */
+/* line 589, ../scss/_small.scss */
 .respond-form form input[type=text],
 .respond-form form input[type=email],
 .respond-form form input[type=url],
@@ -9555,14 +9559,14 @@ COMMENT FORM STYLES
   line-height: 1.5;
   /* form validation */
 }
-/* line 591, ../scss/_small.scss */
+/* line 595, ../scss/_small.scss */
 .respond-form form input[type=text]:focus,
 .respond-form form input[type=email]:focus,
 .respond-form form input[type=url]:focus,
 .respond-form form textarea:focus {
   background: #fff;
 }
-/* line 596, ../scss/_small.scss */
+/* line 600, ../scss/_small.scss */
 .respond-form form input[type=text]:invalid,
 .respond-form form input[type=email]:invalid,
 .respond-form form input[type=url]:invalid,
@@ -9575,14 +9579,14 @@ COMMENT FORM STYLES
   -ms-box-shadow: none;
   box-shadow: none;
 }
-/* line 609, ../scss/_small.scss */
+/* line 613, ../scss/_small.scss */
 .respond-form form input[type=text],
 .respond-form form input[type=email],
 .respond-form form input[type=url] {
   max-width: 25rem;
   min-width: 15.625rem;
 }
-/* line 614, ../scss/_small.scss */
+/* line 618, ../scss/_small.scss */
 .respond-form form textarea {
   resize: none;
   width: 97.3%;
@@ -9591,7 +9595,7 @@ COMMENT FORM STYLES
 
 /* comment submit button */
 /* comment form title */
-/* line 627, ../scss/_small.scss */
+/* line 631, ../scss/_small.scss */
 #comment-form-title {
   margin: 0 0 1.1rem;
 }
@@ -9599,13 +9603,13 @@ COMMENT FORM STYLES
 /* cancel comment reply link */
 /* logged in comments */
 /* allowed tags */
-/* line 640, ../scss/_small.scss */
+/* line 644, ../scss/_small.scss */
 #allowed_tags {
   margin: 1.5rem 0.625rem 0.7335rem 0;
 }
 
 /* no comments */
-/* line 645, ../scss/_small.scss */
+/* line 649, ../scss/_small.scss */
 .nocomments {
   margin: 0 1.25rem 1.1rem;
 }
@@ -9613,17 +9617,17 @@ COMMENT FORM STYLES
 /*********************
 SIDEBARS & ASIDES
 *********************/
-/* line 663, ../scss/_small.scss */
+/* line 667, ../scss/_small.scss */
 .widget ul {
   margin: 0;
 }
-/* line 666, ../scss/_small.scss */
+/* line 670, ../scss/_small.scss */
 .widget ul li {
   list-style: none;
   /* deep nesting */
 }
 
-/* line 685, ../scss/_small.scss */
+/* line 689, ../scss/_small.scss */
 #sidebar-offcanvas .widgettitle {
   color: #fff;
 }
@@ -9631,17 +9635,17 @@ SIDEBARS & ASIDES
 /*--------------------------------------------------------------
 Search Form Widget
 --------------------------------------------------------------*/
-/* line 693, ../scss/_small.scss */
+/* line 697, ../scss/_small.scss */
 .widget_search > form {
   position: relative;
 }
 
-/* line 696, ../scss/_small.scss */
+/* line 700, ../scss/_small.scss */
 #searchform > input#s {
   float: left;
 }
 
-/* line 699, ../scss/_small.scss */
+/* line 703, ../scss/_small.scss */
 .search-icon {
   background: none;
   border: 0 none;
@@ -9654,7 +9658,7 @@ Search Form Widget
 /*********************
 FOOTER STYLES
 *********************/
-/* line 712, ../scss/_small.scss */
+/* line 716, ../scss/_small.scss */
 .footer {
   clear: both;
   margin-top: 1em;
@@ -9673,7 +9677,7 @@ view.
 /*********************
 FOUNDATION STYLES
 *********************/
-/* line 742, ../scss/_small.scss */
+/* line 746, ../scss/_small.scss */
 .clearing-assembled.clearing-blackout a:hover {
   background: none;
 }
@@ -9681,13 +9685,13 @@ FOUNDATION STYLES
 /*********************
 PLUGIN STYLES
 *********************/
-/* line 750, ../scss/_small.scss */
+/* line 754, ../scss/_small.scss */
 .gform_body ul {
   list-style: none outside none;
   margin: 0;
 }
 
-/* line 755, ../scss/_small.scss */
+/* line 759, ../scss/_small.scss */
 .breadcrumbs {
   margin-bottom: 1rem;
 }
