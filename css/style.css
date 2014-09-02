@@ -9691,7 +9691,13 @@ PLUGIN STYLES
   margin: 0;
 }
 
-/* line 759, ../scss/_small.scss */
+/* line 758, ../scss/_small.scss */
+.gfield.gform_validation_container {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute;
+}
+
+/* line 763, ../scss/_small.scss */
 .breadcrumbs {
   margin-bottom: 1rem;
 }
