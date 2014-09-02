@@ -761,7 +761,7 @@ PLUGIN STYLES
 	    clip: rect(1px,1px,1px,1px);
 	    position: absolute;
 	}
-	// address errors for if submit button is clicked
+	// Validation Errors
 	.validation_error {
 	    font-weight: 700;
 	    margin-bottom: 0.5rem;
@@ -777,6 +777,20 @@ PLUGIN STYLES
 		}
 	}
 }
+
+// Formidable Pro Validation Errors
+.frm_forms {
+	.frm_blank_field {
+	    background-color: rgba(255, 192, 203, 0.75); // pink #ffc0cb
+	    margin-bottom: 1rem;
+	    padding: 1rem 1rem 0.5rem;
+	    
+	    .frm_error {
+		    font-style: italic;
+		}
+	}
+}
+
 // give WordPress SEO breadcrumbs some bottom margin
 .breadcrumbs {
 	margin-bottom: 1rem;
