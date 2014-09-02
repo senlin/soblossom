@@ -9685,19 +9685,18 @@ FOUNDATION STYLES
 /*********************
 PLUGIN STYLES
 *********************/
-/* line 754, ../scss/_small.scss */
+/* line 755, ../scss/_small.scss */
 .gform_body ul {
   list-style: none outside none;
   margin: 0;
 }
-
-/* line 758, ../scss/_small.scss */
-.gfield.gform_validation_container {
+/* line 760, ../scss/_small.scss */
+.gform_body .gfield.gform_validation_container {
   clip: rect(1px, 1px, 1px, 1px);
   position: absolute;
 }
 
-/* line 763, ../scss/_small.scss */
+/* line 766, ../scss/_small.scss */
 .breadcrumbs {
   margin-bottom: 1rem;
 }

@@ -751,13 +751,16 @@ FOUNDATION STYLES
 PLUGIN STYLES
 *********************/
 // Makes Gravity Forms play nice with Foundation Form styles
-.gform_body ul {
-    list-style: none outside none;
-    margin: 0;
-}
-.gfield.gform_validation_container {
-    clip: rect(1px,1px,1px,1px);
-    position: absolute;
+.gform_body {
+	ul {
+	    list-style: none outside none;
+	    margin: 0;
+	}
+	// the validation container needs to be invisible
+	.gfield.gform_validation_container {
+	    clip: rect(1px,1px,1px,1px);
+	    position: absolute;
+	}
 }
 // give WordPress SEO breadcrumbs some bottom margin
 .breadcrumbs {
