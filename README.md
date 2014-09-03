@@ -51,7 +51,7 @@ In the `templates` folder you can find these 4 page templates.
 
 The soblossom theme comes optimised for the following plugins:
 
-* [Formidable Pro](http://formidablepro.com) - turn off the CSS output of the plugin to fully enjoy the Foundation Forms styling
+* [Formidable Pro](http://senl.in/FormidablePro) (aff.link) - turn off the CSS output of the plugin to fully enjoy the Foundation Forms styling
 * [Gravity Forms](http://senl.in/gRaVitY) (aff.link) - turn off the CSS output of the plugin to fully enjoy the Foundation Forms styling
 * [Meta Box](http://wordpress.org/plugins/meta-box/) - the `inc/functions/cmb.php` file has been generated with the [demo code](github.com/rilwis/meta-box/blob/master/demo/demo.php) of this plugin.
 * [WordPress SEO](http://wordpress.org/plugins/wordpress-seo/) - title tags in the head section, breadcrumb code already added, admin columns removed via filter in `inc/functions/dashboard-functions.php`
