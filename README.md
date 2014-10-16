@@ -5,7 +5,7 @@ soblossom WordPress theme
 ###### [DEMO SITE](http://so-wp.com/themes/soblossom/)
 ###### Author: [Piet Bos](https://github.com/senlin)
 
-soblossom is a WordPress starter theme that is based on [Foundation](http://foundation.zurb.com) (5.4.0 at time of writing) on the frontend and [Underscores sass](http://underscores.me) on the backend. 
+soblossom is a WordPress starter theme that is based on [Foundation](http://foundation.zurb.com) (5.4.6 at time of writing) on the frontend and [Underscores sass](http://underscores.me) on the backend. 
 
 We first started developing soblossom in 2013 under a few different names (with Foundation 3 and 4). Then when Foundation 5 was released, instead of updating the lot, we started over and in August 2014 we went through another of those quite extreme makeovers/reorganisations...
 
@@ -23,7 +23,7 @@ All Featured Images, for example those on a Single Post, come with the builtin [
 
 ### Gallery Shortcode
 
-For the soblossom theme we have completely overhauled the default WordPress Gallery shortcode. You won't find any inline styling either. We have replaced the functionality with [Foundation Blockgrid](http://foundation.zurb.com/docs/components/block_grid.html) **and** [Foundation Clearing Thumbs]((http://foundation.zurb.com/docs/components/clearing.html), which shows the images with a cool lightbox effect, so you won't need an additional plugin for that either.
+For the soblossom theme we have completely overhauled the default WordPress Gallery shortcode. You won't find any inline styling either. We have replaced the functionality with [Foundation Blockgrid](http://foundation.zurb.com/docs/components/block_grid.html) **and** [Foundation Clearing Thumbs](http://foundation.zurb.com/docs/components/clearing.html), which shows the images with a cool lightbox effect, so you won't need an additional plugin for that either.
 By default the blockgrid shows `small-block-grid-2 medium-block-grid-3 large-block-grid-4`, which means that on small devices (up to 640px wide) it shows 2 thumbs; on medium devices (640-1024px wide) it shows 3 thumbs and on large devices (anything over 1024px) it will show 4 thumbs. Clicking on a thumb will show the Foundation Clearing effect.
 If you want to adjust anything, you can do so in `inc/classes/gallery.php` and the `scss/_gallery.scss` files.
 Showing your galleries this way means that whatever you choose as amount of columns in the WordPress interface will have no effect on the frontend. That is the "price you pay" for awesomeness. Of course you can remove the function and let WordPress do it its own way too.
