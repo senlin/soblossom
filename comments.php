@@ -5,7 +5,7 @@
  * The area of the page that contains both current comments
  * and the comment form. The actual display of comments is
  * handled by a callback to soblossom_comment() which is
- * located in the inc/template-tags.php file.
+ * located in the inc/soblossom.php file.
  *
  * @package soblossom
  * @since SO Blossom 140526 

@@ -4,7 +4,7 @@ Theme URI: http://so-wp.com/themes/soblossom/
 Author: Piet Bos
 Author URI: http://senlinonline.com/
 Description: soblossom is a starter theme that is based on [Foundation](http://foundation.zurb.com) (5.4.0 at time of writing) on the frontend and [Underscores sass](http://underscores.me) on the backend.
-Version: 140901
+Version: 141016
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: soblossom
@@ -25,6 +25,9 @@ This theme, is licensed under the GPL.
 
 // Import social media menu styling
 @import "social-media";
+
+// Import comments styling (uncomment to include)
+//@import "comments";
 
 // Import mobile first styles
 @import "small";

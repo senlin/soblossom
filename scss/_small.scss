@@ -10,6 +10,11 @@ the idea is to keep it as light/minimal as possible.
 ******************************************************************/
 
 /*********************
+DEFAULT COLOURS
+*********************/
+$primary: #008cba; /* used on: html */
+
+/*********************
 GENERAL STYLES
 *********************/
 /*
@@ -25,6 +30,13 @@ Put the adminbar back where it belongs
 // lower the z-index of the adminbar from 999999 to 995, so image overlays will actually overlay the entire screen.
 .single > div#wpadminbar {
     z-index: 995;
+}
+
+::selection {
+	background-color: $primary;
+}
+::-moz-selection {
+	background-color: $primary;
 }
 
 
@@ -408,248 +420,6 @@ PAGE NAVI STYLES
 		}
 	}
 }
-/******************************************************************
-COMMENT STYLES
-******************************************************************/
-.vcard {
-    border: 0 none;
-    margin: 0;
-    padding: 0;
-}
-/* h3 comment title */
-#comments {
-
-	/* number of comments span */
-	span {}
-
-}
-
-#respond {
-	ul {
-		margin-left: 0px;
-	}
-}
-
-.comment-nav {
-
-	ul {
-
-		li {}
-
-	}
-}
-
-
-.commentlist {
-
-	li {
-		position: relative;
-		clear: both;
-		overflow: hidden;
-		list-style-type: none;
-		margin-bottom: 1.5em;
-		padding: 0.7335em 10px;
-
-		&:last-child {
-			margin-bottom: 0;
-		}
-		
-		&.bypostauthor {
-		    background-color: #e6f7fd; // tried lighten($primary-color, 50%), but not light enough
-		}
-
-		ul.children {
-			margin: 0;
-
-			li {
-				
-				&.bypostauthor {
-				    background-color: #e6f7fd;
-				}
-
-			}
-
-			/* variations */
-			.comment {}
-			.alt {}
-			.odd {}
-			.even {}
-			.depth-1 {}           /* change number for different depth */
-			.byuser {}
-			.bypostauthor {}
-			.comment-author-admin {}
-
-		} /* end .commentlist li ul.children */
-	}
-
-	li[class*=depth-] {
-		margin-top: 1.1em;
-	}
-
-	li.depth-1 {
-		margin-left: 0;
-		margin-top: 0;
-	}
-
-	li:not(.depth-1) {
-		margin-left: 10px;
-		margin-top: 0;
-		padding-bottom: 0;
-		background: $secondary-color;
-	}
-
-	li.depth-2 {}
-	li.depth-3 {
-		background: darken($secondary-color, 5%);
-	}
-	li.depth-4 {}
-	li.depth-5 {}
-
-	/* general comment classes */
-	.alt {}
-	.odd {
-	}
-	.even {
-	}
-	.parent {}
-	.comment {}
-	.children {}
-	.pingback {}
-	.bypostauthor {}
-	.comment-author {}
-	.comment-author-admin {}
-	.thread-alt {}
-	.thread-odd {}
-	.thread-even {}
-
-	/* comment-header */
-	.comment-header {
-		
-		.avatar {
-		    float: left;
-		    margin-right: 5%;
-		}
-		cite .fa {
-			color: #888;
-		}
-		time {
-		    color: #888;
-		    font-size: 0.75rem;
-		    font-style: italic;
-		}
-	}
-
-	/* comment content */
-	.comment_content {
-		margin-top: 0.75rem;
-		p {
-		}
-
-	} /* end .commentlist .comment_content */
-
-	/* comment reply link */
-	.comment-reply-link {
-		@include button($padding: $button-sml);
-		float: right;
-
-		&:hover,
-		&:focus {
-		
-		}
-
-	} /* end .commentlist .comment-reply-link */
-
-} /* end .commentlist */
-
-/******************************************************************
-COMMENT FORM STYLES
-******************************************************************/
-
-.respond-form {
-	margin: 1.5rem .625rem;
-	padding-bottom: 2.2rem;
-
-	form {
-		margin: 0.75rem 0;
-
-		li {
-			list-style-type: none;
-			clear: both;
-			margin-bottom: 0.7335rem;
-
-			label,
-			small {
-				display: none;
-			}
-		}
-
-		input[type=text],
-		input[type=email],
-		input[type=url],
-		textarea {
-			padding: rem-calc(3) rem-calc(6);
-			background: #efefef;
-			border: rem-calc(2) solid #cecece;
-			line-height: 1.5;
-
-			&:focus {
-				background: #fff;
-			}
-
-			/* form validation */
-			&:invalid {
-				outline: none;
-				border-color: #fbc2c4;
-				background-color: #f6e7eb;
-				-webkit-box-shadow: none;
-				   -moz-box-shadow: none;
-				    -ms-box-shadow: none;
-						box-shadow: none;
-			}
-		}
-
-		input[type=text],
-		input[type=email],
-		input[type=url] {
-			max-width: 25rem;
-			min-width: 15.625rem;
-		}
-
-		textarea {
-			resize: none;
-			width: 97.3%;
-			height: 9.375rem;
-		}
-
-	}
-}
-
-	/* comment submit button */
-	#submit {}
-
-	/* comment form title */
-	#comment-form-title {
-		margin: 0 0 1.1rem;
-	}
-
-	/* cancel comment reply link */
-	#cancel-comment-reply {
-		a {}
-	}
-
-	/* logged in comments */
-	.comments-logged-in-as {}
-
-	/* allowed tags */
-	#allowed_tags {
-		margin: 1.5rem rem-calc(10) 0.7335rem 0;
-	}
-
-	/* no comments */
-	.nocomments {
-		margin: 0 rem-calc(20) 1.1rem;
-	}
-
 /*********************
 SIDEBARS & ASIDES
 *********************/
