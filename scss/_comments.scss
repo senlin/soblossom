@@ -1,9 +1,5 @@
 /******************************************************************
-
-Stylesheet: Comments Styling
-
-Adjust where necessary
-
+COMMENT STYLES
 ******************************************************************/
 
 .vcard {
@@ -33,7 +29,6 @@ Adjust where necessary
 
 	}
 }
-
 
 .commentlist {
 
@@ -219,31 +214,31 @@ COMMENT FORM STYLES
 	}
 }
 
-	/* comment submit button */
-	#submit {}
+/* comment submit button */
+#submit {}
 
-	/* comment form title */
-	#comment-form-title {
-		margin: 0 0 1.1rem;
-	}
+/* comment form title */
+#comment-form-title {
+	margin: 0 0 1.1rem;
+}
 
-	/* cancel comment reply link */
-	#cancel-comment-reply {
-		a {}
-	}
+/* cancel comment reply link */
+#cancel-comment-reply {
+	a {}
+}
 
-	/* logged in comments */
-	.comments-logged-in-as {}
+/* logged in comments */
+.comments-logged-in-as {}
 
-	/* allowed tags */
-	#allowed_tags {
-		margin: 1.5rem rem-calc(10) 0.7335rem 0;
-	}
+/* allowed tags */
+#allowed_tags {
+	margin: 1.5rem rem-calc(10) 0.7335rem 0;
+}
 
-	/* no comments */
-	.nocomments {
-		margin: 0 rem-calc(20) 1.1rem;
-	}
+/* no comments */
+.nocomments {
+	margin: 0 rem-calc(20) 1.1rem;
+}
 
 
 	
