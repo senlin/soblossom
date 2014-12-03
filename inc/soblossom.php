@@ -610,7 +610,7 @@ function soblossom_supports_wp_features() {
 	function soblossom_adjust_title_home( $title ) {
 		
 		if( empty( $title ) && ( is_home() || is_front_page() ) && ! class_exists( 'wpseo_admin' ) ) {
-			return __( 'Home', 'theme_domain' ) . ' | ' . get_bloginfo( 'description' );
+			return __( 'Home', 'soblossom' ) . ' | ' . esc_attr( get_bloginfo( 'description' ) );
 		}
 		
 		return $title;
