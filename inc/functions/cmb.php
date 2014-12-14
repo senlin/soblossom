@@ -16,7 +16,7 @@
  * You also should read the changelog to know what has been changed before updating.
  *
  * For more information, please visit:
- * @link http://www.deluxeblogtips.com/meta-box/
+ * @link http://metabox.io
  */
 
 
@@ -46,8 +46,8 @@ function soblossom_register_meta_boxes( $meta_boxes ) {
 		// Meta box title - Will appear at the drag and drop handle bar. Required.
 		'title' => __( 'Standard Fields', 'soblossom' ),
 
-		// Post types, accept custom post types as well - DEFAULT is array( 'post', 'page' ). Optional.
-		'pages' => array( 'post', 'page' ),
+		// Post types, accept custom post types as well - DEFAULT is 'post'. Can be array (multiple post types) or string (1 post type). Optional.
+		'post_types' => array( 'post', 'page' ),
 
 		// Where the meta box appear: normal (default), advanced, side. Optional.
 		'context' => 'normal',
@@ -63,14 +63,14 @@ function soblossom_register_meta_boxes( $meta_boxes ) {
 			// TEXT
 			array(
 				// Field name - Will be used as label
-				'name'  => __( 'Text', 'soblossom' ),
+				'name' => __( 'Text', 'soblossom' ),
 				// Field ID, i.e. the meta key
-				'id'    => "{$prefix}text",
+				'id' => "{$prefix}text",
 				// Field description (optional)
-				'desc'  => __( 'Text description', 'soblossom' ),
+				'desc' => __( 'Text description', 'soblossom' ),
 				'type'  => 'text',
 				// Default value (optional)
-				'std'   => __( 'Default text value', 'soblossom' ),
+				'std' => __( 'Default text value', 'soblossom' ),
 				// CLONES: Add to make the field cloneable (i.e. have multiple value)
 				'clone' => true,
 			),
@@ -96,11 +96,11 @@ function soblossom_register_meta_boxes( $meta_boxes ) {
 			),
 			// SELECT BOX
 			array(
-				'name'     => __( 'Select', 'soblossom' ),
-				'id'       => "{$prefix}select",
-				'type'     => 'select',
+				'name'        => __( 'Select', 'soblossom' ),
+				'id'          => "{$prefix}select",
+				'type'        => 'select',
 				// Array of 'value' => 'Label' pairs for select box
-				'options'  => array(
+				'options'     => array(
 					'value1' => __( 'Label1', 'soblossom' ),
 					'value2' => __( 'Label2', 'soblossom' ),
 				),
@@ -133,7 +133,7 @@ function soblossom_register_meta_boxes( $meta_boxes ) {
 			),
 		),
 		'validation' => array(
-			'rules' => array(
+			'rules'    => array(
 				"{$prefix}password" => array(
 					'required'  => true,
 					'minlength' => 7,
@@ -151,7 +151,7 @@ function soblossom_register_meta_boxes( $meta_boxes ) {
 
 	// 2nd meta box
 	$meta_boxes[] = array(
-		'title' => __( 'Advanced Fields', 'soblossom' ),
+		'title'  => __( 'Advanced Fields', 'soblossom' ),
 
 		'fields' => array(
 			// HEADING
@@ -159,22 +159,23 @@ function soblossom_register_meta_boxes( $meta_boxes ) {
 				'type' => 'heading',
 				'name' => __( 'Heading', 'soblossom' ),
 				'id'   => 'fake_id', // Not used but needed for plugin
+				'desc' => __( 'Optional description for this heading', 'soblossom' ),
 			),
 			// SLIDER
 			array(
-				'name' => __( 'Slider', 'soblossom' ),
-				'id'   => "{$prefix}slider",
-				'type' => 'slider',
+				'name'       => __( 'Slider', 'soblossom' ),
+				'id'         => "{$prefix}slider",
+				'type'       => 'slider',
 
 				// Text labels displayed before and after value
-				'prefix' => __( '$', 'soblossom' ),
-				'suffix' => __( ' USD', 'soblossom' ),
+				'prefix'     => __( '$', 'soblossom' ),
+				'suffix'     => __( ' USD', 'soblossom' ),
 
 				// jQuery UI slider options. See here http://api.jqueryui.com/slider/
 				'js_options' => array(
-					'min'   => 10,
-					'max'   => 255,
-					'step'  => 5,
+					'min'  => 10,
+					'max'  => 255,
+					'step' => 5,
 				),
 			),
 			// NUMBER
@@ -188,9 +189,9 @@ function soblossom_register_meta_boxes( $meta_boxes ) {
 			),
 			// DATE
 			array(
-				'name' => __( 'Date picker', 'soblossom' ),
-				'id'   => "{$prefix}date",
-				'type' => 'date',
+				'name'       => __( 'Date picker', 'soblossom' ),
+				'id'         => "{$prefix}date",
+				'type'       => 'date',
 
 				// jQuery date picker options. See here http://api.jqueryui.com/datepicker
 				'js_options' => array(
@@ -203,9 +204,9 @@ function soblossom_register_meta_boxes( $meta_boxes ) {
 			),
 			// DATETIME
 			array(
-				'name' => __( 'Datetime picker', 'soblossom' ),
-				'id'   => $prefix . 'datetime',
-				'type' => 'datetime',
+				'name'       => __( 'Datetime picker', 'soblossom' ),
+				'id'         => $prefix . 'datetime',
+				'type'       => 'datetime',
 
 				// jQuery datetime picker options.
 				// For date options, see here http://api.jqueryui.com/datepicker
@@ -217,9 +218,9 @@ function soblossom_register_meta_boxes( $meta_boxes ) {
 			),
 			// TIME
 			array(
-				'name' => __( 'Time picker', 'soblossom' ),
-				'id'   => $prefix . 'time',
-				'type' => 'time',
+				'name'       => __( 'Time picker', 'soblossom' ),
+				'id'         => $prefix . 'time',
+				'type'       => 'time',
 
 				// jQuery datetime picker options.
 				// For date options, see here http://api.jqueryui.com/datepicker
@@ -238,56 +239,71 @@ function soblossom_register_meta_boxes( $meta_boxes ) {
 			),
 			// CHECKBOX LIST
 			array(
-				'name' => __( 'Checkbox list', 'soblossom' ),
-				'id'   => "{$prefix}checkbox_list",
-				'type' => 'checkbox_list',
+				'name'    => __( 'Checkbox list', 'soblossom' ),
+				'id'      => "{$prefix}checkbox_list",
+				'type'    => 'checkbox_list',
 				// Options of checkboxes, in format 'value' => 'Label'
 				'options' => array(
 					'value1' => __( 'Label1', 'soblossom' ),
 					'value2' => __( 'Label2', 'soblossom' ),
 				),
 			),
+			// AUTOCOMPLETE
+			array(
+				'name'    => __( 'Autocomplete', 'soblossom' ),
+				'id'      => "{$prefix}autocomplete",
+				'type'    => 'autocomplete',
+				// Options of autocomplete, in format 'value' => 'Label'
+				'options' => array(
+					'value1' => __( 'Label1', 'soblossom' ),
+					'value2' => __( 'Label2', 'soblossom' ),
+				),
+				// Input size
+				'size'    => 30,
+				// Clone?
+				'clone'   => false,
+			),
 			// EMAIL
 			array(
-				'name'  => __( 'Email', 'soblossom' ),
-				'id'    => "{$prefix}email",
-				'desc'  => __( 'Email description', 'soblossom' ),
-				'type'  => 'email',
-				'std'   => 'name@email.com',
+				'name' => __( 'Email', 'soblossom' ),
+				'id'   => "{$prefix}email",
+				'desc' => __( 'Email description', 'soblossom' ),
+				'type' => 'email',
+				'std'  => 'name@email.com',
 			),
 			// RANGE
 			array(
-				'name'  => __( 'Range', 'soblossom' ),
-				'id'    => "{$prefix}range",
-				'desc'  => __( 'Range description', 'soblossom' ),
-				'type'  => 'range',
-				'min'   => 0,
-				'max'   => 100,
-				'step'  => 5,
-				'std'   => 0,
+				'name' => __( 'Range', 'soblossom' ),
+				'id'   => "{$prefix}range",
+				'desc' => __( 'Range description', 'soblossom' ),
+				'type' => 'range',
+				'min'  => 0,
+				'max'  => 100,
+				'step' => 5,
+				'std'  => 0,
 			),
 			// URL
 			array(
-				'name'  => __( 'URL', 'soblossom' ),
-				'id'    => "{$prefix}url",
-				'desc'  => __( 'URL description', 'soblossom' ),
-				'type'  => 'url',
-				'std'   => 'http://google.com',
+				'name' => __( 'URL', 'soblossom' ),
+				'id'   => "{$prefix}url",
+				'desc' => __( 'URL description', 'soblossom' ),
+				'type' => 'url',
+				'std'  => 'http://google.com',
 			),
 			// OEMBED
 			array(
-				'name'  => __( 'oEmbed', 'soblossom' ),
-				'id'    => "{$prefix}oembed",
-				'desc'  => __( 'oEmbed description', 'soblossom' ),
-				'type'  => 'oembed',
+				'name' => __( 'oEmbed', 'soblossom' ),
+				'id'   => "{$prefix}oembed",
+				'desc' => __( 'oEmbed description', 'soblossom' ),
+				'type' => 'oembed',
 			),
 			// SELECT ADVANCED BOX
 			array(
-				'name'     => __( 'Select', 'soblossom' ),
-				'id'       => "{$prefix}select_advanced",
-				'type'     => 'select_advanced',
+				'name'        => __( 'Select', 'soblossom' ),
+				'id'          => "{$prefix}select_advanced",
+				'type'        => 'select_advanced',
 				// Array of 'value' => 'Label' pairs for select box
-				'options'  => array(
+				'options'     => array(
 					'value1' => __( 'Label1', 'soblossom' ),
 					'value2' => __( 'Label2', 'soblossom' ),
 				),
@@ -305,35 +321,35 @@ function soblossom_register_meta_boxes( $meta_boxes ) {
 					// Taxonomy name
 					'taxonomy' => 'category',
 					// How to show taxonomy: 'checkbox_list' (default) or 'checkbox_tree', 'select_tree', select_advanced or 'select'. Optional
-					'type' => 'checkbox_list',
+					'type'     => 'checkbox_list',
 					// Additional arguments for get_terms() function. Optional
-					'args' => array()
+					'args'     => array()
 				),
 			),
 			// POST
 			array(
-				'name'    => __( 'Posts (Pages)', 'soblossom' ),
-				'id'      => "{$prefix}pages",
-				'type'    => 'post',
-
+				'name'        => __( 'Posts (Pages)', 'soblossom' ),
+				'id'          => "{$prefix}pages",
+				'type'        => 'post',
 				// Post type
-				'post_type' => 'page',
+				'post_type'   => 'page',
 				// Field type, either 'select' or 'select_advanced' (default)
-				'field_type' => 'select_advanced',
+				'field_type'  => 'select_advanced',
+				'placeholder' => __( 'Select an Item', 'soblossom' ),
 				// Query arguments (optional). No settings means get all published posts
-				'query_args' => array(
+				'query_args'  => array(
 					'post_status'    => 'publish',
 					'posts_per_page' => - 1,
 				)
 			),
 			// WYSIWYG/RICH TEXT EDITOR
 			array(
-				'name' => __( 'WYSIWYG / Rich Text Editor', 'soblossom' ),
-				'id'   => "{$prefix}wysiwyg",
-				'type' => 'wysiwyg',
+				'name'    => __( 'WYSIWYG / Rich Text Editor', 'soblossom' ),
+				'id'      => "{$prefix}wysiwyg",
+				'type'    => 'wysiwyg',
 				// Set the 'raw' parameter to TRUE to prevent data being passed through wpautop() on save
-				'raw'  => false,
-				'std'  => __( 'WYSIWYG default value', 'soblossom' ),
+				'raw'     => false,
+				'std'     => __( 'WYSIWYG default value', 'soblossom' ),
 
 				// Editor settings, see wp_editor() function: look4wp.com/wp_editor
 				'options' => array(
@@ -355,11 +371,11 @@ function soblossom_register_meta_boxes( $meta_boxes ) {
 			),
 			// FILE ADVANCED (WP 3.5+)
 			array(
-				'name' => __( 'File Advanced Upload', 'soblossom' ),
-				'id'   => "{$prefix}file_advanced",
-				'type' => 'file_advanced',
+				'name'             => __( 'File Advanced Upload', 'soblossom' ),
+				'id'               => "{$prefix}file_advanced",
+				'type'             => 'file_advanced',
 				'max_file_uploads' => 4,
-				'mime_type' => 'application,audio,video', // Leave blank for all file types
+				'mime_type'        => 'application,audio,video', // Leave blank for all file types
 			),
 			// IMAGE UPLOAD
 			array(
@@ -393,7 +409,6 @@ function soblossom_register_meta_boxes( $meta_boxes ) {
 				'type' => 'button',
 				'name' => ' ', // Empty name will "align" the button to all field inputs
 			),
-
 		)
 	);
 
