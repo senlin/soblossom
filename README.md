@@ -1,8 +1,8 @@
 soblossom WordPress theme
 =========
 
-###### Last updated on 2014.11.12
-###### Foundation version 5.4.7
+###### Last updated on 2014.12.18
+###### Foundation version 5.5.0
 ###### [DEMO SITE](http://so-wp.com/themes/soblossom/)
 ###### Author: [Piet Bos](https://github.com/senlin)
 
