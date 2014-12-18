@@ -1,11 +1,12 @@
 soblossom WordPress theme
 =========
 
-###### Last updated on 2014.11.12
+###### Last updated on 2014.12.18
+###### Foundation version 5.5.0
 ###### [DEMO SITE](http://so-wp.com/themes/soblossom/)
 ###### Author: [Piet Bos](https://github.com/senlin)
 
-soblossom is a WordPress starter theme that is based on [Foundation](http://foundation.zurb.com) (5.4.7 at time of writing) on the frontend and [Underscores sass](http://underscores.me) on the backend. 
+soblossom is a WordPress starter theme that is based on [Foundation](http://foundation.zurb.com) on the frontend and [Underscores sass](http://underscores.me) on the backend. 
 
 We first started developing soblossom in 2013 under a few different names (with Foundation 3 and 4). Then when Foundation 5 was released, instead of updating the lot, we started over and in August 2014 we went through another of those quite extreme makeovers/reorganisations...
 
@@ -81,6 +82,10 @@ Nowadays there are plenty of WordPress themes built on Foundation and we have lo
 [Website](http://senlinonline.com)
 
 ## Changelog
+
+### 141218
+
+* update to Foundation 5.5.0
 
 ### 141112
 
