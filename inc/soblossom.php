@@ -76,6 +76,9 @@ function soblossom_bloom() { //actions, filters and other theme setup related th
  */
 function soblossom_supports_wp_features() {
 
+	// since WP 4.1 Title Tag no longer needs to be added to header directly - codex.wordpress.org/Title_Tag
+	add_theme_support( 'title-tag' );
+	
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
 
@@ -599,20 +602,3 @@ function soblossom_supports_wp_features() {
 	    echo '<link rel="shortcut icon" href="' . get_template_directory_uri() . '/images/favicon-96.png" />';
 	
 	}
-	
-/**
- * Adjust Title output for homepage
- *
- * @source: //codex.wordpress.org/Function_Reference/wp_title#Covering_Homepage
- */
-	add_filter( 'wp_title', 'soblossom_adjust_title_home' );
-	
-	function soblossom_adjust_title_home( $title ) {
-		
-		if( empty( $title ) && ( is_home() || is_front_page() ) && ! class_exists( 'wpseo_admin' ) ) {
-			return __( 'Home', 'soblossom' ) . ' | ' . esc_attr( get_bloginfo( 'description' ) );
-		}
-		
-		return $title;
-	} 
-
