@@ -51,7 +51,7 @@ function soblossom_replace_howdy( $wp_admin_bar ) {
 // Customize admin footer
 function soblossom_dashboard_footer () {
 	
-	$text = sprintf( __( 'The %s <a href="https://wordpress.org/" target="_blank">WordPress</a> website has been developed on <a href="http://so-wp/themes/soblossom" title="Use soblossom to create an awesome WordPress theme!" target="_blank">soblossom</a> and is managed by <a href="http://senlinonline.com" target="_blank" title="Senlin Online: WordPress Consultant and WPML Specialist">Senlin Online</a>. ', 'soblossom' ),
+	$text = sprintf( __( 'The %s <a href="https://wordpress.org/" target="_blank">WordPress</a> website has been built on <a href="http://so-wp/themes/soblossom" title="Use soblossom to create an awesome WordPress theme!" target="_blank">soblossom</a>. ', 'soblossom' ),
 		get_option( 'blogname' )
 	);
 	
