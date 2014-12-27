@@ -1,7 +1,7 @@
 soblossom WordPress theme
 =========
 
-###### Last updated on 2014.12.18
+###### Last updated on 2014.12.27
 ###### Foundation version 5.5.0
 ###### [DEMO SITE](http://so-wp.com/themes/soblossom/)
 ###### Author: [Piet Bos](https://github.com/senlin)
@@ -58,6 +58,17 @@ The soblossom theme comes optimised for the following plugins:
 * [WordPress SEO](http://wordpress.org/plugins/wordpress-seo/) - title tags in the head section, breadcrumb code already added, admin columns removed via filter in `inc/functions/dashboard-functions.php`
 * [WPML](http://senl.in/getwpml) (aff.link) - language code is added to the body class if WPML is active (filter in `inc/soblossom.php`)
 
+## Languages
+
+In the languages folder you will find the `soblossom.pot` file and any translations that have been completed. To help us translate soblossom in your language, you can do as follows:
+
+* Help translate soblossom using [Transifex](https://www.transifex.com/projects/p/soblossom/)
+* Fork soblossom on Github, locally open the pot file with PO Edit, translate the file into your language and send us a Pull Request on Github
+
+All contributions naturally receive credits here in the readme file.
+
+2014.12.27 - Dutch added - by [Piet Bos](http://senlinonline.com)
+
 ## Credits
 
 Nowadays there are plenty of WordPress themes built on Foundation and we have looked at a few of them: [Reverie](https://github.com/milohuang/reverie) by [Zhen Huang](https://github.com/milohuang), [WPForge](http://wpforge.themeawesome.com/) by [Thomas Vasquez](https://twitter.com/tsquez) and last but not least [JointsWP](http://jointswp.com/) by [Jeremy Englert](http://twitter.com/jeremyenglert). Thanks all for your guidance, tips and inspiration!
@@ -82,6 +93,14 @@ Nowadays there are plenty of WordPress themes built on Foundation and we have lo
 [Website](http://senlinonline.com)
 
 ## Changelog
+
+### 141227
+
+* complete Dutch translation
+
+### 141218
+
+* update to Foundation 5.5.0
 
 ### 141112
 
