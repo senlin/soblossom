@@ -1,0 +1,674 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: soblossom\n"
+"POT-Creation-Date: 2014-12-27 10:21+0800\n"
+"PO-Revision-Date: 2014-12-27 10:48+0800\n"
+"Last-Translator: Piet Bos <piet@so-wp.com>\n"
+"Language-Team: Piet Bos <piet@so-wp.com>\n"
+"Language: nl_NL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.7.1\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: 404.php:19
+msgid "Nothing Here."
+msgstr "Hier gebeurt niets."
+
+#: 404.php:23
+msgid ""
+"Apologies, there is nothing here. Maybe try a search or one of the links "
+"below or in the sidebar?"
+msgstr ""
+"﻿Het lijkt erop dat niets werd gevonden op deze locatie. Misschien wilt u een "
+"zoekopdracht of een van de onderstaande links proberen?"
+
+#: 404.php:34
+msgid "Pages"
+msgstr "﻿Pagina's"
+
+#: archive.php:30
+#, php-format
+msgid "Author: %s"
+msgstr "﻿Auteur: %s"
+
+#: archive.php:33
+#, php-format
+msgid "Day: %s"
+msgstr "﻿Dag: %s"
+
+#: archive.php:36
+#, php-format
+msgid "Month: %s"
+msgstr "﻿Maand: %s"
+
+#: archive.php:36
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr "﻿F Y"
+
+#: archive.php:39
+#, php-format
+msgid "Year: %s"
+msgstr "Jaar: %s"
+
+#: archive.php:39
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr "﻿Y"
+
+#: archive.php:42
+msgid "Archives"
+msgstr "﻿Archieven"
+
+#: comments.php:32
+#, php-format
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] "﻿Één reactie op &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s reacties op &ldquo;%2$s&rdquo;"
+
+#: comments.php:39 comments.php:59
+msgid "Comment navigation"
+msgstr "﻿Reactie navigatie"
+
+#: comments.php:40 comments.php:60
+msgid "<i class=\"fa fa-long-arrow-left\"></i> Older Comments"
+msgstr "<i class=\"fa fa-long-arrow-left\"></i> Eerdere Reacties"
+
+#: comments.php:41 comments.php:61
+msgid "Newer Comments <i class=\"fa fa-long-arrow-right\"></i>"
+msgstr "Nieuwerw Reacties <i class=\"fa fa-long-arrow-right\"></i>"
+
+#: comments.php:71
+msgid "Comments are closed."
+msgstr "﻿Reacties zijn gesloten."
+
+#: footer.php:24
+#, php-format
+msgid ""
+"&copy %1$s <a href=\"#page\" title=\"back to top\">%2$s</a>; %3$s theme by "
+"%4$s."
+msgstr ""
+"&copy %1$s <a href=\"#page\" title=\"terug naar boven\">%2$s</a>; %3$s thema "
+"ontwikked door %4$s."
+
+#: functions.php:137
+msgid "Top Navigation"
+msgstr "Top Navigatie"
+
+#: functions.php:153
+msgid "Social Media"
+msgstr "Sociale Media"
+
+#: functions.php:170
+msgid "Footer Links"
+msgstr "﻿Footer Links"
+
+#: functions.php:190
+#, php-format
+msgid "Add your Top Navigation Menu by adding a %1$s or %2$s the design."
+msgstr ""
+"Voeg het Top Navigatiemenu toe door een %1$s toe te voegen of het ontwerp "
+"%2$s."
+
+#: functions.php:191 functions.php:223
+#, php-format
+msgid "<a href=\"%s\">Menu</a>"
+msgstr "<a href=\"%s\">Menu</a>"
+
+#: functions.php:194 functions.php:226
+#, php-format
+msgid "<a href=\"%s\">Customizing</a>"
+msgstr "<a href=\"%s\">te Customizen</a>"
+
+#: functions.php:206
+#, php-format
+msgid ""
+"Add a %1$s and use FontAwesome names for the descriptions to show your own "
+"Social Links. Alternatively use the %2$s."
+msgstr ""
+"﻿Voeg een %1$s toe en gebruik FontAwesome namen voor de beschrijvingen om uw "
+"eigen sociale Links weer te geven. U kunt ook de %2$s gebruiken."
+
+#: functions.php:207
+#, php-format
+msgid "<a href=\"%s\">Social Media menu</a>"
+msgstr "<a href=\"%s\">Sociale Media menu</a>"
+
+#: functions.php:210
+#, php-format
+msgid "<a href=\"%s\">Customizer</a>"
+msgstr "<a href=\"%s\">Customizer</a>"
+
+#: functions.php:222
+#, php-format
+msgid "Add your own Footer Links by adding a %1$s or %2$s the design."
+msgstr ""
+"Voeg uw eigen Footer Links toe door een %1$s of %2$s aan het ontwerp toe te "
+"voegen."
+
+#: functions.php:242
+msgid "Sidebar Widget Area"
+msgstr "Sidebar Widget Area"
+
+#: functions.php:250
+msgid "Footer Widget Area"
+msgstr "Footer Widget Area"
+
+#: functions.php:252
+msgid "Appears in the footer section of the site."
+msgstr "Verschijnt in de footer sectie van de site."
+
+#: header.php:105
+msgid "Skip to content"
+msgstr "﻿Ga verder naar content"
+
+#: inc/functions/cmb.php:47
+msgid "Standard Fields"
+msgstr "Standaard Velden"
+
+#: inc/functions/cmb.php:66
+msgid "Text"
+msgstr "﻿Tekst"
+
+#: inc/functions/cmb.php:70
+msgid "Text description"
+msgstr "﻿Tekstomschrijving"
+
+#: inc/functions/cmb.php:73
+msgid "Default text value"
+msgstr "﻿Standaardwaarde"
+
+#: inc/functions/cmb.php:79
+msgid "Checkbox"
+msgstr "﻿Checkbox"
+
+#: inc/functions/cmb.php:87
+msgid "Radio"
+msgstr "Radio"
+
+#: inc/functions/cmb.php:93 inc/functions/cmb.php:104
+#: inc/functions/cmb.php:247 inc/functions/cmb.php:258
+#: inc/functions/cmb.php:307
+msgid "Label1"
+msgstr "﻿Label1"
+
+#: inc/functions/cmb.php:94 inc/functions/cmb.php:105
+#: inc/functions/cmb.php:248 inc/functions/cmb.php:259
+#: inc/functions/cmb.php:308
+msgid "Label2"
+msgstr "﻿Label2"
+
+#: inc/functions/cmb.php:99 inc/functions/cmb.php:302
+msgid "Select"
+msgstr "Selecteer"
+
+#: inc/functions/cmb.php:110 inc/functions/cmb.php:313
+#: inc/functions/cmb.php:338
+msgid "Select an Item"
+msgstr "﻿Selecteer een Item"
+
+#: inc/functions/cmb.php:117
+msgid "Hidden value"
+msgstr "﻿Verborgen waarde"
+
+#: inc/functions/cmb.php:121
+msgid "Password"
+msgstr "﻿Wachtwoord"
+
+#: inc/functions/cmb.php:127
+msgid "Textarea"
+msgstr "﻿Textarea"
+
+#: inc/functions/cmb.php:128
+msgid "Textarea description"
+msgstr "﻿Tekstomschrijving"
+
+#: inc/functions/cmb.php:145
+msgid "Password is required"
+msgstr "﻿Wachtwoord is verplicht"
+
+#: inc/functions/cmb.php:146
+msgid "Password must be at least 7 characters"
+msgstr "﻿Wachtwoord moet minstens 7 tekens bevatten"
+
+#: inc/functions/cmb.php:154
+msgid "Advanced Fields"
+msgstr "﻿Geavanceerde velden"
+
+#: inc/functions/cmb.php:160
+msgid "Heading"
+msgstr "Koptekst"
+
+#: inc/functions/cmb.php:162
+msgid "Optional description for this heading"
+msgstr "﻿Optionele beschrijving voor deze koptekst"
+
+#: inc/functions/cmb.php:166
+msgid "Slider"
+msgstr "﻿Slider"
+
+#: inc/functions/cmb.php:171
+msgid "$"
+msgstr "﻿$"
+
+#: inc/functions/cmb.php:172
+msgid " USD"
+msgstr "﻿USD"
+
+#: inc/functions/cmb.php:183
+msgid "Number"
+msgstr "﻿Nummer"
+
+#: inc/functions/cmb.php:192
+msgid "Date picker"
+msgstr "﻿Datumkiezer"
+
+#: inc/functions/cmb.php:198
+msgid "(yyyy-mm-dd)"
+msgstr "(yyyy-mm-dd)"
+
+#: inc/functions/cmb.php:199
+msgid "yy-mm-dd"
+msgstr "yy-mm-dd"
+
+#: inc/functions/cmb.php:207
+msgid "Datetime picker"
+msgstr "﻿Datum-tijd-kiezer"
+
+#: inc/functions/cmb.php:221
+msgid "Time picker"
+msgstr "Tijd-kiezer"
+
+#: inc/functions/cmb.php:236
+msgid "Color picker"
+msgstr "﻿Kleurenkiezer"
+
+#: inc/functions/cmb.php:242
+msgid "Checkbox list"
+msgstr ""
+
+#: inc/functions/cmb.php:253
+msgid "Autocomplete"
+msgstr ""
+
+#: inc/functions/cmb.php:268
+msgid "Email"
+msgstr ""
+
+#: inc/functions/cmb.php:270
+msgid "Email description"
+msgstr ""
+
+#: inc/functions/cmb.php:276
+msgid "Range"
+msgstr ""
+
+#: inc/functions/cmb.php:278
+msgid "Range description"
+msgstr ""
+
+#: inc/functions/cmb.php:287
+msgid "URL"
+msgstr ""
+
+#: inc/functions/cmb.php:289
+msgid "URL description"
+msgstr ""
+
+#: inc/functions/cmb.php:295
+msgid "oEmbed"
+msgstr ""
+
+#: inc/functions/cmb.php:297
+msgid "oEmbed description"
+msgstr ""
+
+#: inc/functions/cmb.php:317
+msgid "Taxonomy"
+msgstr ""
+
+#: inc/functions/cmb.php:331
+msgid "Posts (Pages)"
+msgstr ""
+
+#: inc/functions/cmb.php:347
+msgid "WYSIWYG / Rich Text Editor"
+msgstr ""
+
+#: inc/functions/cmb.php:352
+msgid "WYSIWYG default value"
+msgstr ""
+
+#: inc/functions/cmb.php:368
+msgid "File Upload"
+msgstr ""
+
+#: inc/functions/cmb.php:374
+msgid "File Advanced Upload"
+msgstr ""
+
+#: inc/functions/cmb.php:382
+msgid "Image Upload"
+msgstr ""
+
+#: inc/functions/cmb.php:388
+msgid "Thickbox Image Upload"
+msgstr ""
+
+#: inc/functions/cmb.php:394
+msgid "Plupload Image Upload"
+msgstr ""
+
+#: inc/functions/cmb.php:401
+msgid "Image Advanced Upload"
+msgstr ""
+
+#: inc/functions/cpt.php:17
+msgctxt "Post Type General Name"
+msgid "Samples"
+msgstr ""
+
+#: inc/functions/cpt.php:18
+msgctxt "Post Type Singular Name"
+msgid "Sample"
+msgstr ""
+
+#: inc/functions/cpt.php:19
+msgid "Samples"
+msgstr ""
+
+#: inc/functions/cpt.php:20
+msgid "Parent Sample:"
+msgstr ""
+
+#: inc/functions/cpt.php:21
+msgid "All Samples"
+msgstr ""
+
+#: inc/functions/cpt.php:22
+msgid "View Sample"
+msgstr ""
+
+#: inc/functions/cpt.php:23
+msgid "Add New Sample"
+msgstr ""
+
+#: inc/functions/cpt.php:24
+msgid "Add New"
+msgstr ""
+
+#: inc/functions/cpt.php:25
+msgid "Edit Sample"
+msgstr ""
+
+#: inc/functions/cpt.php:26
+msgid "Update Sample"
+msgstr ""
+
+#: inc/functions/cpt.php:27
+msgid "Search Sample"
+msgstr ""
+
+#: inc/functions/cpt.php:28
+msgid "Not found"
+msgstr ""
+
+#: inc/functions/cpt.php:29
+msgid "Not found in Trash"
+msgstr ""
+
+#: inc/functions/cpt.php:33
+msgid "sample_cpt"
+msgstr ""
+
+#: inc/functions/cpt.php:34
+msgid "Sample Custom Post Type for the soblossom theme"
+msgstr ""
+
+#: inc/functions/dashboard-functions.php:54
+#, php-format
+msgid ""
+"The %s <a href=\"https://wordpress.org/\" target=\"_blank\">WordPress</a> "
+"website has been developed on <a href=\"http://so-wp/themes/soblossom\" "
+"title=\"Use soblossom to create an awesome WordPress theme!\" target=\"_blank"
+"\">soblossom</a> and is managed by <a href=\"http://senlinonline.com\" "
+"target=\"_blank\" title=\"Senlin Online: WordPress Consultant and WPML "
+"Specialist\">Senlin Online</a>. "
+msgstr ""
+
+#: inc/soblossom.php:43
+msgid "Top Navigation Menu"
+msgstr ""
+
+#: inc/soblossom.php:44
+msgid "Social Media Links"
+msgstr ""
+
+#: inc/soblossom.php:45
+msgid "Footer Menu"
+msgstr ""
+
+#: inc/soblossom.php:215
+msgid "Read the rest of "
+msgstr ""
+
+#: inc/soblossom.php:215
+msgid " Read more <i class=\"fa fa-long-arrow-right\"></i>"
+msgstr ""
+
+#: inc/soblossom.php:227
+msgid "Search for:"
+msgstr ""
+
+#: inc/soblossom.php:228
+msgid "Search the Site..."
+msgstr ""
+
+#: inc/soblossom.php:318 inc/soblossom.php:321
+msgid ", "
+msgstr ""
+
+#: inc/soblossom.php:326
+#, php-format
+msgid ""
+"This article was tagged %2$s. Bookmark the <a href=\"%3$s\" rel=\"bookmark"
+"\">permalink</a>."
+msgstr ""
+
+#: inc/soblossom.php:328
+#, php-format
+msgid "Bookmark the <a href=\"%3$s\" rel=\"bookmark\">permalink</a>."
+msgstr ""
+
+#: inc/soblossom.php:334
+#, php-format
+msgid ""
+"This article was posted in %1$s and tagged %2$s. Bookmark the <a href=\"%3$s"
+"\" rel=\"bookmark\">permalink</a>."
+msgstr ""
+
+#: inc/soblossom.php:336
+#, php-format
+msgid ""
+"This article was posted in %1$s. Bookmark the <a href=\"%3$s\" rel=\"bookmark"
+"\">permalink</a>."
+msgstr ""
+
+#: inc/soblossom.php:368
+msgid "Posts navigation"
+msgstr ""
+
+#: inc/soblossom.php:372
+msgid "<i class=\"fa fa-long-arrow-left\"></i> Older articles"
+msgstr ""
+
+#: inc/soblossom.php:376
+msgid "Newer articles <i class=\"fa fa-long-arrow-right\"></i>"
+msgstr ""
+
+#: inc/soblossom.php:402
+msgid "Post navigation"
+msgstr ""
+
+#: inc/soblossom.php:405
+msgctxt "Previous post link"
+msgid "<i class=\"fa fa-long-arrow-left\"></i> %title"
+msgstr ""
+
+#: inc/soblossom.php:406
+msgctxt "Next post link"
+msgid "%title <i class=\"fa fa-long-arrow-right\"></i>"
+msgstr ""
+
+#: inc/soblossom.php:420
+msgid "Published on "
+msgstr ""
+
+#: inc/soblossom.php:430
+msgid "F jS, Y"
+msgstr ""
+
+#: inc/soblossom.php:437
+msgid "Articles by "
+msgstr ""
+
+#: inc/soblossom.php:502
+msgid "Pingback:"
+msgstr ""
+
+#: inc/soblossom.php:502 inc/soblossom.php:529
+msgid "(Edit)"
+msgstr ""
+
+#: inc/soblossom.php:515
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: inc/soblossom.php:521
+#, php-format
+msgid "%1$s at %2$s"
+msgstr ""
+
+#: inc/soblossom.php:525
+msgid "Link to this comment."
+msgstr ""
+
+#: search.php:19
+#, php-format
+msgid "Search Results for: %s"
+msgstr ""
+
+#: sidebar.php:16
+msgid ""
+"Go to Appearance <i class=\"fa fa-long-arrow-right\"></i> Widgets in your "
+"Dashboard to add some widgets"
+msgstr ""
+
+#: templates/banded.php:89 templates/banded.php:90
+msgid "Find out more"
+msgstr ""
+
+#: templates/workspace.php:62 templates/workspace.php:63
+msgid "Learn more"
+msgstr ""
+
+#: templates/workspace.php:71 templates/workspace.php:72
+#: templates/workspace.php:73 templates/workspace.php:74
+msgid "as long as there is no services CPT, nothing will really happen here"
+msgstr ""
+
+#: templates/workspace.php:113 templates/workspace.php:117
+msgid "Call To Action!"
+msgstr ""
+
+#: templates/workspace.php:137
+msgid "More Information"
+msgstr ""
+
+#: templates/workspace.php:142
+msgid "Download Brochure"
+msgstr ""
+
+#: templates/workspace.php:146
+msgid "Book Event"
+msgstr ""
+
+#: templates/workspace.php:158
+msgid "Get in touch!"
+msgstr ""
+
+#: templates/workspace.php:161
+msgid "We'd love to hear from you, you attractive person you."
+msgstr ""
+
+#: templates/workspace.php:165
+msgid "Contact Us"
+msgstr ""
+
+#: tplparts/content-none.php:14
+msgid "Nothing Found"
+msgstr ""
+
+#: tplparts/content-none.php:21
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: tplparts/content-none.php:25
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: tplparts/content-none.php:30
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: tplparts/content-page.php:25 tplparts/content-single.php:33
+#: tplparts/content.php:27
+msgid "Pages:"
+msgstr ""
+
+#: tplparts/content-page.php:32 tplparts/content-single.php:44
+msgid "Edit"
+msgstr ""
+
+#: tplparts/content.php:24
+msgid "Continue reading <i class=\"fa fa-long-arrow-right\"></i>"
+msgstr ""
+
+#: tplparts/nav-offcanvas.php:22
+msgid "Home"
+msgstr ""
+
+#: tplparts/nav-offcanvas.php:26 tplparts/nav-topbar.php:12
+msgid "Menu"
+msgstr ""
+
+#: tplparts/nav-offcanvas.php:68
+msgid "Navigation"
+msgstr ""
+
+#: bower_components/foundation/js/vendor/jquery.js:14
+msgid "<iframe frameborder='0' width='0' height='0'/>"
+msgstr ""
+
+#: bower_components/foundation/js/vendor/jquery.js:26
+msgid "<script>"
+msgstr ""
+
+#: bower_components/foundation/js/vendor/jquery.js:26
+msgid "<div>"
+msgstr ""

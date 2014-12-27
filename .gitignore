@@ -4,3 +4,5 @@
 *.scssc
 
 bower-json.bak
+
+languages/incomplete/*
