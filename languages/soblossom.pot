@@ -405,10 +405,6 @@ msgstr ""
 msgid "Not found in Trash"
 msgstr ""
 
-#: inc/functions/cpt.php:33
-msgid "sample_cpt"
-msgstr ""
-
 #: inc/functions/cpt.php:34
 msgid "Sample Custom Post Type for the soblossom theme"
 msgstr ""
@@ -417,11 +413,9 @@ msgstr ""
 #, php-format
 msgid ""
 "The %s <a href=\"https://wordpress.org/\" target=\"_blank\">WordPress</a> "
-"website has been developed on <a href=\"http://so-wp/themes/soblossom\" "
+"website has been built on <a href=\"http://so-wp/themes/soblossom\" "
 "title=\"Use soblossom to create an awesome WordPress theme!\" target=\"_blank"
-"\">soblossom</a> and is managed by <a href=\"http://senlinonline.com\" "
-"target=\"_blank\" title=\"Senlin Online: WordPress Consultant and WPML "
-"Specialist\">Senlin Online</a>. "
+"\">soblossom</a>. "
 msgstr ""
 
 #: inc/soblossom.php:43
