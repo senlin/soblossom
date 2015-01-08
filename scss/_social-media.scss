@@ -98,6 +98,12 @@ Adjust where necessary
 					color: #e9281e;
 				}
 			}
+			a[href*="weixin"] {
+				&:hover .fa-stack .fa-circle,
+				&:focus .fa-stack .fa-circle {
+					color: #76a70a;
+				}
+			}
 			a[href*="github.com"] {
 				&:hover .fa-stack .fa-circle,
 				&:focus .fa-stack .fa-circle {

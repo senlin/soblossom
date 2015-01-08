@@ -170,6 +170,11 @@ NAVIGATION STYLES
 	.title-area {
 		z-index: 1;
 	}
+	
+	.name h1,
+	.top-bar-section ul li > a {
+		font-size: 1rem;
+	}
 } 
 
 .off-canvas-list {
