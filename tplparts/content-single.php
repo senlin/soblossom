@@ -41,7 +41,7 @@
 		<?php
 			soblossom_posted_in(); // defined in inc/soblossom.php
 			
-			edit_post_link( __( 'Edit', 'soblossom' ), '<span class="edit-link">', '</span>' );
+			edit_post_link( __( 'Edit', 'soblossom' ), '<span class="edit-link"> ', '</span>' );
 		?>
 	</footer><!-- .entry-meta -->
 
