@@ -133,8 +133,6 @@ function soblossom_supports_wp_features() {
 		/* STYLES */
 		wp_enqueue_style( 'soblossom-style', get_template_directory_uri() . '/css/style.css', array(), null );
 	
-		wp_enqueue_style( 'dashicons' );
-	
 		wp_enqueue_style( 'fontawesome', soblossom_fontawesome_url(), array(), null );
 	
 		/* SCRIPTS */
