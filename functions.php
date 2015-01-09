@@ -153,6 +153,7 @@ function soblossom_social_media_links() {
     	'menu' => __( 'Social Media', 'soblossom' ),
        	'menu_class' => 'social-links',
     	'theme_location' => 'social',
+    	'depth' => '1',
     	'before' => '',
         'after' => '',
         'link_before' => '',
