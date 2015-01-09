@@ -82,8 +82,10 @@ add_action( 'wp', 'soblossom_setup_author' );
 	
 	/**
 	 * Sample function to add GA Universal tracking script to the site.
-	 * 
 	 * hooks into soblossom_body_open() function
+	 *
+	 * You can use this for anything, the tracking being merely a demo of what it can do.
+	 * Feel free to experiment or remove it altogether if you don't think it is useful.
 	 * 
 	 * @since 140730
 	 */
