@@ -24,9 +24,6 @@
 		<!-- mobile meta -->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-		<!--[if IE]>
-			<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
-		<![endif]-->
 		<!--[if lt IE 9]>
 			<script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/html5.js"></script>
 		<![endif]-->
