@@ -3,6 +3,7 @@
  * Sample Custom Meta Box to help you on your way
  *
  * Remember: anything and everything can be customised to your wishes
+ * Also keep in mind that to use these, you need to have the Meta Box plugin installed: metabox.io
  *
  * @link: github.com/rilwis/meta-box/blob/master/demo/demo.php
  */
