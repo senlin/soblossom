@@ -242,6 +242,7 @@ function soblossom_register_widget_areas() {
 	register_sidebar( array(
 		'name'          => __( 'Sidebar Widget Area', 'soblossom' ),
 		'id'            => 'sidebar-widget-area',
+		'description'   => __( 'Appears on the side (right by default) of the site.', 'soblossom' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h3 class="widget-title">',
