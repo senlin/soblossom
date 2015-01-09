@@ -18,8 +18,6 @@
 
 		<meta charset="<?php bloginfo( 'charset' ); ?>">
 
-		<title><?php wp_title(''); ?></title>
-
 		<!-- Google Chrome Frame for IE -->
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
