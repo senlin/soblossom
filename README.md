@@ -1,7 +1,7 @@
 soblossom WordPress theme
 =========
 
-###### Last updated on 2015.01.09
+###### Last updated on 2015.01.10
 ###### Foundation version 5.5.0
 ###### [DEMO SITE](http://so-wp.com/themes/soblossom/)
 ###### Author: [Piet Bos](https://github.com/senlin)
@@ -93,6 +93,10 @@ Nowadays there are plenty of WordPress themes built on Foundation and we have lo
 [Website](http://senlinonline.com)
 
 ## Changelog
+
+### 150110
+
+* address issues by [Emil Uzelac](https://github.com/emiluzelac) after his official [Theme Review](http://themereview.co/theme-reviews-as-a-service/)
 
 ### 141227
 
