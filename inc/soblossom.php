@@ -127,6 +127,31 @@ function soblossom_supports_wp_features() {
 		return $fontawesome_url;
 	}
 
+	/**
+	 * Return the Google Webfont URLs of your choice
+	 * These are just two samples, you can find your own fonts on Google
+	 * @link: www.google.com/fonts
+	 */
+	function soblossom_google_webfonts() {
+		$fonts_url = '';
+		$fonts     = array();
+		$subsets   = 'latin,latin-ext';
+	
+		$fonts[] = 'Source Sans Pro:200,300,700,700italic';
+	
+		$fonts[] = 'PT Serif:400,400italic';
+		
+		if ( $fonts ) {
+			$fonts_url = add_query_arg( array(
+				'family' => urlencode( implode( '|', $fonts ) ),
+				'subset' => urlencode( $subsets ),
+			), '//fonts.googleapis.com/css' );
+		}
+	
+		return $fonts_url;
+	}
+
+
 	// Enqueue scripts and styles.
 	function soblossom_scripts() {
 
@@ -134,6 +159,9 @@ function soblossom_supports_wp_features() {
 		wp_enqueue_style( 'soblossom-style', get_template_directory_uri() . '/css/style.css', array(), null );
 	
 		wp_enqueue_style( 'fontawesome', soblossom_fontawesome_url(), array(), null );
+	
+		// uncomment to include Google Webfonts (see lines 130-152)
+		//wp_enqueue_style( 'google_webfonts', soblossom_google_webfonts(), array(), null );
 	
 		/* SCRIPTS */
 		wp_enqueue_script( 'modernizer', get_template_directory_uri() . '/bower_components/modernizr/modernizr.js', array(), null );
