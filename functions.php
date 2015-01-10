@@ -53,8 +53,8 @@ require get_template_directory() . '/inc/walkers/iconfont-walker.php';
  * @link: mobiledetect.net
  * comment out to exclude
  */
-require get_template_directory() . '/inc/classes/Mobile_Detect.php';
-$soblossom_detect = new Mobile_Detect();
+//require get_template_directory() . '/inc/classes/Mobile_Detect.php';
+//$soblossom_detect = new Mobile_Detect();
 
 /**
  * /inc/classes/gallery.php - soblossom_clearing_blockgrid_gallery
