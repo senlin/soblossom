@@ -119,6 +119,7 @@ function soblossom_supports_wp_features() {
 
 	/**
 	 * Return the Font Awesome stylesheet URL, when Font Awesome gets updated, just change this URL
+	 * This is actually the easiest and quickest way, but you might want to check out all possibilities (Ruby Gem or Custom LESS, SASS)
 	 * @link: fontawesome.io/get-started/
 	 */
 	function soblossom_fontawesome_url() {
@@ -160,7 +161,7 @@ function soblossom_supports_wp_features() {
 	
 		wp_enqueue_style( 'fontawesome', soblossom_fontawesome_url(), array(), null );
 	
-		// uncomment to include Google Webfonts (see lines 130-152)
+		// uncomment to include Google Webfonts (see lines 131-153)
 		//wp_enqueue_style( 'google_webfonts', soblossom_google_webfonts(), array(), null );
 	
 		/* SCRIPTS */
