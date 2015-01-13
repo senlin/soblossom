@@ -241,6 +241,11 @@ POSTS & CONTENT STYLES
 .page {}            /* general article on a page style */
 .attachment {}      /* general style on an attachment */
 .sticky {}          /* sticky post style */
+.sticky-post { 
+	position: absolute;
+	top: 0;
+}
+
 .hentry {}          /* hentry class */
 .category-slug {}   /* style by category (i.e. category-videos) */
 .tag-slug {}        /* style by tag (i.e. tag-news) */
