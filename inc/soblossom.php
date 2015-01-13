@@ -10,6 +10,14 @@
  * @package soblossom
  */
 
+/**
+ * Set the content width based on the theme's design and stylesheet.
+ * see available workarounds via wordpress.stackexchange.com/a/87556/2015
+ */
+if ( ! isset( $content_width ) ) {
+	$content_width = 1000;
+}
+
 add_action( 'after_setup_theme', 'soblossom_bloom' );
 
 /**
@@ -33,6 +41,10 @@ function soblossom_bloom() { //actions, filters and other theme setup related th
 
     // enqueue base scripts and styles
     add_action( 'wp_enqueue_scripts', 'soblossom_scripts' );
+    
+    // Add stylesheet to the visual editor to more or less resemble the theme style on the backend
+	add_editor_style( array( 'css/style.css', 'css/style.min.css' ) ); // remove the one you don't use.
+
     
     // widget areas registration (areas are created in functions.php)
 	add_action( 'widgets_init', 'soblossom_register_widget_areas' );
@@ -172,6 +184,11 @@ function soblossom_supports_wp_features() {
 		wp_enqueue_script( 'soblossom-js', get_template_directory_uri() . '/js/soblossom.js', array( 'jquery' ), null, true );
 		
 		wp_enqueue_script( 'soblossom-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), null, true );
+		
+		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+			wp_enqueue_script( 'comment-reply' );
+		}
+
 		
 	}
 
@@ -625,3 +642,28 @@ function soblossom_supports_wp_features() {
 	    echo '<link rel="shortcut icon" href="' . get_template_directory_uri() . '/images/favicon-96.png" />';
 	
 	}
+
+/**
+ * Replace .sticky with .sticky-post on the post_class array (to prevent conflicts with sticky top navigation)
+ *
+ * @source: github.com/wearerequired/required-foundation/blob/master/includes/req-foundation.php#L294-319
+ */
+if ( ! function_exists( 'soblossom_enhance_sticky_post' ) ) {
+
+	add_filter( 'post_class', 'soblossom_enhance_sticky_post', 20 );
+
+	function soblossom_enhance_sticky_post( $classes ) {
+
+		if ( ( $key = array_search( 'sticky', $classes ) ) !== false ) {
+
+			unset( $classes[$key] );
+
+			$classes[] = 'sticky-post';
+
+		}
+
+		return $classes;
+
+	}
+
+}
