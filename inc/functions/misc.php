@@ -9,17 +9,6 @@
  * @package soblossom
  */
 
-/**
- * Function to make it possible to query on is_post_type()
- * 
- * source: http://wordpress.stackexchange.com/a/22166/2015
- */
-function is_post_type( $type ) {
-    global $wp_query;
-    if ( $type == get_post_type( $wp_query->post->ID) ) return true;
-    return false;
-}
-
 // Enable Page Excerpts
 add_post_type_support( 'page', 'excerpt' );
 

@@ -7,6 +7,18 @@
  * @link: generatewp.com/snippet/PGQj8gv/
  */
 
+/**
+ * Function to make it possible to query on is_post_type()
+ * 
+ * source: http://wordpress.stackexchange.com/a/22166/2015
+ */
+function is_post_type( $type ) {
+    global $wp_query;
+    if ( $type == get_post_type( $wp_query->post->ID) ) return true;
+    return false;
+}
+
+
 // Hook into the 'init' action
 add_action( 'init', 'soblossom_sample_cpt', 0 );
 
