@@ -344,7 +344,9 @@ function soblossom_supports_wp_features() {
 			 */
 			echo '<img src="' . $small[0] . '" data-interchange="[' . $small[0] . ', (default)], [' . $medium[0] . ', (small)], [' . $medium[0] . ', (medium)], [' . $large[0] . ', (large)]" itemprop="thumbnailUrl">';
 			
-			//echo '</a></li></ul></div>';
+			//echo '</a></li></ul>';
+			
+			echo '</div>';
 			
 		} //end function soblossom_featured_image()
 	
