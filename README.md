@@ -71,7 +71,7 @@ All contributions naturally receive credits here in the readme file.
 
 ## Credits
 
-Nowadays there are plenty of WordPress themes built on Foundation and we have looked at a few of them: [Reverie](https://github.com/milohuang/reverie) by [Zhen Huang](https://github.com/milohuang), [WPForge](http://wpforge.themeawesome.com/) by [Thomas Vasquez](https://twitter.com/tsquez) and last but not least [JointsWP](http://jointswp.com/) by [Jeremy Englert](http://twitter.com/jeremyenglert). Thanks all for your guidance, tips and inspiration!
+Nowadays there are plenty of WordPress themes built on Foundation and we have looked at a few of them: [Reverie](https://github.com/milohuang/reverie) by [Zhen Huang](https://github.com/milohuang), [Required+](https://github.com/wearerequired/required-foundation) (discontinued) by [Required+](http://required.ch/who-we-are/), [WPForge](http://wpforge.themeawesome.com/) by T. Vasquez and last but not least [JointsWP](http://jointswp.com/) by [Jeremy Englert](http://twitter.com/jeremyenglert). Thanks all for your guidance, tips and inspiration!
 
 ## License
 
