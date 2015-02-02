@@ -15,7 +15,7 @@
  * see available workarounds via wordpress.stackexchange.com/a/87556/2015
  */
 if ( ! isset( $content_width ) ) {
-	$content_width = 1000;
+	$content_width = 970;
 }
 
 add_action( 'after_setup_theme', 'soblossom_bloom' );
