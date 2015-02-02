@@ -201,7 +201,7 @@
    * Licensed under the MIT license.
    */
 
-  (function($) {
+  (function(jQuery) {
 
   // requestAnimationFrame polyfill adapted from Erik Möller
   // fixes from Paul Irish and Tino Zijdel
@@ -267,7 +267,7 @@
 
   }
 
-  }( jQuery ));
+  }( $ ));
 
 
   function removeQuotes (string) {
@@ -933,7 +933,7 @@
 
     valid_checkbox : function(el, required) {
       var el = this.S(el),
-          valid = (el.is(':checked') || !required);
+          valid = (el.is(':checked') || !required || el.get(0).getAttribute('disabled'));
 
       if (valid) {
         el.removeAttr(this.invalid_attr).parent().removeClass(this.settings.error_class);
@@ -948,12 +948,24 @@
       var name = el.getAttribute('name'),
           group = this.S(el).closest('[data-' + this.attr_name(true) + ']').find("[name='"+name+"']"),
           count = group.length,
-          valid = false;
+          valid = false,
+          disabled = false;
 
       // Has to count up to make sure the focus gets applied to the top error
-      for (var i=0; i < count; i++) {
-        if (group[i].checked) valid = true;
-      }
+        for (var i=0; i < count; i++) {
+            if( group[i].getAttribute('disabled') ){
+                disabled=true;
+                valid=true;
+            } else {
+                if (group[i].checked){
+                    valid = true;
+                } else {
+                    if( disabled ){
+                        valid = false;
+                    }
+                }
+            }
+        }
 
       // Has to count up to make sure the focus gets applied to the top error
       for (var i=0; i < count; i++) {
@@ -1138,7 +1150,7 @@
 
       // comma delimited list of selectors that, on click, will close clearing,
       // add 'div.clearing-blackout, div.visible-img' to close on background click
-      close_selectors : '.clearing-close, div.clearing-blackout', 
+      close_selectors : '.clearing-close, div.clearing-blackout',
 
       // Default to the entire li element.
       open_selectors : '',
@@ -1282,7 +1294,7 @@
       if ($el.parent().hasClass('carousel')) {
         return;
       }
-      
+
       $el.after('<div id="foundationClearingHolder"></div>');
 
       var grid = $el.detach(),
@@ -1293,7 +1305,7 @@
       } else {
         grid_outerHTML = grid[0].outerHTML;
       }
-      
+
       var holder = this.S('#foundationClearingHolder'),
           settings = $el.data(this.attr_name(true) + '-init'),
           data = {
@@ -1394,7 +1406,7 @@
           .removeClass('clearing-blackout');
         container.removeClass('clearing-container');
         visible_image.hide();
-        visible_image.trigger('closed.fndtn.clearing');        
+        visible_image.trigger('closed.fndtn.clearing');
       }
 
       // Event to re-enable scrolling on touch devices
@@ -1474,34 +1486,18 @@
     },
 
     center_and_label : function (target, label) {
-      if (!this.rtl) {
-        target.css({
-          marginLeft : -(target.outerWidth() / 2),
-          marginTop : -(target.outerHeight() / 2)
+      if (!this.rtl && label.length > 0) {
+        label.css({
+          marginLeft : -(label.outerWidth() / 2),
+          marginTop : -(target.outerHeight() / 2)-label.outerHeight()-10
         });
-
-        if (label.length > 0) {
-          label.css({
-            marginLeft : -(label.outerWidth() / 2),
-            marginTop : -(target.outerHeight() / 2)-label.outerHeight()-10
-          });
-        }
       } else {
-        target.css({
-          marginRight : -(target.outerWidth() / 2),
-          marginTop : -(target.outerHeight() / 2),
+        label.css({
+          marginRight : -(label.outerWidth() / 2),
+          marginTop : -(target.outerHeight() / 2)-label.outerHeight()-10,
           left: 'auto',
           right: '50%'
         });
-
-        if (label.length > 0) {
-          label.css({
-            marginRight : -(label.outerWidth() / 2),
-            marginTop : -(target.outerHeight() / 2)-label.outerHeight()-10,
-            left: 'auto',
-            right: '50%'
-          });
-        }
       }
       return this;
     },
@@ -1558,7 +1554,7 @@
           .hide();
       }
       return this;
-    }, 
+    },
 
     // directional methods
 
@@ -1770,6 +1766,10 @@
 
           if (links.length > 0 && parent.attr('aria-autoclose') !== "false") {
               self.close.call(self, S('[' + self.attr_name() + '-content]'));
+          }
+
+          if (e.target !== document && !$.contains(document.documentElement, e.target)) {
+            return;
           }
 
           if (S(e.target).closest('[' + self.attr_name() + ']').length > 0) {
@@ -2471,7 +2471,7 @@
 
       if (i > 0) {
         while (i--) {
-          var split = raw_arr[i].split(/\((.*?)(\))$/);
+          var split = raw_arr[i].split(/\(([^\)]*?)(\))$/);
 
           if (split.length > 1) {
             var params = this.parse_scenario(split);
@@ -3943,8 +3943,8 @@
           slides_container.trigger('after-slide-change.fndtn.orbit',[{slide_number: idx, total_slides: slides.length}]);
           settings.after_slide_change(idx, slides.length);
         };
-        if (slides_container.height() != next.height() && settings.variable_height) {
-          slides_container.animate({'height': next.height()}, 250, 'linear', unlock);
+        if (slides_container.outerHeight() != next.outerHeight() && settings.variable_height) {
+          slides_container.animate({'height': next.outerHeight()}, 250, 'linear', unlock);
         } else {
           unlock();
         }
@@ -3957,8 +3957,8 @@
         if (dir === 'prev') {animate.prev(current, next, callback);}
       };
 
-      if (next.height() > slides_container.height() && settings.variable_height) {
-        slides_container.animate({'height': next.height()}, 250, 'linear', start_animation);
+      if (next.outerHeight() > slides_container.outerHeight() && settings.variable_height) {
+        slides_container.animate({'height': next.outerHeight()}, 250, 'linear', start_animation);
       } else {
         start_animation();
       }
@@ -4007,10 +4007,10 @@
 
     self.compute_dimensions = function() {
       var current = $(self.slides().get(idx));
-      var h = current.height();
+      var h = current.outerHeight();
       if (!settings.variable_height) {
         self.slides().each(function(){
-          if ($(this).height() > h) { h = $(this).height(); }
+          if ($(this).outerHeight() > h) { h = $(this).outerHeight(); }
         });
       }
       slides_container.height(h);
@@ -4309,7 +4309,6 @@
       close_on_esc: true,
       dismiss_modal_class: 'close-reveal-modal',
       bg_class: 'reveal-modal-bg',
-      bg_root_element: 'body',
       root_element: 'body',
       open: function(){},
       opened: function(){},
@@ -4343,7 +4342,7 @@
         .off('.reveal')
         .on('click.fndtn.reveal', '[' + this.add_namespace('data-reveal-id') + ']:not([disabled])', function (e) {
           e.preventDefault();
-        
+
           if (!self.locked) {
             var element = S(this),
                 ajax = element.data(self.data_attr('reveal-ajax'));
@@ -4362,9 +4361,7 @@
 
       S(document)
         .on('click.fndtn.reveal', this.close_targets(), function (e) {
-
           e.preventDefault();
-
           if (!self.locked) {
             var settings = S('[' + self.attr_name() + '].open').data(self.attr_name(true) + '-init') || self.settings,
                 bg_clicked = S(e.target)[0] === S('.' + settings.bg_class)[0];
@@ -4464,7 +4461,8 @@
         }
 
         this.key_up_on(modal);    // PATCH #3: turning on key up capture only when a reveal window is open
-        modal.trigger('open').trigger('open.fndtn.reveal');
+
+        modal.on('open.fndtn.reveal').trigger('open.fndtn.reveal');
 
         if (open_modal.length < 1) {
           this.toggle_bg(modal, true);
@@ -4533,13 +4531,10 @@
       return base;
     },
 
-    toggle_bg : function (el, modal, state) {
-      var settings = el.data(this.attr_name(true) + '-init') || this.settings,
-            bg_root_element = settings.bg_root_element; // Adding option to specify the background root element fixes scrolling issue
-      
+    toggle_bg : function (modal, state) {
       if (this.S('.' + this.settings.bg_class).length === 0) {
         this.settings.bg = $('<div />', {'class': this.settings.bg_class})
-          .appendTo(bg_root_element).hide();
+          .appendTo('body').hide();
       }
 
       var visible = this.settings.bg.filter(':visible').length > 0;
@@ -4574,9 +4569,9 @@
           this.locked = false;
         }
         if (animData.pop) {
-          css.top = $(root_element).scrollTop() - el.data('offset') + 'px'; //adding root_element instead of window for scrolling offset if modal trigger is below the fold
+          css.top = $(window).scrollTop() - el.data('offset') + 'px';
           var end_css = {
-            top: $(root_element).scrollTop() + el.data('css-top') + 'px', //adding root_element instead of window for scrolling offset if modal trigger is below the fold
+            top: $(window).scrollTop() + el.data('css-top') + 'px',
             opacity: 1
           };
 
@@ -4592,7 +4587,7 @@
         }
 
         if (animData.fade) {
-          css.top = $(root_element).scrollTop() + el.data('css-top') + 'px'; //adding root_element instead of window for scrolling offset if modal trigger is below the fold
+          css.top = $(window).scrollTop() + el.data('css-top') + 'px';
           var end_css = {opacity: 1};
 
           return setTimeout(function () {
@@ -4624,8 +4619,8 @@
     hide : function (el, css) {
       // is modal
       if (css) {
-        var settings = el.data(this.attr_name(true) + '-init') || this.settings,
-            root_element = settings.root_element;
+        var settings = el.data(this.attr_name(true) + '-init');
+        settings = settings || this.settings;
 
         var animData = getAnimationData(settings.animation);
         if (!animData.animate) {
@@ -4633,7 +4628,7 @@
         }
         if (animData.pop) {
           var end_css = {
-            top: - $(root_element).scrollTop() - el.data('offset') + 'px', //adding root_element instead of window for scrolling offset if modal trigger is below the fold
+            top: - $(window).scrollTop() - el.data('offset') + 'px',
             opacity: 0
           };
 
@@ -5041,6 +5036,10 @@
       S('[' + this.attr_name() + '] > .active > a', this.scope).each(function () {
         self.default_tab_hashes.push(this.hash);
       });
+
+      // store the initial href, which is used to allow correct behaviour of the
+      // browser back button when deep linking is turned on.
+      self.entry_location = window.location.href;
     },
 
     events : function () {
@@ -5116,7 +5115,8 @@
      },
 
     toggle_active_tab: function (tab, location_hash) {
-      var S = this.S,
+      var self = this,
+          S = self.S,
           tabs = tab.closest('[' + this.attr_name() + ']'),
           tab_link = tab.find('a'),
           anchor = tab.children('a').first(),
@@ -5169,6 +5169,16 @@
             $('#' + $(document.activeElement).attr('href').substring(1))
               .attr('aria-hidden', null);
 
+          },
+          go_to_hash = function(hash) {
+            // This function allows correct behaviour of the browser's back button when deep linking is enabled. Without it
+            // the user would get continually redirected to the default hash.
+            var is_entry_location = window.location.href === self.entry_location,
+                default_hash = settings.scroll_to_content ? self.default_tab_hashes[0] : 'fndtn-' + self.default_tab_hashes[0].replace('#', '')
+
+            if (!(is_entry_location && hash === default_hash)) {
+              window.location.hash = hash;
+            }
           };
 
       // allow usage of data-tab-content attribute instead of href
@@ -5180,8 +5190,10 @@
       if (settings.deep_linking) {
 
         if (settings.scroll_to_content) {
+
           // retain current hash to scroll to content
-          window.location.hash = location_hash || target_hash;
+          go_to_hash(location_hash || target_hash);
+
           if (location_hash == undefined || location_hash == target_hash) {
             tab.parent()[0].scrollIntoView();
           } else {
@@ -5190,9 +5202,9 @@
         } else {
           // prefix the hashes so that the browser doesn't scroll down
           if (location_hash != undefined) {
-            window.location.hash = 'fndtn-' + location_hash.replace('#', '');
+            go_to_hash('fndtn-' + location_hash.replace('#', ''));
           } else {
-            window.location.hash = 'fndtn-' + target_hash.replace('#', '');
+            go_to_hash('fndtn-' + target_hash.replace('#', ''));
           }
         }
       }
