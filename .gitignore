@@ -1,8 +1,8 @@
 
 *.DS_Store
+.bowerrc
 
-*.scssc
-
-bower-json.bak
+node_modules/*
 
 languages/incomplete/*
+
