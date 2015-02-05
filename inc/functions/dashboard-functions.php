@@ -101,7 +101,7 @@ function soblossom_remove_wp_default_widgets() {
 
 
 function soblossom_login_stylesheet() {
-    wp_enqueue_style( 'custom-login', get_stylesheet_directory_uri() . '/inc/css/custom-login.css' );
+    wp_enqueue_style( 'custom-login', get_stylesheet_directory_uri() . '/css/custom-login.css' );
 }
 
 function soblossom_login_logo_url() {

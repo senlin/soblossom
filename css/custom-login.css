@@ -7,27 +7,28 @@
  * @package soblossom
  */
 /* change the background color of the login screen */
-/* line 11, ../scss/custom-login.scss */
 body.login {
   background-color: #fff;
   /* replace WordPress logo with your own */
-  /* hide the error */
-  /* remove box shadow and add a nice border */
-}
-/* line 15, ../scss/custom-login.scss */
-body.login div#login h1 a {
-  background-image: url(../images/login.png);
-  background-size: 307px 62px;
-  height: 62px;
-  padding-bottom: 0;
-  width: 307px;
-}
-/* line 24, ../scss/custom-login.scss */
-body.login #login_error {
-  display: none;
-}
-/* line 29, ../scss/custom-login.scss */
-body.login form {
-  border: 1px solid #a7d7f9;
-  box-shadow: 0 0;
-}
+  /* hide the error */ }
+  body.login div#login {
+    /* remove box shadow and add a nice border */ }
+    body.login div#login h1 a {
+      background-image: url(../images/login.png);
+      background-size: 307px 62px;
+      height: 62px;
+      padding-bottom: 0;
+      width: 307px; }
+    body.login div#login p.message {
+      border-left: 4px solid #008cba; }
+    body.login div#login form {
+      border: 1px solid #008cba;
+      box-shadow: 0 0; }
+      body.login div#login form input[type="text"]:focus, body.login div#login form input[type="password"]:focus {
+        border-color: #43ac6a;
+        box-shadow: 0 0 2px rgba(67, 172, 106, 0.8); }
+      body.login div#login form #wp-submit.button-primary {
+        background: #008cba;
+        border-color: #008cba; }
+  body.login #login_error {
+    display: none; }
