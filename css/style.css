@@ -9980,53 +9980,63 @@ view.
 /*********************
 FOUNDATION STYLES
 *********************/
-/* line 527, ../scss/_small.scss */
-.clearing-assembled.clearing-blackout a:hover {
-  background: none;
+/*** Clearing Thumbs (lightbox effect) ***/
+/* line 528, ../scss/_small.scss */
+.clearing-assembled.clearing-blackout {
+  background: transparent;
+}
+/* line 533, ../scss/_small.scss */
+.clearing-assembled.clearing-blackout .clearing-container .visible-img {
+  background: rgba(51, 51, 51, 0.8);
+  height: 100%;
+}
+/* line 542, ../scss/_small.scss */
+.clearing-assembled.clearing-blackout .clearing-container .carousel {
+  margin-top: 0;
 }
 
 /*********************
 PLUGIN STYLES
 *********************/
-/* line 536, ../scss/_small.scss */
+/* line 559, ../scss/_small.scss */
 .gform_body ul {
   list-style: none outside none;
   margin: 0;
 }
-/* line 541, ../scss/_small.scss */
+/* line 564, ../scss/_small.scss */
 .gform_body .gfield.gform_validation_container {
   clip: rect(1px, 1px, 1px, 1px);
   position: absolute;
 }
-/* line 546, ../scss/_small.scss */
+/* line 569, ../scss/_small.scss */
 .gform_body .validation_error {
   font-weight: 700;
   margin-bottom: 0.5rem;
   text-align: center;
 }
-/* line 551, ../scss/_small.scss */
+/* line 574, ../scss/_small.scss */
 .gform_body .gfield_error.gfield_contains_required {
   background-color: rgba(255, 192, 203, 0.75);
   margin-bottom: 1rem;
   padding: .25rem 1rem;
 }
-/* line 556, ../scss/_small.scss */
+/* line 579, ../scss/_small.scss */
 .gform_body .gfield_error.gfield_contains_required .validation_message {
   font-style: italic;
 }
 
-/* line 564, ../scss/_small.scss */
+/* line 587, ../scss/_small.scss */
 .frm_forms .frm_blank_field {
   background-color: rgba(255, 192, 203, 0.75);
   margin-bottom: 1rem;
   padding: 1rem 1rem 0.5rem;
 }
-/* line 569, ../scss/_small.scss */
+/* line 592, ../scss/_small.scss */
 .frm_forms .frm_blank_field .frm_error {
   font-style: italic;
 }
 
-/* line 576, ../scss/_small.scss */
+/* line 599, ../scss/_small.scss */
 .breadcrumbs {
   margin-bottom: 1rem;
 }

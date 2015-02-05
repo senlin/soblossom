@@ -524,9 +524,32 @@ FOOTER STYLES
 /*********************
 FOUNDATION STYLES
 *********************/
-.clearing-assembled.clearing-blackout a:hover {
-	background: none;
+/*** Clearing Thumbs (lightbox effect) ***/
+.clearing-assembled.clearing-blackout {
+	background: transparent;
+	
+	.clearing-container {
+	
+		.visible-img {
+			background: rgba(51,51,51,0.8);
+			height: 100%;
+			
+			// optional - if used for single image
+			.clearing-main-prev > span, .clearing-main-next > span {
+			    //display: none;
+			}
+		}
+		.carousel {
+			margin-top: 0;
+
+			// optional - if used for single image (this is the thumbnail in the bottom carousel)
+			a {
+		    	//display: none;
+		    }
+		}
+	}
 }
+
 
 /*********************
 PLUGIN STYLES
