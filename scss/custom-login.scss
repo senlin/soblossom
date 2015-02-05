@@ -7,28 +7,46 @@
  * @package soblossom
  */
 
+$white: #fff;
+$primary: #008cba;
+$success: #43ac6a;
+
 /* change the background color of the login screen */
 body.login {
-	background-color: #fff;
+	background-color: $white;
 
 	/* replace WordPress logo with your own */
-	div#login h1 a {
-	    background-image: url(../images/login.png);
-	    background-size: 307px 62px;
-	    height: 62px;
-	    padding-bottom: 0;
-	    width: 307px;
-	}
+	div#login {
+		h1 a {
+		    background-image: url(../images/login.png);
+		    background-size: 307px 62px;
+		    height: 62px;
+		    padding-bottom: 0;
+		    width: 307px;
+		}
+		p.message {
+	    	border-left: 4px solid $primary;
+	    }
 
+		/* remove box shadow and add a nice border */
+		form {
+			border: 1px solid $primary;
+			box-shadow: 0 0;
+			
+			input[type="text"]:focus,
+			input[type="password"]:focus {
+			    border-color: $success;
+			    box-shadow: 0 0 2px rgba($success, 0.8);
+			}
+
+			#wp-submit.button-primary {
+			    background: $primary;
+			    border-color: $primary;
+			}
+		}
+	}
 	/* hide the error */
 	#login_error {
 		display: none;
 	}
-
-	/* remove box shadow and add a nice border */
-	form {
-		border: 1px solid #a7d7f9;
-		box-shadow: 0 0;
-	}
-
 }
