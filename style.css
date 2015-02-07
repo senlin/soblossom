@@ -4,7 +4,7 @@ Theme URI: http://so-wp.com/themes/soblossom/
 Author: Piet Bos
 Author URI: http://senlinonline.com/
 Description: soblossom is a WordPress starter theme that is based on Foundation on the frontend and Underscores sass on the backend.
-Version: 150205
+Version: 150207
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: soblossom
@@ -20,7 +20,7 @@ This theme is licensed under the GPL.
  * The only reason this file is here, is because it a required theme file by WordPress.
  * 
  * The real stylesheet however is compiled with Grunt and you can find it in the `css` folder.
- * Set your preferences via the `Gruntfile.js` file.
+ * Set your preferences via the `Gruntfile.js` file; a sample has been included.
  * 
  * You can use this file to leave some notes for yourself if you wish, or just leave it empty; 
  */

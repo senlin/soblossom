@@ -1,7 +1,7 @@
 soblossom WordPress theme
 =========
 
-###### Last updated on 2015.02.05
+###### Last updated on 2015.02.08
 ###### Foundation version 5.5.1
 ###### [DEMO SITE](http://so-wp.com/themes/soblossom/)
 ###### Author: [Piet Bos](https://github.com/senlin)
@@ -69,6 +69,33 @@ All contributions naturally receive credits here in the readme file.
 
 2014.12.27 - Dutch added - by [Piet Bos](http://senlinonline.com)
 
+## Font Awesome
+
+Since 150208 we are loading the Font Awesome icon font via Bower. This means that you don't need to separately enqueue it anymore which saves a call to an external source. We have added two lines to the main scss file (`scss/style.scss` line 25-26) which you can remove if you don't need Font Awesome.
+
+## Grunt
+
+Since 150205 we have included Font Awesome and added some import lines to the `scss/style.scss` file to be able to use this super popular icon font on your site. If you don't want to use it, you can just remove the lines and even delete the fontawesome folder from the `bower_components` if you want.
+
+If you're new to Grunt, then we would like to suggest to start off by reading [this amazing article](http://24ways.org/2013/grunt-is-not-weird-and-hard/) by Chris Coyier.
+
+As a quick reminder (if only for ourselves) to start a new project you will first need to install everything:
+
+* start with installing Foundation according to [the Get Started instructions over at Zurb](http://foundation.zurb.com/docs/sass.html)
+* then copy over everything from this Repo into your new project (overwrite everything except the `bower_components` and the `node_modules` folders and don't forget to remove the `.git`folder that comes with the Foundation install)
+* when Foundation is installed the grunt-sass and grunt-contrib-watch tasks are already installed, so you don't have to install those anymore
+* grunt-contrib-concat: `$ npm install grunt-contrib-concat --save-dev`
+* grunt-contrib-uglify: `$ npm install grunt-contrib-uglify --save-dev`
+* grunt-wp-i18n: `$ npm install grunt-wp-i18n --save-dev`
+
+For LiveReload to work, you will need to [install the browser extension](http://feedback.livereload.com/knowledgebase/articles/86242-how-do-i-install-and-use-the-browser-extensions-) for the browser you use for your dev work.
+
+Included is a sample Gruntfile.js that you can use as a start.
+
+### Can I also use soblossom without Grunt?
+
+Yes, of course you can! Then you can just ignore all the stuff about Grunt. What you then need to do though is to adjust the enqueueing of styles and scripts in the `inc/soblossom.php` file (lines 168-210) and if you want to use the Font Awesome font, you will need to separately include that (lines 132-141).
+
 ## Credits
 
 Nowadays there are plenty of WordPress themes built on Foundation and we have looked at a few of them: [Reverie](https://github.com/milohuang/reverie) by [Zhen Huang](https://github.com/milohuang), [Required+](https://github.com/wearerequired/required-foundation) (discontinued) by [Required+](http://required.ch/who-we-are/), [WPForge](http://wpforge.themeawesome.com/) by T. Vasquez and last but not least [JointsWP](http://jointswp.com/) by [Jeremy Englert](http://twitter.com/jeremyenglert). Thanks all for your guidance, tips and inspiration!
@@ -93,6 +120,10 @@ Nowadays there are plenty of WordPress themes built on Foundation and we have lo
 [Website](http://senlinonline.com)
 
 ## Changelog
+
+### 150208
+
+* include Font Awesome icon font via Bower
 
 ### 150205
 

@@ -130,17 +130,6 @@ function soblossom_supports_wp_features() {
  */
 
 	/**
-	 * Return the Font Awesome stylesheet URL, when Font Awesome gets updated, just change this URL
-	 * This is actually the easiest and quickest way, but you might want to check out all possibilities (Ruby Gem or Custom LESS, SASS)
-	 * @link: fontawesome.io/get-started/
-	 */
-	function soblossom_fontawesome_url() {
-		$fontawesome_url = '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css';
-	
-		return $fontawesome_url;
-	}
-
-	/**
 	 * Return the Google Webfont URLs of your choice
 	 * These are just two samples, you can find your own fonts on Google
 	 * @link: www.google.com/fonts
@@ -169,28 +158,43 @@ function soblossom_supports_wp_features() {
 	function soblossom_scripts() {
 
 		/* STYLES */
-		wp_enqueue_style( 'soblossom-style', get_template_directory_uri() . '/css/style.css', array(), null );
-	
-		wp_enqueue_style( 'fontawesome', soblossom_fontawesome_url(), array(), null );
-	
-		// uncomment to include Google Webfonts (see lines 131-153)
+		if ( WP_DEBUG || SCRIPT_DEBUG ) { // DEBUG usually is turned on in the Dev environment and off on Staging and Production
+
+			wp_enqueue_style( 'soblossom-style', get_template_directory_uri() . '/css/style.css', array(), null );
+		
+		} else {
+			
+			wp_enqueue_style( 'soblossom-style-minified', get_template_directory_uri() . '/css/style.min.css', array(), null );
+			
+		}
+		
+		// uncomment to include Google Webfonts (see lines 132-154)
 		//wp_enqueue_style( 'google_webfonts', soblossom_google_webfonts(), array(), null );
 	
 		/* SCRIPTS */
-		wp_enqueue_script( 'modernizer', get_template_directory_uri() . '/bower_components/modernizr/modernizr.js', array(), null );
+		if ( WP_DEBUG || SCRIPT_DEBUG ) {
+
+			//wp_enqueue_script( 'modernizer', get_template_directory_uri() . '/bower_components/modernizr/modernizr.js', array(), null );
+			
+			//wp_enqueue_script( 'foundation', get_template_directory_uri() . '/bower_components/foundation/js/foundation.min.js', array(), null, true );
+			
+			//wp_enqueue_script( 'soblossom-js', get_template_directory_uri() . '/js/soblossom.js', array( 'jquery' ), null, true );
+			
+			//wp_enqueue_script( 'soblossom-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), null, true );
+			
+			wp_enqueue_script( 'soblossom-combined', get_template_directory_uri() . '/js/combined.js', array( 'jquery' ), null, true );
+			
+		} else {
 		
-		wp_enqueue_script( 'foundation', get_template_directory_uri() . '/bower_components/foundation/js/foundation.min.js', array(), null, true );
+			wp_enqueue_script( 'soblossom-minified', get_template_directory_uri() . '/js/combined.min.js', array( 'jquery' ), null, true );
 		
-		wp_enqueue_script( 'soblossom-js', get_template_directory_uri() . '/js/soblossom.js', array( 'jquery' ), null, true );
-		
-		wp_enqueue_script( 'soblossom-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), null, true );
+		}		
 		
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 			wp_enqueue_script( 'comment-reply' );
 		}
-
-		
 	}
+
 
 /**
  * WP_HEAD CLEANUP
