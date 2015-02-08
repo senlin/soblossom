@@ -71,11 +71,9 @@ All contributions naturally receive credits here in the readme file.
 
 ## Font Awesome
 
-Since 150208 we are loading the Font Awesome icon font via Bower. This means that you don't need to separately enqueue it anymore which saves a call to an external source. We have added two lines to the main scss file (`scss/style.scss` line 25-26) which you can remove if you don't need Font Awesome.
+Since 150208 we are loading the Font Awesome icon font via Bower. This means that you don't need to separately enqueue it anymore which saves a call to an external source. We have added two lines to the main scss file (`scss/style.scss` line 25-26). If you don't want to use it, you can just remove the lines and even delete the fontawesome folder from the `bower_components` if you want.
 
 ## Grunt
-
-Since 150205 we have included Font Awesome and added some import lines to the `scss/style.scss` file to be able to use this super popular icon font on your site. If you don't want to use it, you can just remove the lines and even delete the fontawesome folder from the `bower_components` if you want.
 
 If you're new to Grunt, then we would like to suggest to start off by reading [this amazing article](http://24ways.org/2013/grunt-is-not-weird-and-hard/) by Chris Coyier.
 
@@ -94,7 +92,7 @@ Included is a sample Gruntfile.js that you can use as a start.
 
 ### Can I also use soblossom without Grunt?
 
-Yes, of course you can! Then you can just ignore all the stuff about Grunt. What you then need to do though is to adjust the enqueueing of styles and scripts in the `inc/soblossom.php` file (lines 168-210) and if you want to use the Font Awesome font, you will need to separately include that (lines 132-141).
+Yes, of course you can! Then you can just ignore all the stuff about Grunt. What you then need to do though, is to adjust the enqueueing of styles and scripts in the `inc/soblossom.php` file (lines 168-210) and if you want to use the Font Awesome font, you will need to separately include that (lines 132-141).
 
 ## Credits
 
