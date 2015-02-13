@@ -449,7 +449,7 @@ function soblossom_supports_wp_features() {
 				<div class="nav-links">
 					<?php
 						previous_post_link( '<div class="nav-previous">%link</div>', _x( '<i class="fa fa-long-arrow-left"></i> %title', 'Previous post link', 'soblossom' ) );
-						next_post_link(     '<div class="nav-next">%link</div>',     _x( '%title <i class="fa fa-long-arrow-right"></i>', 'Next post link',     'soblossom' ) );
+						next_post_link(     '<div class="nav-next">%link</div>',     _x( '%title <i class="fa fa-long-arrow-right"></i>', 'Next post link', 'soblossom' ) );
 					?>
 				</div><!-- .nav-links -->
 			</nav><!-- .navigation -->
