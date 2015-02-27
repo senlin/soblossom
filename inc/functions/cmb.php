@@ -39,6 +39,56 @@ function soblossom_register_meta_boxes( $meta_boxes ) {
 	// Better has an underscore as last sign
 	$prefix = '_soblossom_';
 
+	// Photos CMB
+	$meta_boxes[] = array(
+		// Meta box id, UNIQUE per meta box. Optional since 4.1.5
+		'id'         => 'soblossom_photos',
+
+		// Meta box title - Will appear at the drag and drop handle bar. Required.
+		'title'      => __( 'Photo Galleries', 'soblossom' ),
+
+		// Post types, accept custom post types as well - DEFAULT is 'post'. Can be array (multiple post types) or string (1 post type). Optional.
+		'post_types' => array( 'page' ),
+
+		// Where the meta box appear: normal (default), advanced, side. Optional.
+		'context'    => 'normal',
+
+		// Order of meta box: high (default), low. Optional.
+		'priority'   => 'high',
+
+		// Auto save: true, false (default). Optional.
+		'autosave'   => true,
+
+/*** uses the include/exclude premium script by metabox.io ***/
+		// Exclude for Homepage Template
+		'include' => array(
+            // With all conditions below, use this logical operator to combine them. Default is 'OR'. Optional.
+            'relation'      => 'OR',
+
+            // List of page templates. Can be array or comma separated. Optional.
+            'template' => array( 'templates/photos.php' ),
+        ),
+		// List of meta fields
+		'fields'     => array(
+			// HEADING
+			array(
+				'type' => 'heading',
+				'name' => __( 'Add as many Photo Galleries as you want by clicking on the blue "+ button".', 'soblossom' ),
+				'id'   => 'fake_id', // Not used but needed for plugin
+				'desc' => __( 'Generate your Photo Gallery above and then add the entire shortcode here. You can find exact instructions with screenshots in the <a href="admin.php?page=wp-help-documents">Site Manual</a>)', 'soblossom' ),
+			),
+			// TEXT
+			array(
+				'name' => __( 'Gallery shortcode', 'soblossom' ),
+				'desc' => __( 'Add the generated shortcode here', 'soblossom' ),
+				'id'   => "{$prefix}gallery_shortcode",
+				'type' => 'text',
+				'size' => 50,
+				'clone' => true
+			),
+		),
+	);
+
 	// 1st meta box
 	$meta_boxes[] = array(
 		// Meta box id, UNIQUE per meta box. Optional since 4.1.5
