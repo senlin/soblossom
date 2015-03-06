@@ -73,8 +73,9 @@ function soblossom_bloom() { //actions, filters and other theme setup related th
     // remove injected CSS from gallery
     add_filter( 'gallery_style', 'soblossom_remove_gallery_styling' );
 
-    // clean up excerpt more
-    add_filter( 'excerpt_more', 'soblossom_clean_excerpt_more' );
+    // clean up and add new excerpt more
+    add_filter( 'excerpt_more', 'soblossom_clean_excerpt_more' ); //remove [&hellip;] 
+    add_filter( 'get_the_excerpt', 'soblossom_new_excerpt_more' ); // add a proper read more link
 
     // add soblossom search form
 	add_filter( 'get_search_form', 'soblossom_wpsearch' );
@@ -253,12 +254,18 @@ function soblossom_supports_wp_features() {
 	}
 
 /**
- * CLEAN UP EXCERPT MORE
+ * CLEAN EXCERPT MORE AND ADD A NEW EXCERPT MORE
  * edit the output to your liking
  */
-	function soblossom_clean_excerpt_more() {
+	// remove [&hellip;]
+	function soblossom_clean_excerpt_more( $more ) {
+		return '';
+	}	
+	
+	// add a proper read more link
+	function soblossom_new_excerpt_more( $output ) {
 		global $post;
-		return '&hellip; <a class="excerpt-read-more" href="' . get_permalink( $post->ID ) . '" title="' . __( 'Read the rest of ', 'soblossom' ) . get_the_title( $post->ID ) .'">' .  __( ' Read more <i class="fa fa-long-arrow-right"></i>', 'soblossom' ) . '</a>';
+		return $output . '&hellip; <a class="excerpt-read-more" href="' . get_permalink( $post->ID ) . '" title="' . __( 'Read the rest of ', 'soblossom' ) . get_the_title( $post->ID ) .'">' .  __( ' Read more <i class="fa fa-long-arrow-right"></i>', 'soblossom' ) . '</a>';
 			
 	}
 
