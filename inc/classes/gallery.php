@@ -179,6 +179,16 @@ function soblossom_clearing_blockgrid_gallery( $attr ) {
 		}
 		$image_meta  = wp_get_attachment_metadata( $id );
 
+		// borrowed from zurb-foundation-5-clearing-gallery plugin, class.prso-foundation-5-clearing-gallery.php lines 443-451
+		$caption_text = NULL;
+		if ( trim($attachment->post_excerpt) ) {
+			$caption_text = wptexturize($attachment->post_excerpt);
+			$caption_text = apply_filters( 'soblossom_gallery_image_caption', $caption_text, $attachment );
+		}
+		
+		//Add caption to img tag
+		$image_output = str_replace('<img', '<img data-caption="' . $caption_text . '"', $image_output);
+
 		$orientation = '';
 		if ( isset( $image_meta['height'], $image_meta['width'] ) ) {
 			$orientation = ( $image_meta['height'] > $image_meta['width'] ) ? 'portrait' : 'landscape';
