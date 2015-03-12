@@ -109,9 +109,10 @@ function soblossom_supports_wp_features() {
 	//add_image_size( $name, $width, $height, $crop );
 
 	// Enable support for HTML5 markup.
+	// from WP 4.2 also supports widgets: //make.wordpress.org/core/2015/03/11/html5-widgets-in-wordpress-4-2/
 	add_theme_support( 'html5',
 		array(
-			'search-form', 'comment-form', 'comment-list', 'gallery', 'caption'
+			'search-form', 'comment-form', 'comment-list', 'gallery', 'caption', 'widgets'
 		)
 	);
 
