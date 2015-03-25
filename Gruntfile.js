@@ -84,6 +84,10 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-wp-i18n');
 	
+	grunt.registerTask( 'build', [
+		'sass'
+	]);
+	
 	grunt.registerTask( 'default', [
 		'sass:dev',
 		'concat',

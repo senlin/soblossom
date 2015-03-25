@@ -29,9 +29,13 @@ add_action( 'login_enqueue_scripts', 'soblossom_login_stylesheet' ); // custom l
 add_filter( 'login_headerurl', 'soblossom_login_logo_url' );
 add_filter( 'login_headertitle', 'soblossom_login_logo_url_title' );
 add_filter( 'gettext', 'soblossom_remove_lostpassword_text' );
+// Remove error messages
+add_filter( 'login_errors', create_function( '$a', "return null;" ) );
 
-
-
+/* Disable Emoji (since WP 4.2) */
+add_action( 'wp_print_scripts', 'soblossom_disable_emoji_dequeue_script', 100 );
+/* Remove the emoji styles */
+remove_action( 'wp_print_styles', 'soblossom_print_emoji_styles' );
 
 // Replace "Howdy" with "Hello, welcome back"
 function soblossom_replace_howdy( $wp_admin_bar ) {
@@ -119,6 +123,21 @@ function soblossom_remove_lostpassword_text ( $text ) {
 	 return $text;
 }
 
-// Remove error messages
-add_filter( 'login_errors', create_function( '$a', "return null;" ) );
+
+/*
+Plugin Name: Disable Emojis
+Plugin URI: https://geek.hellyer.kiwi/plugins/disable-emojis/
+Description: Disable Emojis
+Version: 1.0
+Author: Ryan Hellyer
+Author URI: https://geek.hellyer.kiwi/
+License: GPL2
+------------------------------------------------------------------------
+Copyright Ryan Hellyer
+
+ * Dequeue the Emoji script.
+ */
+function soblossom_disable_emoji_dequeue_script() {
+	wp_dequeue_script( 'emoji' );
+}
 
