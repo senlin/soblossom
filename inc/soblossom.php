@@ -149,7 +149,7 @@ function soblossom_supports_wp_features() {
 			$fonts_url = add_query_arg( array(
 				'family' => urlencode( implode( '|', $fonts ) ),
 				'subset' => urlencode( $subsets ),
-			), '//fonts.googleapis.com/css' );
+			), '//fonts.googleapis.com/css' ); // possible to replace with //fonts.useso.com/css for fonts to be accessible in China too
 		}
 	
 		return $fonts_url;
