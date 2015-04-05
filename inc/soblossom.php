@@ -420,14 +420,40 @@ function soblossom_supports_wp_features() {
 			<nav class="navigation paging-navigation clearfix" role="navigation">
 				<h1 class="screen-reader-text"><?php _e( 'Posts navigation', 'soblossom' ); ?></h1>
 				<div class="nav-links">
-		
-					<?php if ( get_next_posts_link() ) : ?>
-					<div class="nav-previous"><?php next_posts_link( __( '<i class="fa fa-long-arrow-left"></i> Older articles', 'soblossom' ) ); ?></div>
-					<?php endif; ?>
-		
-					<?php if ( get_previous_posts_link() ) : ?>
-					<div class="nav-next"><?php previous_posts_link( __( 'Newer articles <i class="fa fa-long-arrow-right"></i>', 'soblossom' ) ); ?></div>
-					<?php endif; ?>
+					
+					<?php
+						/**
+						 * Search reasults also uses this pagination and results are not always articles
+						 * Therefore changed into "more" for both older and newer with condition for is_search()
+						 */
+						if ( get_next_posts_link() ) {
+						
+							echo '<div class="nav-previous">';
+
+							if ( is_search() ) {
+								next_posts_link( __( '<i class="fa fa-long-arrow-left"></i> More', 'so80' ) );
+							} else {
+								next_posts_link( __( '<i class="fa fa-long-arrow-left"></i> Older articles', 'so80' ) );
+							}
+							
+							echo '</div>';
+							
+						} // endif ( get_next_posts_link() )	
+						
+						if ( get_previous_posts_link() ) {
+							
+							echo '<div class="nav-next">';
+
+							if ( is_search() ) {
+								previous_posts_link( __( 'More <i class="fa fa-long-arrow-right"></i>', 'so80' ) );
+							} else {
+								previous_posts_link( __( 'Newer articles <i class="fa fa-long-arrow-right"></i>', 'so80' ) );
+							}
+
+							echo '</div>';
+							
+						} //endif ( get_previous_posts_link() )
+					?>
 		
 				</div><!-- .nav-links -->
 			</nav><!-- .navigation -->
