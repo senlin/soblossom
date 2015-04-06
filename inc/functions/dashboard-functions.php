@@ -123,21 +123,3 @@ function soblossom_remove_lostpassword_text ( $text ) {
 	 return $text;
 }
 
-
-/*
-Plugin Name: Disable Emojis
-Plugin URI: https://geek.hellyer.kiwi/plugins/disable-emojis/
-Description: Disable Emojis
-Version: 1.0
-Author: Ryan Hellyer
-Author URI: https://geek.hellyer.kiwi/
-License: GPL2
-------------------------------------------------------------------------
-Copyright Ryan Hellyer
-
- * Dequeue the Emoji script.
- */
-function soblossom_disable_emoji_dequeue_script() {
-	wp_dequeue_script( 'emoji' );
-}
-
