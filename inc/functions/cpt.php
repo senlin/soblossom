@@ -26,24 +26,24 @@ add_action( 'init', 'soblossom_sample_cpt', 0 );
 function soblossom_sample_cpt() {
 
 	$labels = array(
-		'name'                => _x( 'Samples', 'Post Type General Name', 'soblossom' ),
-		'singular_name'       => _x( 'Sample', 'Post Type Singular Name', 'soblossom' ),
-		'menu_name'           => __( 'Samples', 'soblossom' ),
-		'parent_item_colon'   => __( 'Parent Sample:', 'soblossom' ),
-		'all_items'           => __( 'All Samples', 'soblossom' ),
-		'view_item'           => __( 'View Sample', 'soblossom' ),
-		'add_new_item'        => __( 'Add New Sample', 'soblossom' ),
-		'add_new'             => __( 'Add New', 'soblossom' ),
-		'edit_item'           => __( 'Edit Sample', 'soblossom' ),
-		'update_item'         => __( 'Update Sample', 'soblossom' ),
-		'search_items'        => __( 'Search Sample', 'soblossom' ),
-		'not_found'           => __( 'Not found', 'soblossom' ),
-		'not_found_in_trash'  => __( 'Not found in Trash', 'soblossom' ),
+		'name'                => _x( 'Samples', 'Post Type General Name', 'soblossom-cpt' ),
+		'singular_name'       => _x( 'Sample', 'Post Type Singular Name', 'soblossom-cpt' ),
+		'menu_name'           => __( 'Samples', 'soblossom-cpt' ),
+		'parent_item_colon'   => __( 'Parent Sample:', 'soblossom-cpt' ),
+		'all_items'           => __( 'All Samples', 'soblossom-cpt' ),
+		'view_item'           => __( 'View Sample', 'soblossom-cpt' ),
+		'add_new_item'        => __( 'Add New Sample', 'soblossom-cpt' ),
+		'add_new'             => __( 'Add New', 'soblossom-cpt' ),
+		'edit_item'           => __( 'Edit Sample', 'soblossom-cpt' ),
+		'update_item'         => __( 'Update Sample', 'soblossom-cpt' ),
+		'search_items'        => __( 'Search Sample', 'soblossom-cpt' ),
+		'not_found'           => __( 'Not found', 'soblossom-cpt' ),
+		'not_found_in_trash'  => __( 'Not found in Trash', 'soblossom-cpt' ),
 	);
 	
 	$args = array(
-		'label'               => __( 'sample_cpt', 'soblossom' ),
-		'description'         => __( 'Sample Custom Post Type for the soblossom theme', 'soblossom' ),
+		'label'               => __( 'sample_cpt', 'soblossom-cpt' ),
+		'description'         => __( 'Sample Custom Post Type for the soblossom theme', 'soblossom-cpt' ),
 		'labels'              => $labels,
 		'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'trackbacks', 'revisions', 'custom-fields', 'page-attributes', 'post-formats' ), // remove the ones you don't need
 		'taxonomies'          => array( 'category', 'post_tag' ), // or any other custom taxonomy
