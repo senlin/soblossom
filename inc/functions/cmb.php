@@ -45,7 +45,7 @@ function soblossom_register_meta_boxes( $meta_boxes ) {
 		'id' => 'standard',
 
 		// Meta box title - Will appear at the drag and drop handle bar. Required.
-		'title' => __( 'Standard Fields', 'soblossom' ),
+		'title' => __( 'Standard Fields', 'soblossom-cmb' ),
 
 		// Post types, accept custom post types as well - DEFAULT is 'post'. Can be array (multiple post types) or string (1 post type). Optional.
 		'post_types' => array( 'post', 'page' ),
@@ -64,20 +64,20 @@ function soblossom_register_meta_boxes( $meta_boxes ) {
 			// TEXT
 			array(
 				// Field name - Will be used as label
-				'name' => __( 'Text', 'soblossom' ),
+				'name' => __( 'Text', 'soblossom-cmb' ),
 				// Field ID, i.e. the meta key
 				'id' => "{$prefix}text",
 				// Field description (optional)
-				'desc' => __( 'Text description', 'soblossom' ),
+				'desc' => __( 'Text description', 'soblossom-cmb' ),
 				'type'  => 'text',
 				// Default value (optional)
-				'std' => __( 'Default text value', 'soblossom' ),
+				'std' => __( 'Default text value', 'soblossom-cmb' ),
 				// CLONES: Add to make the field cloneable (i.e. have multiple value)
 				'clone' => true,
 			),
 			// CHECKBOX
 			array(
-				'name' => __( 'Checkbox', 'soblossom' ),
+				'name' => __( 'Checkbox', 'soblossom-cmb' ),
 				'id'   => "{$prefix}checkbox",
 				'type' => 'checkbox',
 				// Value can be 0 or 1
@@ -85,54 +85,57 @@ function soblossom_register_meta_boxes( $meta_boxes ) {
 			),
 			// RADIO BUTTONS
 			array(
-				'name'    => __( 'Radio', 'soblossom' ),
+				'name'    => __( 'Radio', 'soblossom-cmb' ),
 				'id'      => "{$prefix}radio",
 				'type'    => 'radio',
 				// Array of 'value' => 'Label' pairs for radio options.
 				// Note: the 'value' is stored in meta field, not the 'Label'
 				'options' => array(
-					'value1' => __( 'Label1', 'soblossom' ),
-					'value2' => __( 'Label2', 'soblossom' ),
+					'value1' => __( 'Label1', 'soblossom-cmb' ),
+					'value2' => __( 'Label2', 'soblossom-cmb' ),
 				),
 			),
 			// SELECT BOX
 			array(
-				'name'        => __( 'Select', 'soblossom' ),
+				'name'        => __( 'Select', 'soblossom-cmb' ),
 				'id'          => "{$prefix}select",
 				'type'        => 'select',
 				// Array of 'value' => 'Label' pairs for select box
 				'options'     => array(
-					'value1' => __( 'Label1', 'soblossom' ),
-					'value2' => __( 'Label2', 'soblossom' ),
+					'value1' => __( 'Label1', 'soblossom-cmb' ),
+					'value2' => __( 'Label2', 'soblossom-cmb' ),
 				),
 				// Select multiple values, optional. Default is false.
 				'multiple'    => false,
 				'std'         => 'value2',
-				'placeholder' => __( 'Select an Item', 'soblossom' ),
+				'placeholder' => __( 'Select an Item', 'soblossom-cmb' ),
 			),
 			// HIDDEN
 			array(
 				'id'   => "{$prefix}hidden",
 				'type' => 'hidden',
 				// Hidden field must have predefined value
-				'std'  => __( 'Hidden value', 'soblossom' ),
+				'std'  => __( 'Hidden value', 'soblossom-cmb' ),
 			),
+/*
 			// PASSWORD
 			array(
-				'name' => __( 'Password', 'soblossom' ),
+				'name' => __( 'Password', 'soblossom-cmb' ),
 				'id'   => "{$prefix}password",
 				'type' => 'password',
 			),
+*/
 			// TEXTAREA
 			array(
-				'name' => __( 'Textarea', 'soblossom' ),
-				'desc' => __( 'Textarea description', 'soblossom' ),
+				'name' => __( 'Textarea', 'soblossom-cmb' ),
+				'desc' => __( 'Textarea description', 'soblossom-cmb' ),
 				'id'   => "{$prefix}textarea",
 				'type' => 'textarea',
 				'cols' => 20,
 				'rows' => 3,
 			),
 		),
+/*
 		'validation' => array(
 			'rules'    => array(
 				"{$prefix}password" => array(
@@ -143,34 +146,36 @@ function soblossom_register_meta_boxes( $meta_boxes ) {
 			// optional override of default jquery.validate messages
 			'messages' => array(
 				"{$prefix}password" => array(
-					'required'  => __( 'Password is required', 'soblossom' ),
-					'minlength' => __( 'Password must be at least 7 characters', 'soblossom' ),
+					'required'  => __( 'Password is required', 'soblossom-cmb' ),
+					'minlength' => __( 'Password must be at least 7 characters', 'soblossom-cmb' ),
 				),
 			)
 		)
+*/
 	);
 
 	// 2nd meta box
 	$meta_boxes[] = array(
-		'title'  => __( 'Advanced Fields', 'soblossom' ),
+		'title'  => __( 'Advanced Fields', 'soblossom-cmb' ),
+		'post_types' => array( 'post', 'page' ),
 
 		'fields' => array(
 			// HEADING
 			array(
 				'type' => 'heading',
-				'name' => __( 'Heading', 'soblossom' ),
+				'name' => __( 'Heading', 'soblossom-cmb' ),
 				'id'   => 'fake_id', // Not used but needed for plugin
-				'desc' => __( 'Optional description for this heading', 'soblossom' ),
+				'desc' => __( 'Optional description for this heading', 'soblossom-cmb' ),
 			),
 			// SLIDER
 			array(
-				'name'       => __( 'Slider', 'soblossom' ),
+				'name'       => __( 'Slider', 'soblossom-cmb' ),
 				'id'         => "{$prefix}slider",
 				'type'       => 'slider',
 
 				// Text labels displayed before and after value
-				'prefix'     => __( '$', 'soblossom' ),
-				'suffix'     => __( ' USD', 'soblossom' ),
+				'prefix'     => __( '$', 'soblossom-cmb' ),
+				'suffix'     => __( ' USD', 'soblossom-cmb' ),
 
 				// jQuery UI slider options. See here http://api.jqueryui.com/slider/
 				'js_options' => array(
@@ -181,7 +186,7 @@ function soblossom_register_meta_boxes( $meta_boxes ) {
 			),
 			// NUMBER
 			array(
-				'name' => __( 'Number', 'soblossom' ),
+				'name' => __( 'Number', 'soblossom-cmb' ),
 				'id'   => "{$prefix}number",
 				'type' => 'number',
 
@@ -190,14 +195,14 @@ function soblossom_register_meta_boxes( $meta_boxes ) {
 			),
 			// DATE
 			array(
-				'name'       => __( 'Date picker', 'soblossom' ),
+				'name'       => __( 'Date picker', 'soblossom-cmb' ),
 				'id'         => "{$prefix}date",
 				'type'       => 'date',
 
 				// jQuery date picker options. See here http://api.jqueryui.com/datepicker
 				'js_options' => array(
-					'appendText'      => __( '(yyyy-mm-dd)', 'soblossom' ),
-					'dateFormat'      => __( 'yy-mm-dd', 'soblossom' ),
+					'appendText'      => __( '(yyyy-mm-dd)', 'soblossom-cmb' ),
+					'dateFormat'      => __( 'yy-mm-dd', 'soblossom-cmb' ),
 					'changeMonth'     => true,
 					'changeYear'      => true,
 					'showButtonPanel' => true,
@@ -205,7 +210,7 @@ function soblossom_register_meta_boxes( $meta_boxes ) {
 			),
 			// DATETIME
 			array(
-				'name'       => __( 'Datetime picker', 'soblossom' ),
+				'name'       => __( 'Datetime picker', 'soblossom-cmb' ),
 				'id'         => $prefix . 'datetime',
 				'type'       => 'datetime',
 
@@ -219,7 +224,7 @@ function soblossom_register_meta_boxes( $meta_boxes ) {
 			),
 			// TIME
 			array(
-				'name'       => __( 'Time picker', 'soblossom' ),
+				'name'       => __( 'Time picker', 'soblossom-cmb' ),
 				'id'         => $prefix . 'time',
 				'type'       => 'time',
 
@@ -234,30 +239,30 @@ function soblossom_register_meta_boxes( $meta_boxes ) {
 			),
 			// COLOR
 			array(
-				'name' => __( 'Color picker', 'soblossom' ),
+				'name' => __( 'Color picker', 'soblossom-cmb' ),
 				'id'   => "{$prefix}color",
 				'type' => 'color',
 			),
 			// CHECKBOX LIST
 			array(
-				'name'    => __( 'Checkbox list', 'soblossom' ),
+				'name'    => __( 'Checkbox list', 'soblossom-cmb' ),
 				'id'      => "{$prefix}checkbox_list",
 				'type'    => 'checkbox_list',
 				// Options of checkboxes, in format 'value' => 'Label'
 				'options' => array(
-					'value1' => __( 'Label1', 'soblossom' ),
-					'value2' => __( 'Label2', 'soblossom' ),
+					'value1' => __( 'Label1', 'soblossom-cmb' ),
+					'value2' => __( 'Label2', 'soblossom-cmb' ),
 				),
 			),
 			// AUTOCOMPLETE
 			array(
-				'name'    => __( 'Autocomplete', 'soblossom' ),
+				'name'    => __( 'Autocomplete', 'soblossom-cmb' ),
 				'id'      => "{$prefix}autocomplete",
 				'type'    => 'autocomplete',
 				// Options of autocomplete, in format 'value' => 'Label'
 				'options' => array(
-					'value1' => __( 'Label1', 'soblossom' ),
-					'value2' => __( 'Label2', 'soblossom' ),
+					'value1' => __( 'Label1', 'soblossom-cmb' ),
+					'value2' => __( 'Label2', 'soblossom-cmb' ),
 				),
 				// Input size
 				'size'    => 30,
@@ -266,17 +271,17 @@ function soblossom_register_meta_boxes( $meta_boxes ) {
 			),
 			// EMAIL
 			array(
-				'name' => __( 'Email', 'soblossom' ),
+				'name' => __( 'Email', 'soblossom-cmb' ),
 				'id'   => "{$prefix}email",
-				'desc' => __( 'Email description', 'soblossom' ),
+				'desc' => __( 'Email description', 'soblossom-cmb' ),
 				'type' => 'email',
 				'std'  => 'name@email.com',
 			),
 			// RANGE
 			array(
-				'name' => __( 'Range', 'soblossom' ),
+				'name' => __( 'Range', 'soblossom-cmb' ),
 				'id'   => "{$prefix}range",
-				'desc' => __( 'Range description', 'soblossom' ),
+				'desc' => __( 'Range description', 'soblossom-cmb' ),
 				'type' => 'range',
 				'min'  => 0,
 				'max'  => 100,
@@ -285,37 +290,37 @@ function soblossom_register_meta_boxes( $meta_boxes ) {
 			),
 			// URL
 			array(
-				'name' => __( 'URL', 'soblossom' ),
+				'name' => __( 'URL', 'soblossom-cmb' ),
 				'id'   => "{$prefix}url",
-				'desc' => __( 'URL description', 'soblossom' ),
+				'desc' => __( 'URL description', 'soblossom-cmb' ),
 				'type' => 'url',
 				'std'  => 'http://google.com',
 			),
 			// OEMBED
 			array(
-				'name' => __( 'oEmbed', 'soblossom' ),
+				'name' => __( 'oEmbed', 'soblossom-cmb' ),
 				'id'   => "{$prefix}oembed",
-				'desc' => __( 'oEmbed description', 'soblossom' ),
+				'desc' => __( 'oEmbed description', 'soblossom-cmb' ),
 				'type' => 'oembed',
 			),
 			// SELECT ADVANCED BOX
 			array(
-				'name'        => __( 'Select', 'soblossom' ),
+				'name'        => __( 'Select', 'soblossom-cmb' ),
 				'id'          => "{$prefix}select_advanced",
 				'type'        => 'select_advanced',
 				// Array of 'value' => 'Label' pairs for select box
 				'options'     => array(
-					'value1' => __( 'Label1', 'soblossom' ),
-					'value2' => __( 'Label2', 'soblossom' ),
+					'value1' => __( 'Label1', 'soblossom-cmb' ),
+					'value2' => __( 'Label2', 'soblossom-cmb' ),
 				),
 				// Select multiple values, optional. Default is false.
 				'multiple'    => false,
 				// 'std'         => 'value2', // Default value, optional
-				'placeholder' => __( 'Select an Item', 'soblossom' ),
+				'placeholder' => __( 'Select an Item', 'soblossom-cmb' ),
 			),
 			// TAXONOMY
 			array(
-				'name'    => __( 'Taxonomy', 'soblossom' ),
+				'name'    => __( 'Taxonomy', 'soblossom-cmb' ),
 				'id'      => "{$prefix}taxonomy",
 				'type'    => 'taxonomy',
 				'options' => array(
@@ -329,14 +334,14 @@ function soblossom_register_meta_boxes( $meta_boxes ) {
 			),
 			// POST
 			array(
-				'name'        => __( 'Posts (Pages)', 'soblossom' ),
+				'name'        => __( 'Posts (Pages)', 'soblossom-cmb' ),
 				'id'          => "{$prefix}pages",
 				'type'        => 'post',
 				// Post type
 				'post_type'   => 'page',
 				// Field type, either 'select' or 'select_advanced' (default)
 				'field_type'  => 'select_advanced',
-				'placeholder' => __( 'Select an Item', 'soblossom' ),
+				'placeholder' => __( 'Select an Item', 'soblossom-cmb' ),
 				// Query arguments (optional). No settings means get all published posts
 				'query_args'  => array(
 					'post_status'    => 'publish',
@@ -345,12 +350,12 @@ function soblossom_register_meta_boxes( $meta_boxes ) {
 			),
 			// WYSIWYG/RICH TEXT EDITOR
 			array(
-				'name'    => __( 'WYSIWYG / Rich Text Editor', 'soblossom' ),
+				'name'    => __( 'WYSIWYG / Rich Text Editor', 'soblossom-cmb' ),
 				'id'      => "{$prefix}wysiwyg",
 				'type'    => 'wysiwyg',
 				// Set the 'raw' parameter to TRUE to prevent data being passed through wpautop() on save
 				'raw'     => false,
-				'std'     => __( 'WYSIWYG default value', 'soblossom' ),
+				'std'     => __( 'WYSIWYG default value', 'soblossom-cmb' ),
 
 				// Editor settings, see wp_editor() function: look4wp.com/wp_editor
 				'options' => array(
@@ -366,13 +371,13 @@ function soblossom_register_meta_boxes( $meta_boxes ) {
 			),
 			// FILE UPLOAD
 			array(
-				'name' => __( 'File Upload', 'soblossom' ),
+				'name' => __( 'File Upload', 'soblossom-cmb' ),
 				'id'   => "{$prefix}file",
 				'type' => 'file',
 			),
 			// FILE ADVANCED (WP 3.5+)
 			array(
-				'name'             => __( 'File Advanced Upload', 'soblossom' ),
+				'name'             => __( 'File Advanced Upload', 'soblossom-cmb' ),
 				'id'               => "{$prefix}file_advanced",
 				'type'             => 'file_advanced',
 				'max_file_uploads' => 4,
@@ -380,26 +385,26 @@ function soblossom_register_meta_boxes( $meta_boxes ) {
 			),
 			// IMAGE UPLOAD
 			array(
-				'name' => __( 'Image Upload', 'soblossom' ),
+				'name' => __( 'Image Upload', 'soblossom-cmb' ),
 				'id'   => "{$prefix}image",
 				'type' => 'image',
 			),
 			// THICKBOX IMAGE UPLOAD (WP 3.3+)
 			array(
-				'name' => __( 'Thickbox Image Upload', 'soblossom' ),
+				'name' => __( 'Thickbox Image Upload', 'soblossom-cmb' ),
 				'id'   => "{$prefix}thickbox",
 				'type' => 'thickbox_image',
 			),
 			// PLUPLOAD IMAGE UPLOAD (WP 3.3+)
 			array(
-				'name'             => __( 'Plupload Image Upload', 'soblossom' ),
+				'name'             => __( 'Plupload Image Upload', 'soblossom-cmb' ),
 				'id'               => "{$prefix}plupload",
 				'type'             => 'plupload_image',
 				'max_file_uploads' => 4,
 			),
 			// IMAGE ADVANCED (WP 3.5+)
 			array(
-				'name'             => __( 'Image Advanced Upload', 'soblossom' ),
+				'name'             => __( 'Image Advanced Upload', 'soblossom-cmb' ),
 				'id'               => "{$prefix}imgadv",
 				'type'             => 'image_advanced',
 				'max_file_uploads' => 4,
