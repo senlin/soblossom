@@ -134,7 +134,7 @@ function soblossom_top_nav() {
     wp_nav_menu( array(
     	'container' => false,
     	'container_class' => '',
-    	'menu' => __( 'Top Navigation', 'soblossom' ),
+    	'menu' => __( 'Top Navigation', 'soblossom-backend' ),
     	'menu_class' => 'right',
     	'theme_location' => 'topnav',
     	'before' => '',
@@ -150,7 +150,7 @@ function soblossom_social_media_links() {
     wp_nav_menu( array(
     	'container' => '',
     	'container_class' => 'socialmedia clearfix',
-    	'menu' => __( 'Social Media', 'soblossom' ),
+    	'menu' => __( 'Social Media', 'soblossom-backend' ),
        	'menu_class' => 'social-links',
     	'theme_location' => 'social',
     	'depth' => '1',
@@ -168,7 +168,7 @@ function soblossom_footer_nav() {
     wp_nav_menu( array(
     	'container' => false,
     	'container_class' => '',
-    	'menu' => __( 'Footer Links', 'soblossom' ),
+    	'menu' => __( 'Footer Links', 'soblossom-backend' ),
     	'menu_class' => 'footer-nav inline-list right',
     	'theme_location' => 'footer',
     	'before' => '',
@@ -188,11 +188,11 @@ if( ! function_exists( 'soblossom_topnav_fallback' ) ) {
 	function soblossom_topnav_fallback() {
 		echo '<div class="alert-box warning">';
 		// Translators 1: Link to Menus, 2: Link to Customize
-	  	printf( __( 'Add your Top Navigation Menu by adding a %1$s or %2$s the design.', 'soblossom' ),
-	  		sprintf(  __( '<a href="%s">Menu</a>', 'soblossom' ),
+	  	printf( __( 'Add your Top Navigation Menu by adding a %1$s or %2$s the design.', 'soblossom-backend' ),
+	  		sprintf(  __( '<a href="%s">Menu</a>', 'soblossom-backend' ),
 	  			get_admin_url( get_current_blog_id(), 'nav-menus.php' )
 	  		),
-	  		sprintf(  __( '<a href="%s">Customizing</a>', 'soblossom' ),
+	  		sprintf(  __( '<a href="%s">Customizing</a>', 'soblossom-backend' ),
 	  			get_admin_url( get_current_blog_id(), 'customize.php' )
 	  		)
 	  	);
@@ -204,11 +204,11 @@ if( ! function_exists( 'soblossom_socialmedia_fallback' ) ) {
 	function soblossom_socialmedia_fallback() {
 		echo '<div class="alert-box info">';
 		// Translators 1: Link to Menus, 2: Link to Customize
-	  	printf( __( 'Add a %1$s and use FontAwesome names for the descriptions to show your own Social Links. Alternatively use the %2$s.', 'soblossom' ),
-	  		sprintf(  __( '<a href="%s">Social Media menu</a>', 'soblossom' ),
+	  	printf( __( 'Add a %1$s and use FontAwesome names for the descriptions to show your own Social Links. Alternatively use the %2$s.', 'soblossom-backend' ),
+	  		sprintf(  __( '<a href="%s">Social Media menu</a>', 'soblossom-backend' ),
 	  			get_admin_url( get_current_blog_id(), 'nav-menus.php' )
 	  		),
-	  		sprintf(  __( '<a href="%s">Customizer</a>', 'soblossom' ),
+	  		sprintf(  __( '<a href="%s">Customizer</a>', 'soblossom-backend' ),
 	  			get_admin_url( get_current_blog_id(), 'customize.php' )
 	  		)
 	  	);
@@ -220,11 +220,11 @@ if( ! function_exists( 'soblossom_footer_fallback' ) ) {
 	function soblossom_footer_fallback() {
 		echo '<div class="alert-box alert">';
 		// Translators 1: Link to Menus, 2: Link to Customize
-	  	printf( __( 'Add your own Footer Links by adding a %1$s or %2$s the design.', 'soblossom' ),
-	  		sprintf(  __( '<a href="%s">Menu</a>', 'soblossom' ),
+	  	printf( __( 'Add your own Footer Links by adding a %1$s or %2$s the design.', 'soblossom-backend' ),
+	  		sprintf(  __( '<a href="%s">Menu</a>', 'soblossom-backend' ),
 	  			get_admin_url( get_current_blog_id(), 'nav-menus.php' )
 	  		),
-	  		sprintf(  __( '<a href="%s">Customizing</a>', 'soblossom' ),
+	  		sprintf(  __( '<a href="%s">Customizing</a>', 'soblossom-backend' ),
 	  			get_admin_url( get_current_blog_id(), 'customize.php' )
 	  		)
 	  	);
@@ -240,18 +240,18 @@ if( ! function_exists( 'soblossom_footer_fallback' ) ) {
  */
 function soblossom_register_widget_areas() {
 	register_sidebar( array(
-		'name'          => __( 'Sidebar Widget Area', 'soblossom' ),
+		'name'          => __( 'Sidebar Widget Area', 'soblossom-backend' ),
 		'id'            => 'sidebar-widget-area',
-		'description'   => __( 'Appears on the side (right by default) of the site.', 'soblossom' ),
+		'description'   => __( 'Appears on the side (right by default) of the site.', 'soblossom-backend' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h3 class="widget-title">',
 		'after_title'   => '</h3>',
 	) );
 	register_sidebar( array(
-		'name'          => __( 'Footer Widget Area', 'soblossom' ),
+		'name'          => __( 'Footer Widget Area', 'soblossom-backend' ),
 		'id'            => 'footer-widget-area',
-		'description'   => __( 'Appears in the footer section of the site.', 'soblossom' ),
+		'description'   => __( 'Appears in the footer section of the site.', 'soblossom-backend' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s small-12 medium-3 columns">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h3 class="widget-title">',

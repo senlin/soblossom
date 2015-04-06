@@ -52,9 +52,9 @@ function soblossom_bloom() { //actions, filters and other theme setup related th
 	// Navigation menus registration (menus are created in functions.php)
 	register_nav_menus(
 		array(
-			'topnav' => __( 'Top Navigation Menu', 'soblossom' ),
-			'social' => __( 'Social Media Links', 'soblossom' ),
-			'footer' => __( 'Footer Menu', 'soblossom' )
+			'topnav' => __( 'Top Navigation Menu', 'soblossom-backend' ),
+			'social' => __( 'Social Media Links', 'soblossom-backend' ),
+			'footer' => __( 'Footer Menu', 'soblossom-backend' )
 		)
 	);
 
