@@ -109,20 +109,6 @@ require get_template_directory() . '/inc/classes/gallery.php';
 
 
 /**
- * /inc/functions/misc.php - Miscellaneous functions that you might or might not use for your theme
- * 	- function to make it possible to query on is_post_type()
- *	- remove widget title function
- * 	- enable page excerpts
- * 	- enable shortcode in text widgets
- * 	- function that sets the authordata global when viewing an author archive
- * 	- add hook soblossom_body_open (to add 3rd party scripts like GA)
- *
- * uncomment to include
- */
-// require get_template_directory() . '/inc/functions/misc.php';
-
-
-/**
  * NAVIGATION MENUS FUNCTIONS
  *
  * Top Navigation and Footer Navigation Menus

@@ -34,22 +34,6 @@
 
 <body <?php body_class(); ?>>
 
-<?php
-/**
- * Add hook right after the opening body tag to be able to add scripts that 
- * need to be placed there, for example Google Analytics, Facebook, Google+, etc.
- * 
- * See inc/functions/misc.php for details
- *
- * uncomment to start using
- *
- * @since 140730
- */
-	
-	//soblossom_body_open();
-
-?>
-
 	<div class="off-canvas-wrap" data-offcanvas>
 
 		<div class="inner-wrap">

@@ -79,6 +79,9 @@ function soblossom_bloom() { //actions, filters and other theme setup related th
 
     // add soblossom search form
 	add_filter( 'get_search_form', 'soblossom_wpsearch' );
+	
+	// enable Page excerpts
+	add_post_type_support( 'page', 'excerpt' );
 
 } // end soblossom_bloom()
 
@@ -706,3 +709,60 @@ if ( ! function_exists( 'soblossom_enhance_sticky_post' ) ) {
 	}
 
 }
+
+/**
+ * Following functions and filter are optional and disabled by default
+ * 
+ * If you think they're useful uncomment them, otherwise feel free to remove the lot
+ */
+
+// Enable shortcode in text widgets
+// UNCOMMENT TO ENABLE
+//add_filter( 'widget_text', 'do_shortcode' );
+
+/**
+ * Snippet taken from Remove Widget Titles plugin by Stephen Cronin
+ * (because I think it is nonsense to install a plugin for a simple function like this)
+ * 
+ * Removes the title from any widget that has a title starting with the "!" character.
+ *
+ * @source: wordpress.org/plugins/remove-widget-titles/
+ */
+ 
+// Add the filter and function, returning the widget title only if the first character is not "!"
+// UNCOMMENT TO ENABLE
+//add_filter( 'widget_title', 'soblossom_remove_widget_title' );
+
+function soblossom_remove_widget_title( $widget_title ) {
+	if ( substr ( $widget_title, 0, 1 ) == '!' )
+		return;
+	else 
+		return ( $widget_title );
+}
+
+/**
+ * Sets the authordata global when viewing an author archive.
+ *
+ * This provides backwards compatibility with
+ * http://core.trac.wordpress.org/changeset/25574
+ *
+ * It removes the need to call the_post() and rewind_posts() in an author
+ * template to print information about the author.
+ *
+ * @imported from previous inc/extras.php
+ * @global WP_Query $wp_query WordPress Query object.
+ * @return void
+ */
+
+// UNCOMMENT TO ENABLE
+//add_action( 'wp', 'soblossom_setup_author' );
+
+function soblossom_setup_author() {
+	global $wp_query;
+
+	if ( $wp_query->is_author() && isset( $wp_query->post ) ) {
+		$GLOBALS['authordata'] = get_userdata( $wp_query->post->post_author );
+	}
+}
+
+
