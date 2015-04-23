@@ -61,6 +61,9 @@ function soblossom_bloom() { //actions, filters and other theme setup related th
 	// clean up the head
 	add_action( 'init', 'soblossom_clean_head' );
 	
+	// remove emojis
+	add_action( 'init', 'soblossom_remove_emojis', 1 );
+	
     // remove action WP recent comments widget
     add_action( 'wp_head', 'soblossom_removeaction_wpwidget_recent_comments', 1 );
     
@@ -228,6 +231,32 @@ function soblossom_supports_wp_features() {
 		remove_action( 'wp_head', 'wp_generator' );
 
 	} // end soblossom_clean_head()
+
+/**
+ * Function to remove the emojis added to WP 4.2
+ * function and filter taken from Classic Smilies plugin by Samuel Wood (Otto) 
+ *
+ * @source: https://wordpress.org/plugins/classic-smilies/
+ */
+	function soblossom_remove_emojis() {
+	
+		// disable any and all mention of emoji's
+		remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+		remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
+		remove_action( 'wp_print_styles', 'print_emoji_styles' );
+		remove_action( 'admin_print_styles', 'print_emoji_styles' );	
+		remove_filter( 'the_content_feed', 'wp_staticize_emoji' );
+		remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );	
+		remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
+		add_filter( 'tiny_mce_plugins', 'soblossom_remove_tinymce_emoji' );	
+	
+	}
+	
+	// filter function used to remove the tinymce emoji plugin
+	function soblossom_remove_tinymce_emoji( $plugins ) {
+		return array_diff( $plugins, array( 'wpemoji' ) );
+	}
+
 	
 	// soblossom_removeaction_wpwidget_recent_comments
 	function soblossom_removeaction_wpwidget_recent_comments() {
