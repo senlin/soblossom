@@ -12,7 +12,8 @@ module.exports = function(grunt) {
 					outputStyle: 'expanded'
 				},
 		        files: {
-		          'css/style.css': 'scss/style.scss'
+		          'css/style.css': 'scss/style.scss',
+		          'css/custom-login.css': 'scss/custom-login.scss'
 		        }        
 			},
 	
@@ -21,7 +22,8 @@ module.exports = function(grunt) {
 					outputStyle: 'compressed'
 				},
 				files: {
-					'css/style.min.css': 'scss/style.scss'
+					'css/style.min.css': 'scss/style.scss',
+					'css/custom-login.min.css': 'scss/custom-login.scss'
 				}        
 			}
 		},
