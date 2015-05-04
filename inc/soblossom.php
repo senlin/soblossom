@@ -346,9 +346,9 @@ function soblossom_supports_wp_features() {
 			
 			/**
 			 * To use the built-in Foundation lightbox effect to enlarge the Featured Image to full size,
-			 * uncomment the following line and the one below at line 314
+			 * uncomment the following line and the one below at line 364 and adjust the output of line 362 to remove the interchange code.
 			 */
-			//echo '<ul class="clearing-thumbs" data-clearing><li><a href="' . $full[0] . '" title="' . the_title_attribute( 'echo=0' ) . '" itemprop="image">';
+			//echo '<ul class="clearing-thumbs" data-clearing><li><a href="' . $full[0] . '" data-clearing-interchange="[' . $small[0] . ', (default)], [' . $medium[0] . ', (small)], [' . $medium[0] . ', (medium)], [' . $large[0] . ', (large)]" title="' . the_title_attribute( 'echo=0' ) . '" itemprop="image">';
 			
 			/**
 			 * use the built-in Foundation Interchange to load different sized image depending on device
