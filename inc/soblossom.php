@@ -61,9 +61,6 @@ function soblossom_bloom() { //actions, filters and other theme setup related th
 	// clean up the head
 	add_action( 'init', 'soblossom_clean_head' );
 	
-	// remove emojis
-	add_action( 'init', 'soblossom_remove_emojis', 1 );
-	
     // remove action WP recent comments widget
     add_action( 'wp_head', 'soblossom_removeaction_wpwidget_recent_comments', 1 );
     
