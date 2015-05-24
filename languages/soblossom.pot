@@ -1,22 +1,17 @@
+# Copyright (C) 2015 Piet Bos
+# This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: soblossom\n"
-"POT-Creation-Date: 2014-08-26 12:59+0800\n"
-"PO-Revision-Date: 2014-08-26 13:03+0800\n"
-"Last-Translator: Piet Bos <piet@so-wp.com>\n"
-"Language-Team: Piet Bos <piet@so-wp.com>\n"
-"Language: en\n"
+"Project-Id-Version: soblossom 150524\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
+"POT-Creation-Date: 2015-05-24 04:51:19+00:00\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.6.8\n"
-"X-Poedit-Basepath: ..\n"
-"X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
-"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
-"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Poedit-SearchPath-0: .\n"
+"PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"X-Generator: grunt-wp-i18n 0.5.0\n"
 
 #: 404.php:19
 msgid "Nothing Here."
@@ -33,33 +28,19 @@ msgid "Pages"
 msgstr ""
 
 #: archive.php:30
-#, php-format
 msgid "Author: %s"
 msgstr ""
 
 #: archive.php:33
-#, php-format
 msgid "Day: %s"
 msgstr ""
 
 #: archive.php:36
-#, php-format
 msgid "Month: %s"
 msgstr ""
 
-#: archive.php:36
-msgctxt "monthly archives date format"
-msgid "F Y"
-msgstr ""
-
 #: archive.php:39
-#, php-format
 msgid "Year: %s"
-msgstr ""
-
-#: archive.php:39
-msgctxt "yearly archives date format"
-msgid "Y"
 msgstr ""
 
 #: archive.php:42
@@ -67,7 +48,6 @@ msgid "Archives"
 msgstr ""
 
 #: comments.php:32
-#, php-format
 msgid "One thought on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] ""
@@ -90,457 +70,439 @@ msgid "Comments are closed."
 msgstr ""
 
 #: footer.php:24
-#, php-format
-msgid ""
-"&copy %1$s <a href=\"#page\" title=\"back to top\">%2$s</a>; %3$s theme by "
-"%4$s."
+msgid "&copy %1$s <a href=\"%2$s\" title=\"%3$s\">%3$s</a> · All Rights Reserved."
 msgstr ""
 
-#: functions.php:136
+#: footer.php:44
+msgid "Back to top"
+msgstr ""
+
+#: functions.php:123
 msgid "Top Navigation"
 msgstr ""
 
-#: functions.php:152
+#: functions.php:139
 msgid "Social Media"
 msgstr ""
 
-#: functions.php:169
+#: functions.php:157
 msgid "Footer Links"
 msgstr ""
 
-#: functions.php:189
-#, php-format
+#: functions.php:177
 msgid "Add your Top Navigation Menu by adding a %1$s or %2$s the design."
 msgstr ""
 
-#: functions.php:190 functions.php:222
-#, php-format
+#: functions.php:178 functions.php:210
 msgid "<a href=\"%s\">Menu</a>"
 msgstr ""
 
-#: functions.php:193 functions.php:225
-#, php-format
+#: functions.php:181 functions.php:213
 msgid "<a href=\"%s\">Customizing</a>"
 msgstr ""
 
-#: functions.php:205
-#, php-format
+#: functions.php:193
 msgid ""
 "Add a %1$s and use FontAwesome names for the descriptions to show your own "
 "Social Links. Alternatively use the %2$s."
 msgstr ""
 
-#: functions.php:206
-#, php-format
+#: functions.php:194
 msgid "<a href=\"%s\">Social Media menu</a>"
 msgstr ""
 
-#: functions.php:209
-#, php-format
+#: functions.php:197
 msgid "<a href=\"%s\">Customizer</a>"
 msgstr ""
 
-#: functions.php:221
-#, php-format
+#: functions.php:209
 msgid "Add your own Footer Links by adding a %1$s or %2$s the design."
 msgstr ""
 
-#: functions.php:241
+#: functions.php:229
 msgid "Sidebar Widget Area"
 msgstr ""
 
-#: functions.php:249
+#: functions.php:231
+msgid "Appears on the side (right by default) of the site."
+msgstr ""
+
+#: functions.php:238
 msgid "Footer Widget Area"
 msgstr ""
 
-#: functions.php:251
+#: functions.php:240
 msgid "Appears in the footer section of the site."
 msgstr ""
 
-#: header.php:102
+#: header.php:82
 msgid "Skip to content"
 msgstr ""
 
-#: inc/functions/cmb.php:47
+#: inc/functions/cmb.php:48
 msgid "Standard Fields"
 msgstr ""
 
-#: inc/functions/cmb.php:66
+#: inc/functions/cmb.php:67
 msgid "Text"
 msgstr ""
 
-#: inc/functions/cmb.php:70
+#: inc/functions/cmb.php:71
 msgid "Text description"
 msgstr ""
 
-#: inc/functions/cmb.php:73
+#: inc/functions/cmb.php:74
 msgid "Default text value"
 msgstr ""
 
-#: inc/functions/cmb.php:79
+#: inc/functions/cmb.php:80
 msgid "Checkbox"
 msgstr ""
 
-#: inc/functions/cmb.php:87
+#: inc/functions/cmb.php:88
 msgid "Radio"
 msgstr ""
 
-#: inc/functions/cmb.php:93 inc/functions/cmb.php:104
-#: inc/functions/cmb.php:246 inc/functions/cmb.php:291
+#: inc/functions/cmb.php:94 inc/functions/cmb.php:105 inc/functions/cmb.php:253
+#: inc/functions/cmb.php:264 inc/functions/cmb.php:313
 msgid "Label1"
 msgstr ""
 
-#: inc/functions/cmb.php:94 inc/functions/cmb.php:105
-#: inc/functions/cmb.php:247 inc/functions/cmb.php:292
+#: inc/functions/cmb.php:95 inc/functions/cmb.php:106 inc/functions/cmb.php:254
+#: inc/functions/cmb.php:265 inc/functions/cmb.php:314
 msgid "Label2"
 msgstr ""
 
-#: inc/functions/cmb.php:99 inc/functions/cmb.php:286
+#: inc/functions/cmb.php:100 inc/functions/cmb.php:308
 msgid "Select"
 msgstr ""
 
-#: inc/functions/cmb.php:110 inc/functions/cmb.php:297
+#: inc/functions/cmb.php:111 inc/functions/cmb.php:319
+#: inc/functions/cmb.php:344
 msgid "Select an Item"
 msgstr ""
 
-#: inc/functions/cmb.php:117
+#: inc/functions/cmb.php:118
 msgid "Hidden value"
 msgstr ""
 
-#: inc/functions/cmb.php:121
-msgid "Password"
-msgstr ""
-
-#: inc/functions/cmb.php:127
+#: inc/functions/cmb.php:130
 msgid "Textarea"
 msgstr ""
 
-#: inc/functions/cmb.php:128
+#: inc/functions/cmb.php:131
 msgid "Textarea description"
 msgstr ""
 
-#: inc/functions/cmb.php:145
-msgid "Password is required"
-msgstr ""
-
-#: inc/functions/cmb.php:146
-msgid "Password must be at least 7 characters"
-msgstr ""
-
-#: inc/functions/cmb.php:154
+#: inc/functions/cmb.php:159
 msgid "Advanced Fields"
 msgstr ""
 
-#: inc/functions/cmb.php:160
+#: inc/functions/cmb.php:166
 msgid "Heading"
 msgstr ""
 
-#: inc/functions/cmb.php:165
+#: inc/functions/cmb.php:168
+msgid "Optional description for this heading"
+msgstr ""
+
+#: inc/functions/cmb.php:172
 msgid "Slider"
 msgstr ""
 
-#: inc/functions/cmb.php:170
+#: inc/functions/cmb.php:177
 msgid "$"
 msgstr ""
 
-#: inc/functions/cmb.php:171
+#: inc/functions/cmb.php:178
 msgid " USD"
 msgstr ""
 
-#: inc/functions/cmb.php:182
+#: inc/functions/cmb.php:189
 msgid "Number"
 msgstr ""
 
-#: inc/functions/cmb.php:191
+#: inc/functions/cmb.php:198
 msgid "Date picker"
 msgstr ""
 
-#: inc/functions/cmb.php:197
+#: inc/functions/cmb.php:204
 msgid "(yyyy-mm-dd)"
 msgstr ""
 
-#: inc/functions/cmb.php:198
+#: inc/functions/cmb.php:205
 msgid "yy-mm-dd"
 msgstr ""
 
-#: inc/functions/cmb.php:206
+#: inc/functions/cmb.php:213
 msgid "Datetime picker"
 msgstr ""
 
-#: inc/functions/cmb.php:220
+#: inc/functions/cmb.php:227
 msgid "Time picker"
 msgstr ""
 
-#: inc/functions/cmb.php:235
+#: inc/functions/cmb.php:242
 msgid "Color picker"
 msgstr ""
 
-#: inc/functions/cmb.php:241
+#: inc/functions/cmb.php:248
 msgid "Checkbox list"
 msgstr ""
 
-#: inc/functions/cmb.php:252
+#: inc/functions/cmb.php:259
+msgid "Autocomplete"
+msgstr ""
+
+#: inc/functions/cmb.php:274
 msgid "Email"
 msgstr ""
 
-#: inc/functions/cmb.php:254
+#: inc/functions/cmb.php:276
 msgid "Email description"
 msgstr ""
 
-#: inc/functions/cmb.php:260
+#: inc/functions/cmb.php:282
 msgid "Range"
 msgstr ""
 
-#: inc/functions/cmb.php:262
+#: inc/functions/cmb.php:284
 msgid "Range description"
 msgstr ""
 
-#: inc/functions/cmb.php:271
+#: inc/functions/cmb.php:293
 msgid "URL"
 msgstr ""
 
-#: inc/functions/cmb.php:273
+#: inc/functions/cmb.php:295
 msgid "URL description"
 msgstr ""
 
-#: inc/functions/cmb.php:279
+#: inc/functions/cmb.php:301
 msgid "oEmbed"
 msgstr ""
 
-#: inc/functions/cmb.php:281
+#: inc/functions/cmb.php:303
 msgid "oEmbed description"
 msgstr ""
 
-#: inc/functions/cmb.php:301
+#: inc/functions/cmb.php:323
 msgid "Taxonomy"
 msgstr ""
 
-#: inc/functions/cmb.php:315
+#: inc/functions/cmb.php:337
 msgid "Posts (Pages)"
 msgstr ""
 
-#: inc/functions/cmb.php:331
+#: inc/functions/cmb.php:353
 msgid "WYSIWYG / Rich Text Editor"
 msgstr ""
 
-#: inc/functions/cmb.php:336
+#: inc/functions/cmb.php:358
 msgid "WYSIWYG default value"
 msgstr ""
 
-#: inc/functions/cmb.php:352
+#: inc/functions/cmb.php:374
 msgid "File Upload"
 msgstr ""
 
-#: inc/functions/cmb.php:358
+#: inc/functions/cmb.php:380
 msgid "File Advanced Upload"
 msgstr ""
 
-#: inc/functions/cmb.php:366
+#: inc/functions/cmb.php:388
 msgid "Image Upload"
 msgstr ""
 
-#: inc/functions/cmb.php:372
+#: inc/functions/cmb.php:394
 msgid "Thickbox Image Upload"
 msgstr ""
 
-#: inc/functions/cmb.php:378
+#: inc/functions/cmb.php:400
 msgid "Plupload Image Upload"
 msgstr ""
 
-#: inc/functions/cmb.php:385
+#: inc/functions/cmb.php:407
 msgid "Image Advanced Upload"
 msgstr ""
 
-#: inc/functions/cpt.php:17
-msgctxt "Post Type General Name"
+#: inc/functions/cpt.php:31
 msgid "Samples"
 msgstr ""
 
-#: inc/functions/cpt.php:18
-msgctxt "Post Type Singular Name"
-msgid "Sample"
-msgstr ""
-
-#: inc/functions/cpt.php:19
-msgid "Samples"
-msgstr ""
-
-#: inc/functions/cpt.php:20
+#: inc/functions/cpt.php:32
 msgid "Parent Sample:"
 msgstr ""
 
-#: inc/functions/cpt.php:21
+#: inc/functions/cpt.php:33
 msgid "All Samples"
 msgstr ""
 
-#: inc/functions/cpt.php:22
+#: inc/functions/cpt.php:34
 msgid "View Sample"
 msgstr ""
 
-#: inc/functions/cpt.php:23
+#: inc/functions/cpt.php:35
 msgid "Add New Sample"
 msgstr ""
 
-#: inc/functions/cpt.php:24
+#: inc/functions/cpt.php:36
 msgid "Add New"
 msgstr ""
 
-#: inc/functions/cpt.php:25
+#: inc/functions/cpt.php:37
 msgid "Edit Sample"
 msgstr ""
 
-#: inc/functions/cpt.php:26
+#: inc/functions/cpt.php:38
 msgid "Update Sample"
 msgstr ""
 
-#: inc/functions/cpt.php:27
+#: inc/functions/cpt.php:39
 msgid "Search Sample"
 msgstr ""
 
-#: inc/functions/cpt.php:28
+#: inc/functions/cpt.php:40
 msgid "Not found"
 msgstr ""
 
-#: inc/functions/cpt.php:29
+#: inc/functions/cpt.php:41
 msgid "Not found in Trash"
 msgstr ""
 
-#: inc/functions/cpt.php:34
+#: inc/functions/cpt.php:45
+msgid "sample_cpt"
+msgstr ""
+
+#: inc/functions/cpt.php:46
 msgid "Sample Custom Post Type for the soblossom theme"
 msgstr ""
 
-#: inc/functions/dashboard-functions.php:54
-#, php-format
+#: inc/functions/dashboard-functions.php:58
 msgid ""
 "The %s <a href=\"https://wordpress.org/\" target=\"_blank\">WordPress</a> "
 "website has been built on <a href=\"http://so-wp/themes/soblossom\" "
-"title=\"Use soblossom to create an awesome WordPress theme!\" target=\"_blank"
-"\">soblossom</a>. "
+"title=\"Use soblossom to create an awesome WordPress theme!\" "
+"target=\"_blank\">soblossom</a>. "
 msgstr ""
 
-#: inc/soblossom.php:43
+#: inc/soblossom.php:55
 msgid "Top Navigation Menu"
 msgstr ""
 
-#: inc/soblossom.php:44
+#: inc/soblossom.php:56
 msgid "Social Media Links"
 msgstr ""
 
-#: inc/soblossom.php:45
+#: inc/soblossom.php:57
 msgid "Footer Menu"
 msgstr ""
 
-#: inc/soblossom.php:212
+#: inc/soblossom.php:271
 msgid "Read the rest of "
 msgstr ""
 
-#: inc/soblossom.php:212
+#: inc/soblossom.php:271
 msgid " Read more <i class=\"fa fa-long-arrow-right\"></i>"
 msgstr ""
 
-#: inc/soblossom.php:224
+#: inc/soblossom.php:283
 msgid "Search for:"
 msgstr ""
 
-#: inc/soblossom.php:225
+#: inc/soblossom.php:284
 msgid "Search the Site..."
 msgstr ""
 
-#: inc/soblossom.php:315 inc/soblossom.php:318
+#: inc/soblossom.php:376
+#. translators: used between list items, there is a space after the comma
 msgid ", "
 msgstr ""
 
-#: inc/soblossom.php:323
-#, php-format
+#: inc/soblossom.php:384
+#. translators: used between list items, there is a space after the comma
 msgid ""
-"This article was tagged %2$s. Bookmark the <a href=\"%3$s\" rel=\"bookmark"
-"\">permalink</a>."
+"This article was tagged %2$s. Bookmark the <a href=\"%3$s\" "
+"title=\"Permalink to %4$s\" rel=\"bookmark\">permalink</a>."
 msgstr ""
 
-#: inc/soblossom.php:325
-#, php-format
-msgid "Bookmark the <a href=\"%3$s\" rel=\"bookmark\">permalink</a>."
-msgstr ""
-
-#: inc/soblossom.php:331
-#, php-format
+#: inc/soblossom.php:386
 msgid ""
-"This article was posted in %1$s and tagged %2$s. Bookmark the <a href=\"%3$s"
-"\" rel=\"bookmark\">permalink</a>."
+"Bookmark the <a href=\"%3$s\" title=\"Permalink to %4$s\" "
+"rel=\"bookmark\">permalink</a>."
 msgstr ""
 
-#: inc/soblossom.php:333
-#, php-format
+#: inc/soblossom.php:391
 msgid ""
-"This article was posted in %1$s. Bookmark the <a href=\"%3$s\" rel=\"bookmark"
-"\">permalink</a>."
+"This article was posted in %1$s and tagged %2$s. Bookmark the <a "
+"href=\"%3$s\" title=\"Permalink to %4$s\" rel=\"bookmark\">permalink</a>."
 msgstr ""
 
-#: inc/soblossom.php:365
+#: inc/soblossom.php:393
+msgid ""
+"This article was posted in %1$s. Bookmark the <a href=\"%3$s\" "
+"title=\"Permalink to %4$s\" rel=\"bookmark\">permalink</a>."
+msgstr ""
+
+#: inc/soblossom.php:424
 msgid "Posts navigation"
 msgstr ""
 
-#: inc/soblossom.php:369
+#: inc/soblossom.php:437
+msgid "<i class=\"fa fa-long-arrow-left\"></i> More"
+msgstr ""
+
+#: inc/soblossom.php:439
 msgid "<i class=\"fa fa-long-arrow-left\"></i> Older articles"
 msgstr ""
 
-#: inc/soblossom.php:373
+#: inc/soblossom.php:451
+msgid "More <i class=\"fa fa-long-arrow-right\"></i>"
+msgstr ""
+
+#: inc/soblossom.php:453
 msgid "Newer articles <i class=\"fa fa-long-arrow-right\"></i>"
 msgstr ""
 
-#: inc/soblossom.php:399
+#: inc/soblossom.php:484
 msgid "Post navigation"
 msgstr ""
 
-#: inc/soblossom.php:402
-msgctxt "Previous post link"
-msgid "<i class=\"fa fa-long-arrow-left\"></i> %title"
-msgstr ""
-
-#: inc/soblossom.php:403
-msgctxt "Next post link"
-msgid "%title <i class=\"fa fa-long-arrow-right\"></i>"
-msgstr ""
-
-#: inc/soblossom.php:417
+#: inc/soblossom.php:502
 msgid "Published on "
 msgstr ""
 
-#: inc/soblossom.php:427
+#: inc/soblossom.php:512
+#. Translators: for Chinese translate to: Y年n月j日
 msgid "F jS, Y"
 msgstr ""
 
-#: inc/soblossom.php:434
+#: inc/soblossom.php:519
 msgid "Articles by "
 msgstr ""
 
-#: inc/soblossom.php:499
+#: inc/soblossom.php:584
 msgid "Pingback:"
 msgstr ""
 
-#: inc/soblossom.php:499 inc/soblossom.php:526
+#: inc/soblossom.php:584 inc/soblossom.php:611
 msgid "(Edit)"
 msgstr ""
 
-#: inc/soblossom.php:512
+#: inc/soblossom.php:597
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: inc/soblossom.php:518
-#, php-format
+#: inc/soblossom.php:603
+#. translators: 1: date, 2: time
 msgid "%1$s at %2$s"
 msgstr ""
 
-#: inc/soblossom.php:522
+#: inc/soblossom.php:607
 msgid "Link to this comment."
 msgstr ""
 
-#: inc/soblossom.php:613 tplparts/nav-offcanvas.php:22
-msgid "Home"
-msgstr ""
-
 #: search.php:19
-#, php-format
 msgid "Search Results for: %s"
 msgstr ""
 
@@ -554,35 +516,40 @@ msgstr ""
 msgid "Find out more"
 msgstr ""
 
-#: templates/workspace.php:65 templates/workspace.php:66
+#: templates/workspace.php:62 templates/workspace.php:63
 msgid "Learn more"
 msgstr ""
 
-#: templates/workspace.php:108 templates/workspace.php:117
+#: templates/workspace.php:71 templates/workspace.php:72
+#: templates/workspace.php:73 templates/workspace.php:74
+msgid "as long as there is no services CPT, nothing will really happen here"
+msgstr ""
+
+#: templates/workspace.php:113 templates/workspace.php:117
 msgid "Call To Action!"
 msgstr ""
 
-#: templates/workspace.php:128
+#: templates/workspace.php:137
 msgid "More Information"
 msgstr ""
 
-#: templates/workspace.php:133
+#: templates/workspace.php:142
 msgid "Download Brochure"
 msgstr ""
 
-#: templates/workspace.php:137
+#: templates/workspace.php:146
 msgid "Book Event"
 msgstr ""
 
-#: templates/workspace.php:151
+#: templates/workspace.php:158
 msgid "Get in touch!"
 msgstr ""
 
-#: templates/workspace.php:154
+#: templates/workspace.php:161
 msgid "We'd love to hear from you, you attractive person you."
 msgstr ""
 
-#: templates/workspace.php:157
+#: templates/workspace.php:165
 msgid "Contact Us"
 msgstr ""
 
@@ -591,9 +558,7 @@ msgid "Nothing Found"
 msgstr ""
 
 #: tplparts/content-none.php:21
-#, php-format
-msgid ""
-"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
 
 #: tplparts/content-none.php:25
@@ -621,10 +586,82 @@ msgstr ""
 msgid "Continue reading <i class=\"fa fa-long-arrow-right\"></i>"
 msgstr ""
 
+#: tplparts/nav-offcanvas.php:22
+msgid "Home"
+msgstr ""
+
 #: tplparts/nav-offcanvas.php:26 tplparts/nav-topbar.php:12
 msgid "Menu"
 msgstr ""
 
 #: tplparts/nav-offcanvas.php:68
 msgid "Navigation"
+msgstr ""
+
+#. Theme Name of the plugin/theme
+msgid "soblossom"
+msgstr ""
+
+#. Theme URI of the plugin/theme
+msgid "http://so-wp.com/themes/soblossom/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"soblossom is a WordPress starter theme that is based on Foundation on the "
+"frontend and Underscores sass on the backend."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Piet Bos"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://senlinonline.com/"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Banded"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Full Width"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Name Page Template"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Workspace"
+msgstr ""
+
+#: archive.php:36
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr ""
+
+#: archive.php:39
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr ""
+
+#: inc/functions/cpt.php:29
+msgctxt "Post Type General Name"
+msgid "Samples"
+msgstr ""
+
+#: inc/functions/cpt.php:30
+msgctxt "Post Type Singular Name"
+msgid "Sample"
+msgstr ""
+
+#: inc/soblossom.php:487
+msgctxt "Previous post link"
+msgid "<i class=\"fa fa-long-arrow-left\"></i> %title"
+msgstr ""
+
+#: inc/soblossom.php:488
+msgctxt "Next post link"
+msgid "%title <i class=\"fa fa-long-arrow-right\"></i>"
 msgstr ""

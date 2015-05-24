@@ -39,8 +39,15 @@ Put the adminbar back where it belongs
 	background-color: $primary;
 }
 
-
 body {}
+
+#back-top {
+  position: fixed;
+  bottom: rem-calc(20);
+  bottom: 20px;
+  right: 2%;
+  z-index: 100;
+}
 
 /********************
 WORDPRESS BODY CLASSES

@@ -119,6 +119,13 @@ Nowadays there are plenty of WordPress themes built on Foundation and we have lo
 
 ## Changelog
 
+### 150524
+
+* add adminbar specific styling, see scss/_adminbar.scss
+* change footer copy right text (replace back to top link with sitename/link)
+* add script for back to top transition
+* add script that removes sometimes conflicting body class of f-topbar-fixed
+
 ### 150504
 
 * update to Foundation 5.5.2

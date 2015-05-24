@@ -16,19 +16,41 @@
 	//$('input[type="submit"]').addClass('button');
 
 	/**
-	 * Enable closing clearing (lightbox) by clicking anywhere on the mask
+	 * Remove the sometimes conflicting f-topbar-fixed class that is added to the body tag by Foundation (only when navigation is fixed)
 	 *
-	 * @source: //github.com/zurb/foundation/issues/4119 answer of @javierarques
+	 * @source: //stackoverflow.com/questions/8468996/jquery-to-remove-class-from-body-tag#comment10474602_8468996
 	 */
-	$(document).on('click', '.clearing-blackout', function () {
-		var container = $('.clearing-container');
-		var visible_image = container.find('.visible-img');
-		container.find('ul[data-clearing]')
-		.attr('style', '').closest('.clearing-blackout')
-		.removeClass('clearing-blackout');
-		container.removeClass('clearing-container');
-		visible_image.fadeOut();
-	});	
+	$(document.body).removeClass('f-topbar-fixed');
 
+	/**
+	 * Add scroll to top button
+	 * see bottom of footer.php and scss/small.scss (under general)
+	 * @source: //foundation.zurb.com/forum/posts/5265-how-to-add-a-back-to-the-top-image
+	 */
+	$(document).ready(function(){
+
+	  // hide #back-top first
+	  $("#back-top").hide();
+	
+	  // fade in #back-top
+	  $(function () {
+	    $(window).scroll(function () {
+	      if ($(this).scrollTop() > 100) {
+	        $('#back-top').fadeIn();
+	      } else {
+	        $('#back-top').fadeOut();
+	      }
+	    });
+	
+	    // scroll body to 0px on click
+	    $('#back-top .fa').click(function () {
+	      $('body,html').animate({
+	        scrollTop: 0
+	      }, 800);
+	      return false;
+	    });
+	  });
+	
+	});
 
 }(jQuery)); 

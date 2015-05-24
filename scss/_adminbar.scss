@@ -1,0 +1,36 @@
+/******************************************************************
+
+Stylesheet: Adminbar specific styling
+
+Breakpoints:
+	0 – 600px, position: absolute, 46px height
+	601 – 783px, position: fixed, 46px height
+	784px an up, position: fixed; 32px height
+
+@source: //spigotdesign.com/wordpress-admin-bar-break-points/
+
+******************************************************************/
+
+$adminsmall: "(max-width: 600px)";
+$adminmedium: "(min-width: 601px) and (max-width: 783px)";
+$adminlarge: "(min-width: 784px)";
+
+.admin-bar .contain-to-grid.fixed {
+    width: 100%;
+    padding: 0;
+	
+	@media #{$adminsmall} {
+		position: absolute;
+		top: 0;
+	}
+
+	@media #{$adminmedium} {
+		position: fixed;
+		top: 46px;
+	}
+
+	@media #{$adminlarge} {
+		position: fixed;
+		top: 32px;
+	}
+}
