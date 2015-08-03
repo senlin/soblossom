@@ -627,6 +627,24 @@ function soblossom_supports_wp_features() {
 		    endswitch;
 		}
 	} // ends check for soblossom_comment()
+	
+	/**
+	 * Disable commenting on Attachment pages
+	 *
+	 * @source: github.com/senlin/Code-Snippets/blob/master/Functions/Comments/disable-attachment-comments.php
+	 */
+	add_filter( 'comments_open', 'soblossom_disable_attachment_pages_comments', 10 , 2 );
+	
+	function soblossom_disable_attachment_pages_comments( $open, $post_id ) {
+		
+		$post = get_post( $post_id );
+		
+		if ( 'attachment' == $post->post_type )
+			$open = false;
+	
+		return $open;
+	
+	}
 
 
 /**
