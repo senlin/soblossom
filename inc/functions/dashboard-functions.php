@@ -22,7 +22,6 @@ add_filter( 'admin_footer_text', 'soblossom_dashboard_footer' );
 add_action( 'admin_menu', 'soblossom_disable_default_dashboard_widgets' );
 add_action( 'widgets_init', 'soblossom_remove_wp_default_widgets', 1 );
 add_filter( 'show_admin_bar', '__return_false' );
-add_filter( 'wpseo_use_page_analysis', '__return_false' );
 
 /* Related to Custom Login */
 add_action( 'login_enqueue_scripts', 'soblossom_login_stylesheet' ); // custom logo is set from here too
