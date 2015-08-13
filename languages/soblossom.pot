@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: soblossom 150524\n"
+"Project-Id-Version: soblossom 1.6.2\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2015-05-24 04:51:19+00:00\n"
+"POT-Creation-Date: 2015-08-13 01:53:41+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -378,7 +378,7 @@ msgstr ""
 msgid "Sample Custom Post Type for the soblossom theme"
 msgstr ""
 
-#: inc/functions/dashboard-functions.php:58
+#: inc/functions/dashboard-functions.php:57
 msgid ""
 "The %s <a href=\"https://wordpress.org/\" target=\"_blank\">WordPress</a> "
 "website has been built on <a href=\"http://so-wp/themes/soblossom\" "
@@ -398,107 +398,111 @@ msgstr ""
 msgid "Footer Menu"
 msgstr ""
 
-#: inc/soblossom.php:271
+#: inc/soblossom.php:87
+msgid "Another awesome site built on soblossom!"
+msgstr ""
+
+#: inc/soblossom.php:316
 msgid "Read the rest of "
 msgstr ""
 
-#: inc/soblossom.php:271
+#: inc/soblossom.php:316
 msgid " Read more <i class=\"fa fa-long-arrow-right\"></i>"
 msgstr ""
 
-#: inc/soblossom.php:283
+#: inc/soblossom.php:328
 msgid "Search for:"
 msgstr ""
 
-#: inc/soblossom.php:284
+#: inc/soblossom.php:329
 msgid "Search the Site..."
 msgstr ""
 
-#: inc/soblossom.php:376
+#: inc/soblossom.php:421
 #. translators: used between list items, there is a space after the comma
 msgid ", "
 msgstr ""
 
-#: inc/soblossom.php:384
+#: inc/soblossom.php:429
 #. translators: used between list items, there is a space after the comma
 msgid ""
 "This article was tagged %2$s. Bookmark the <a href=\"%3$s\" "
 "title=\"Permalink to %4$s\" rel=\"bookmark\">permalink</a>."
 msgstr ""
 
-#: inc/soblossom.php:386
+#: inc/soblossom.php:431
 msgid ""
 "Bookmark the <a href=\"%3$s\" title=\"Permalink to %4$s\" "
 "rel=\"bookmark\">permalink</a>."
 msgstr ""
 
-#: inc/soblossom.php:391
+#: inc/soblossom.php:436
 msgid ""
 "This article was posted in %1$s and tagged %2$s. Bookmark the <a "
 "href=\"%3$s\" title=\"Permalink to %4$s\" rel=\"bookmark\">permalink</a>."
 msgstr ""
 
-#: inc/soblossom.php:393
+#: inc/soblossom.php:438
 msgid ""
 "This article was posted in %1$s. Bookmark the <a href=\"%3$s\" "
 "title=\"Permalink to %4$s\" rel=\"bookmark\">permalink</a>."
 msgstr ""
 
-#: inc/soblossom.php:424
+#: inc/soblossom.php:469
 msgid "Posts navigation"
 msgstr ""
 
-#: inc/soblossom.php:437
+#: inc/soblossom.php:482
 msgid "<i class=\"fa fa-long-arrow-left\"></i> More"
 msgstr ""
 
-#: inc/soblossom.php:439
+#: inc/soblossom.php:484
 msgid "<i class=\"fa fa-long-arrow-left\"></i> Older articles"
 msgstr ""
 
-#: inc/soblossom.php:451
+#: inc/soblossom.php:496
 msgid "More <i class=\"fa fa-long-arrow-right\"></i>"
 msgstr ""
 
-#: inc/soblossom.php:453
+#: inc/soblossom.php:498
 msgid "Newer articles <i class=\"fa fa-long-arrow-right\"></i>"
 msgstr ""
 
-#: inc/soblossom.php:484
+#: inc/soblossom.php:529
 msgid "Post navigation"
 msgstr ""
 
-#: inc/soblossom.php:502
+#: inc/soblossom.php:547
 msgid "Published on "
 msgstr ""
 
-#: inc/soblossom.php:512
+#: inc/soblossom.php:557
 #. Translators: for Chinese translate to: Y年n月j日
 msgid "F jS, Y"
 msgstr ""
 
-#: inc/soblossom.php:519
+#: inc/soblossom.php:564
 msgid "Articles by "
 msgstr ""
 
-#: inc/soblossom.php:584
+#: inc/soblossom.php:629
 msgid "Pingback:"
 msgstr ""
 
-#: inc/soblossom.php:584 inc/soblossom.php:611
+#: inc/soblossom.php:629 inc/soblossom.php:656
 msgid "(Edit)"
 msgstr ""
 
-#: inc/soblossom.php:597
+#: inc/soblossom.php:642
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: inc/soblossom.php:603
+#: inc/soblossom.php:648
 #. translators: 1: date, 2: time
 msgid "%1$s at %2$s"
 msgstr ""
 
-#: inc/soblossom.php:607
+#: inc/soblossom.php:652
 msgid "Link to this comment."
 msgstr ""
 
@@ -656,12 +660,12 @@ msgctxt "Post Type Singular Name"
 msgid "Sample"
 msgstr ""
 
-#: inc/soblossom.php:487
+#: inc/soblossom.php:532
 msgctxt "Previous post link"
 msgid "<i class=\"fa fa-long-arrow-left\"></i> %title"
 msgstr ""
 
-#: inc/soblossom.php:488
+#: inc/soblossom.php:533
 msgctxt "Next post link"
 msgid "%title <i class=\"fa fa-long-arrow-right\"></i>"
 msgstr ""

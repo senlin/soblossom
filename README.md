@@ -1,8 +1,8 @@
 soblossom WordPress theme
 =========
 
-###### Version 1.6.1
-###### Last updated on 2015.08.08
+###### Version 1.6.2
+###### Last updated on 2015.08.13
 ###### Foundation version 5.5.2
 ###### FontAwesome version 4.4.0
 ###### [DEMO SITE](http://so-wp.com/themes/soblossom/)
@@ -114,13 +114,19 @@ Nowadays there are plenty of WordPress themes built on Foundation and we have lo
 
 [Github](https://github.com/senlin) 
 
-[Google+](http://plus.google.com/+PietBos) 
+[LinkedIn](https://www.linkedin.com/in/pietbos) 
 
-[WordPress](http://profiles.wordpress.org/senlin/) 
+[WordPress](https://profiles.wordpress.org/senlin/) 
+
+[Google+](https://plus.google.com/+PietBos) 
 
 [Website](http://senlinonline.com)
 
 ## Changelog
+
+### 1.6.2 (date 2015.08.13)
+
+* add alternative enqueueing of scripts/styles together with better documentation for if people want to use something other than Grunt.
 
 ### 1.6.1 (date 2015.08.08)
 
