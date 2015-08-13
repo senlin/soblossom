@@ -96,8 +96,7 @@ Included is a sample Gruntfile.js that you can use as a start.
 
 ### Can I also use soblossom without Grunt?
 
-Yes, of course you can! Then you can just ignore all the stuff about Grunt. What you then need to do though, is to adjust the enqueueing of styles and scripts in the `inc/soblossom.php` file (lines 168-210) and if you want to use the Font Awesome font, you will need to separately include that (lines 132-141).
-
+Yes, of course you can! Then you can just ignore all the stuff about Grunt. At the top of the `soblossom_scripts()` function, which enqueues the styles and scripts, you can find an explanation and an alternative. You can find this function in the `inc/soblossom.php` file.
 ## Credits
 
 Nowadays there are plenty of WordPress themes built on Foundation and we have looked at a few of them: [Reverie](https://github.com/milohuang/reverie) by [Zhen Huang](https://github.com/milohuang), [Required+](https://github.com/wearerequired/required-foundation) (discontinued) by [Required+](http://required.ch/who-we-are/), [WPForge](http://wpforge.themeawesome.com/) by T. Vasquez and last but not least [JointsWP](http://jointswp.com/) by [Jeremy Englert](http://twitter.com/jeremyenglert). Thanks all for your guidance, tips and inspiration!
