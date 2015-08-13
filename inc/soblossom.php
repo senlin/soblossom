@@ -161,7 +161,20 @@ function soblossom_supports_wp_features() {
 	}
 
 
-	// Enqueue scripts and styles.
+	/**
+	 * Enqueue scripts and styles.
+	 *
+	 * We're using Grunt which we have given the instructions
+	 * to output the stylesheet when in dev (WP_DEBUG set to true) and compress the stylesheet for production (WP_DEBUG set to false).
+	 *
+	 * Furthermore it combines all the javascript files into one when in dev (combined.js)
+	 * and it minifies the lot when in production (combined.min.js)
+	 *
+	 * If you want to use something else than Grunt [issue 21](https://github.com/senlin/soblossom/issues/21),
+	 * then you need to write the function a little bit different, depending on what you will use instead. To give you a start
+	 * we have added a sample on regular enqued styles and scripts below the "regular" soblossom_scripts() function.
+	 * We have commented it out, so you will need to uncomment it to use it (and comment out the regular one).
+	 */
 	function soblossom_scripts() {
 
 		/* STYLES */
@@ -201,6 +214,35 @@ function soblossom_supports_wp_features() {
 			wp_enqueue_script( 'comment-reply' );
 		}
 	}
+
+	/**
+	 * Alternative way of enqueueing stylesheets and javascripts if you're using something else than Grunt
+	 */
+/*
+	function soblossom_scripts() {
+
+		// STYLES
+		wp_enqueue_style( 'soblossom-style', get_template_directory_uri() . '/css/style.css', array(), null );
+				
+		// uncomment to include Google Webfonts (see lines 132-154)
+		//wp_enqueue_style( 'google_webfonts', soblossom_google_webfonts(), array(), null );
+	
+		// SCRIPTS
+		wp_enqueue_script( 'modernizer', get_template_directory_uri() . '/bower_components/modernizr/modernizr.js', array(), null );
+		
+		wp_enqueue_script( 'foundation', get_template_directory_uri() . '/bower_components/foundation/js/foundation.min.js', array(), null, true );
+		
+		wp_enqueue_script( 'soblossom-js', get_template_directory_uri() . '/js/soblossom.js', array( 'jquery' ), null, true );
+		
+		wp_enqueue_script( 'soblossom-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), null, true );
+		
+		wp_enqueue_script( 'soblossom-combined', get_template_directory_uri() . '/js/combined.js', array( 'jquery' ), null, true );
+			
+		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+			wp_enqueue_script( 'comment-reply' );
+		}
+	}
+*/
 
 
 /**
