@@ -48,26 +48,26 @@ module.exports = function(grunt) {
 		    }
 	    },
 
-        concat: {
-            dev: {
-	            src: [
-		           'bower_components/modernizr/modernizr.js',
-		           'bower_components/foundation/js/foundation.js',
-		           'js/soblossom.js',
-		           'js/skip-link-focus-fix.js'
-	            ],
-	            dest: 'js/combined.js',
-            },
-        },
-
+		/* Multiple files per target @source: //github.com/gruntjs/grunt-contrib-concat */
+		concat: {
+			dev: {
+				files: {
+					'js/vendor.js': ['bower_components/modernizr/modernizr.js','bower_components/foundation/js/foundation.js'],
+					'js/theme.js': ['js/soblossom.js','js/skip-link-focus-fix.js'],
+				},
+			},
+		},
+		
+		/* Basic compression @source: //github.com/gruntjs/grunt-contrib-uglify */
 		uglify: {
 		    release: {
-		        src: 'js/combined.js',
-		        dest: 'js/combined.min.js'
+				files: {
+				    'js/soblossom.min.js': ['js/vendor.js', 'js/theme.js']
+				}
 		    }
 		},
 
-    	// https://www.npmjs.org/package/grunt-wp-i18n
+    	/* @source: //npmjs.org/package/grunt-wp-i18n */
 	    makepot: {
 	        target: {
 	            options: {
