@@ -85,6 +85,7 @@ As a quick reminder (if only for ourselves) to start a new project you will firs
 
 * start with installing Foundation according to [the Get Started instructions over at Zurb](http://foundation.zurb.com/docs/sass.html)
 * then copy over everything from this Repo into your new project (overwrite everything except the `bower_components` and the `node_modules` folders and don't forget to remove the `.git`folder that comes with the Foundation install)
+* if you want to use FontAwesome, you will hoever need to copy that folder over from the soblossom `bower_components` folder to your new install
 * when Foundation is installed the grunt-sass and grunt-contrib-watch tasks are already installed, so you don't have to install those anymore
 * grunt-contrib-concat: `$ npm install grunt-contrib-concat --save-dev`
 * grunt-contrib-uglify: `$ npm install grunt-contrib-uglify --save-dev`
