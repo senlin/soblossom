@@ -31,11 +31,6 @@ add_filter( 'gettext', 'soblossom_remove_lostpassword_text' );
 // Remove error messages
 add_filter( 'login_errors', create_function( '$a', "return null;" ) );
 
-/* Disable Emoji (since WP 4.2) */
-add_action( 'wp_print_scripts', 'soblossom_disable_emoji_dequeue_script', 100 );
-/* Remove the emoji styles */
-remove_action( 'wp_print_styles', 'soblossom_print_emoji_styles' );
-
 // Replace "Howdy" with "Hello, welcome back"
 function soblossom_replace_howdy( $wp_admin_bar ) {
     
