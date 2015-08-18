@@ -83,9 +83,6 @@ function soblossom_bloom() { //actions, filters and other theme setup related th
 	// enable Page excerpts
 	add_post_type_support( 'page', 'excerpt' );
 
-	// change the default Site Description (tagline)
-	update_option( 'blogdescription', __( 'Another awesome site built on soblossom!', 'sojoy' ) );
-
 } // end soblossom_bloom()
 
 

@@ -125,6 +125,10 @@ Nowadays there are plenty of WordPress themes built on Foundation and we have lo
 
 ## Changelog
 
+### 1.6.4 (date 2015.08.18)
+
+* critical update, fixes bug that made it impossible to change site description
+
 ### 1.6.3 (date 2015.08.16)
 
 * improve Grunt file to separate vendor scripts and theme scripts
