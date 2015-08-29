@@ -77,7 +77,7 @@
 					</div><!-- end .inner-header -->
 					*/?>
 
-					<nav id="site-navigation" class="main-navigation row" role="navigation">
+					<div id="site-navigation" class="main-navigation row" role="navigation">
 
 						<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'soblossom' ); ?></a>
 
@@ -110,6 +110,6 @@
 						
 						?>
 
-					</nav> <!-- end .main-navigation -->
+					</div> <!-- end .main-navigation -->
 
 				</header> <!-- end header -->
