@@ -2,7 +2,7 @@
 
 
 remove_shortcode( 'gallery' );
-add_shortcode( 'gallery', 'soblossom_clearing_blockgrid_gallery' );
+add_shortcode( 'gallery', 'soblossom_blockgrid_gallery' );
 
 /**
  * The Gallery shortcode.
@@ -35,7 +35,7 @@ add_shortcode( 'gallery', 'soblossom_clearing_blockgrid_gallery' );
  * }
  * @return string HTML content to display gallery.
  */
-function soblossom_clearing_blockgrid_gallery( $attr ) {
+function soblossom_blockgrid_gallery( $attr ) {
 	$post = get_post();
 
 	static $instance = 0;
@@ -156,7 +156,7 @@ function soblossom_clearing_blockgrid_gallery( $attr ) {
 	}
 
 	$size_class = sanitize_html_class( $atts['size'] );
-	$gallery_div = "<div id='gallery-{$id}' class='soblossom-gallery'><ul class='clearing-thumbs small-block-grid-2 medium-block-grid-3 large-block-grid-4' data-clearing>";
+	$gallery_div = '<div id="gallery-{$id}" class="soblossom-gallery"><ul class="small-block-grid-2 medium-block-grid-3 large-block-grid-4">';
 
 	/**
 	 * Filter the default gallery shortcode CSS styles.

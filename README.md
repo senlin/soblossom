@@ -1,8 +1,8 @@
 soblossom WordPress theme
 =========
 
-###### Version 1.6.3
-###### Last updated on 2015.08.16
+###### Version 1.6.5
+###### Last updated on 2015.09.18
 ###### Foundation version 5.5.2
 ###### FontAwesome version 4.4.0
 ###### [DEMO SITE](http://so-wp.com/themes/soblossom/)
@@ -26,9 +26,9 @@ All Featured Images, for example those on a Single Post, come with the builtin [
 
 ### Gallery Shortcode
 
-For the soblossom theme we have completely overhauled the default WordPress Gallery shortcode. You won't find any inline styling either. We have replaced the functionality with [Foundation Blockgrid](http://foundation.zurb.com/docs/components/block_grid.html) **and** [Foundation Clearing Thumbs](http://foundation.zurb.com/docs/components/clearing.html), which shows the images with a cool lightbox effect, so you won't need an additional plugin for that either.
-By default the blockgrid shows `small-block-grid-2 medium-block-grid-3 large-block-grid-4`, which means that on small devices (up to 640px wide) it shows 2 thumbs; on medium devices (640-1024px wide) it shows 3 thumbs and on large devices (anything over 1024px) it will show 4 thumbs. Clicking on a thumb will show the Foundation Clearing effect.
-If you want to adjust anything, you can do so in `inc/classes/gallery.php` and the `scss/_gallery.scss` files.
+For the soblossom theme we have completely overhauled the default WordPress Gallery shortcode. You won't find any inline styling either. We have replaced the functionality with [Foundation Blockgrid](http://foundation.zurb.com/docs/components/block_grid.html). Since [v1.6.5](https://github.com/senlin/soblossom/releases/tag/v1.6.5) we have removed the clearing from the soblossom gallery shortcode, due to too many inconsistencies and ongoing (or recurring) conflicts.
+By default the blockgrid shows `small-block-grid-2 medium-block-grid-3 large-block-grid-4`, which means that on small devices (up to 640px wide) it shows 2 thumbs; on medium devices (640-1024px wide) it shows 3 thumbs and on large devices (anything over 1024px) it will show 4 thumbs.If you want to adjust anything, you can do so in `inc/classes/gallery.php` and the `scss/_gallery.scss` files.
+If you want to have a lightbox effect we recommend using the [WP Featherlight](https://wordpress.org/plugins/wp-featherlight/) plugin.
 Showing your galleries this way means that whatever you choose as amount of columns in the WordPress interface will have no effect on the frontend. That is the "price you pay" for awesomeness. Of course you can remove the function and let WordPress do it its own way too.
 
 ### Other Foundation Features
@@ -98,6 +98,7 @@ Included is a sample Gruntfile.js that you can use as a start.
 ### Can I also use soblossom without Grunt?
 
 Yes, of course you can! Then you can just ignore all the stuff about Grunt. At the top of the `soblossom_scripts()` function, which enqueues the styles and scripts, you can find an explanation and an alternative. You can find this function in the `inc/soblossom.php` file.
+
 ## Credits
 
 Nowadays there are plenty of WordPress themes built on Foundation and we have looked at a few of them: [Reverie](https://github.com/milohuang/reverie) by [Zhen Huang](https://github.com/milohuang), [Required+](https://github.com/wearerequired/required-foundation) (discontinued) by [Required+](http://required.ch/who-we-are/), [WPForge](http://wpforge.themeawesome.com/) by T. Vasquez and last but not least [JointsWP](http://jointswp.com/) by [Jeremy Englert](http://twitter.com/jeremyenglert). Thanks all for your guidance, tips and inspiration!
@@ -124,6 +125,10 @@ Nowadays there are plenty of WordPress themes built on Foundation and we have lo
 [Website](http://senlinonline.com)
 
 ## Changelog
+
+### 1.6.5 (date 2015.09.18)
+
+* remove clearing from `inc/classes/gallery.php` due to too many recurring conflicts with Foundation clearing functionality. For an always working responsive lightbox we recommend to use [WP Featherlight](https://wordpress.org/plugins/wp-featherlight/) instead, which looks almost the same and is much more consistent and reliable.
 
 ### 1.6.4 (date 2015.08.18)
 
