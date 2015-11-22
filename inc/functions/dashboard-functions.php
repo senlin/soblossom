@@ -31,6 +31,9 @@ add_filter( 'gettext', 'soblossom_remove_lostpassword_text' );
 // Remove error messages
 add_filter( 'login_errors', create_function( '$a', "return null;" ) );
 
+// Disable XML-RPC - //plugins.svn.wordpress.org/disable-xml-rpc/tags/1.0.1/disable-xml-rpc.php
+add_filter( 'xmlrpc_enabled', '__return_false' );
+
 // Replace "Howdy" with "Hello, welcome back"
 function soblossom_replace_howdy( $wp_admin_bar ) {
     
