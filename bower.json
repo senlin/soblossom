@@ -2,9 +2,9 @@
   "name": "foundation-libsass-template",
   "dependencies": {
     "foundation": "zurb/bower-foundation",
-    "fontawesome": "~4.4.0"
+    "fontawesome": "~4.5.0"
   },
   "resolutions": {
-    "fontawesome": "~4.4.0"
+    "fontawesome": "~4.5.0"
   }
 }

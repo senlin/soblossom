@@ -1,10 +1,10 @@
 soblossom WordPress theme
 =========
 
-###### Version 1.6.6
-###### Last updated on 2015.10.07
+###### Version 1.6.7
+###### Last updated on 2015.11.24
 ###### Foundation version 5.5.3
-###### FontAwesome version 4.4.0
+###### FontAwesome version 4.5.0
 ###### [DEMO SITE](http://so-wp.com/themes/soblossom/)
 ###### Author: [Piet Bos](https://github.com/senlin)
 
@@ -120,11 +120,15 @@ Nowadays there are plenty of WordPress themes built on Foundation and we have lo
 
 [WordPress](https://profiles.wordpress.org/senlin/) 
 
-[Google+](https://plus.google.com/+PietBos) 
-
 [Website](http://senlinonline.com)
 
+[soblossom on Facebook](https://www.facebook.com/sowp.soblossom/) 
+
 ## Changelog
+
+### 1.6.7 (date 2015.11.24)
+
+* update to FontAwesome 4.5.0
 
 ### 1.6.6 (date 2015.10.07)
 
