@@ -1,0 +1,738 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: soblossom 1.6.6\n"
+"POT-Creation-Date: 2015-11-24 13:18+0100\n"
+"PO-Revision-Date: 2015-11-24 13:39+0100\n"
+"Language-Team: de_DE\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Generator: Poedit 1.8.6\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: _:1;gettext:1;dgettext:2;ngettext:1,2;dngettext:2,3;"
+"__:1;_e:1;_c:1;_n:1,2;_n_noop:1,2;_nc:1,2;__ngettext:1,2;"
+"__ngettext_noop:1,2;_x:1,2c;_ex:1,2c;_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;"
+"_nx_js:1,2,3c;esc_attr__:1;esc_html__:1;esc_attr_e:1;esc_html_e:1;"
+"esc_attr_x:1,2c;esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;"
+"Language: de_DE\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../404.php:19
+msgid "Nothing Here."
+msgstr "Nichts hier."
+
+#: ../404.php:23
+msgid ""
+"Apologies, there is nothing here. Maybe try a search or one of the links "
+"below or in the sidebar?"
+msgstr ""
+"Entschuldigung, hier gibt es nichts. Eventuell hilft eine Suche oder einer "
+"der Links unten oder in der Sidebar?"
+
+#: ../404.php:34
+msgid "Pages"
+msgstr "Seiten"
+
+#: ../archive.php:30
+#, php-format
+msgid "Author: %s"
+msgstr "Autor: %s"
+
+#: ../archive.php:33
+#, php-format
+msgid "Day: %s"
+msgstr "Tag: %s"
+
+#: ../archive.php:36
+#, php-format
+msgid "Month: %s"
+msgstr "Monat: %s"
+
+#: ../archive.php:36
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr "F Y"
+
+#: ../archive.php:39
+#, php-format
+msgid "Year: %s"
+msgstr "Jahr: %s"
+
+#: ../archive.php:39
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr "Y"
+
+#: ../archive.php:42
+msgid "Archives"
+msgstr "Archiv"
+
+#: ../comments.php:32
+#, php-format
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] "Ein Kommentar zu &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s Kommentare zu &ldquo;%2$s&rdquo;"
+
+#: ../comments.php:39 ../comments.php:59
+msgid "Comment navigation"
+msgstr "Kommentar Navigation"
+
+#: ../comments.php:40 ../comments.php:60
+msgid "<i class=\"fa fa-long-arrow-left\"></i> Older Comments"
+msgstr "<i class=\"fa fa-long-arrow-left\"></i> Ältere Kommentare"
+
+#: ../comments.php:41 ../comments.php:61
+msgid "Newer Comments <i class=\"fa fa-long-arrow-right\"></i>"
+msgstr "Neuere Kommentare <i class=\"fa fa-long-arrow-right\"></i>"
+
+#: ../comments.php:71
+msgid "Comments are closed."
+msgstr "Kommentare sind geschlossen."
+
+#: ../footer.php:34
+msgid "Back to top"
+msgstr "Zurück zum Anfang"
+
+#: ../functions.php:123
+msgid "Top Navigation"
+msgstr "Top Navigation"
+
+#: ../functions.php:139
+msgid "Social Media"
+msgstr "Social Media"
+
+#: ../functions.php:157
+msgid "Footer Links"
+msgstr "Footer Links"
+
+#: ../functions.php:177
+#, php-format
+msgid "Add your Top Navigation Menu by adding a %1$s or %2$s the design."
+msgstr ""
+"Fügen sie ihre Top Navigation hinzu indem sie %1$s oder %2$s im Design "
+"einfügen."
+
+#: ../functions.php:178 ../functions.php:210
+#, php-format
+msgid "<a href=\"%s\">Menu</a>"
+msgstr "<a href=\"%s\">Menü</a>"
+
+#: ../functions.php:181 ../functions.php:213
+#, php-format
+msgid "<a href=\"%s\">Customizing</a>"
+msgstr "<a href=\"%s\">Anpassen</a>"
+
+#: ../functions.php:193
+#, php-format
+msgid ""
+"Add a %1$s and use FontAwesome names for the descriptions to show your own "
+"Social Links. Alternatively use the %2$s."
+msgstr ""
+"Fügen sie ein %1$s hinzu und nutzen sie FontAwesome Namen für die "
+"Beschreibungen um ihre eigenen Social Links anzuzeigen. Nutzen sie "
+"alternativ %2$s."
+
+#: ../functions.php:194
+#, php-format
+msgid "<a href=\"%s\">Social Media menu</a>"
+msgstr "<a href=\"%s\">Social Media Menü</a>"
+
+#: ../functions.php:197
+#, php-format
+msgid "<a href=\"%s\">Customizer</a>"
+msgstr "<a href=\"%s\">Anpassen</a>"
+
+#: ../functions.php:209
+#, php-format
+msgid "Add your own Footer Links by adding a %1$s or %2$s the design."
+msgstr ""
+"Fügen sie ihre eigenen Footer Links hinzu indem sie %1$s oder %2$s im "
+"Design einfügen."
+
+#: ../functions.php:229
+msgid "Home Widget Area"
+msgstr "Widget Bereich Startseite"
+
+#: ../functions.php:231
+msgid "Appears on the Homepage of the site."
+msgstr "Erscheint auf der Startseite."
+
+#: ../functions.php:238
+msgid "Sidebar Widget Area"
+msgstr "Sidebar Widget Bereich"
+
+#: ../functions.php:240
+msgid "Appears on the side (right by default) of the site."
+msgstr "Erscheint an der Seite (standardmäßig rechts) der Site."
+
+#: ../functions.php:247
+msgid "Footer Widget Area"
+msgstr "Footer Widget Bereich"
+
+#: ../functions.php:249
+msgid "Appears in the footer section of the site."
+msgstr "Erscheint im Footer-Bereich der Site."
+
+#: ../header.php:76
+msgid "Skip to content"
+msgstr "Überspringen zum Inhalt"
+
+#: ../search.php:19
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Suchergebnisse für: %s"
+
+#: ../sidebar.php:16
+msgid ""
+"Go to Appearance <i class=\"fa fa-long-arrow-right\"></i> Widgets in your "
+"Dashboard to add some widgets"
+msgstr ""
+"Gehen Sie zu Design <i class=\"fa fa-long-arrow-right\"></i> Widgets in "
+"Ihrem Backend um Widgets hinzu zu fügen."
+
+#: ../single-seminare.php:24 ../single.php:23
+msgid "Back to overview"
+msgstr "Zurück zur Übersicht"
+
+#: ../inc/soblossom.php:55
+msgid "Top Navigation Menu"
+msgstr "Top Navigation Menü"
+
+#: ../inc/soblossom.php:56
+msgid "Social Media Links"
+msgstr "Social Media Links"
+
+#: ../inc/soblossom.php:57
+msgid "Footer Menu"
+msgstr "Footer Menü"
+
+#: ../inc/soblossom.php:314
+msgid "Read the rest of "
+msgstr "Lesen Sie den Rest von "
+
+#: ../inc/soblossom.php:314
+msgid " Read more <i class=\"fa fa-long-arrow-right\"></i>"
+msgstr " Weiterlesen <i class=\"fa fa-long-arrow-right\"></i>"
+
+#: ../inc/soblossom.php:326
+msgid "Search for:"
+msgstr "Suche nach:"
+
+#: ../inc/soblossom.php:327
+msgid "Search the Site..."
+msgstr "Site durchsuchen…"
+
+#. translators: used between list items, there is a space after the comma
+#: ../inc/soblossom.php:419
+msgid ", "
+msgstr ", "
+
+#. translators: used between list items, there is a space after the comma
+#: ../inc/soblossom.php:427
+#, php-format
+msgid ""
+"This article was tagged %2$s. Bookmark the <a href=\"%3$s\" title="
+"\"Permalink to %4$s\" rel=\"bookmark\">permalink</a>."
+msgstr ""
+"Dieser Beitrag wurde markiert %2$s. Setzen Sie ein Lesezeichen auf den <a "
+"href=\"%3$s\" title=\"Permalink to %4$s\" rel=\"bookmark\">Permalink</a>."
+
+#: ../inc/soblossom.php:429
+#, php-format
+msgid ""
+"Bookmark the <a href=\"%3$s\" title=\"Permalink to %4$s\" rel=\"bookmark"
+"\">permalink</a>."
+msgstr ""
+"Speichern sie den <a href=\"%3$s\" title=\"Permalink to %4$s\" rel="
+"\"bookmark\">Permalink</a>."
+
+#: ../inc/soblossom.php:434
+#, php-format
+msgid ""
+"This article was posted in %1$s and tagged %2$s. Bookmark the <a href=\"%3$s"
+"\" title=\"Permalink to %4$s\" rel=\"bookmark\">permalink</a>."
+msgstr ""
+"Dieser Beitrag wurde veröffentlicht in %1$s und markiert %2$s. Setzen Sie "
+"ein Lesezeichen auf den <a href=\"%3$s\" title=\"Permalink to %4$s\" rel="
+"\"bookmark\">Permalink</a>."
+
+#: ../inc/soblossom.php:436
+#, php-format
+msgid ""
+"This article was posted in %1$s. Bookmark the <a href=\"%3$s\" title="
+"\"Permalink to %4$s\" rel=\"bookmark\">permalink</a>."
+msgstr ""
+"Dieser Beitrag wurde veröffentlicht in %1$s. Setzen Sie ein Lesezeichen auf "
+"den <a href=\"%3$s\" title=\"Permalink to %4$s\" rel=\"bookmark"
+"\">Permalink</a>."
+
+#: ../inc/soblossom.php:467
+msgid "Posts navigation"
+msgstr "Beitragsnavigation"
+
+#: ../inc/soblossom.php:480
+msgid "<i class=\"fa fa-long-arrow-left\"></i> More"
+msgstr "<i class=\"fa fa-long-arrow-left\"></i> Mehr"
+
+#: ../inc/soblossom.php:482
+msgid "<i class=\"fa fa-long-arrow-left\"></i> Older articles"
+msgstr "<i class=\"fa fa-long-arrow-left\"></i> Ältere Beiträge"
+
+#: ../inc/soblossom.php:494
+msgid "More <i class=\"fa fa-long-arrow-right\"></i>"
+msgstr "Mehr <i class=\"fa fa-long-arrow-right\"></i>"
+
+#: ../inc/soblossom.php:496
+msgid "Newer articles <i class=\"fa fa-long-arrow-right\"></i>"
+msgstr "Neuere Beiträge <i class=\"fa fa-long-arrow-right\"></i>"
+
+#: ../inc/soblossom.php:527
+msgid "Post navigation"
+msgstr "Beitrags Navigation"
+
+#: ../inc/soblossom.php:530
+msgctxt "Previous post link"
+msgid "<i class=\"fa fa-long-arrow-left\"></i> %title"
+msgstr "<i class=\"fa fa-long-arrow-left\"></i> %title"
+
+#: ../inc/soblossom.php:531
+msgctxt "Next post link"
+msgid "%title <i class=\"fa fa-long-arrow-right\"></i>"
+msgstr "%title <i class=\"fa fa-long-arrow-right\"></i>"
+
+#: ../inc/soblossom.php:545
+msgid "Published on "
+msgstr "Veröffentlicht am"
+
+#. Translators: for Chinese translate to: Y年n月j日
+#: ../inc/soblossom.php:555
+msgid "F jS, Y"
+msgstr "d. F Y"
+
+#: ../inc/soblossom.php:562
+msgid "Articles by "
+msgstr "Beiträge von "
+
+#: ../inc/soblossom.php:627
+msgid "Pingback:"
+msgstr "Pingback:"
+
+#: ../inc/soblossom.php:627 ../inc/soblossom.php:654
+msgid "(Edit)"
+msgstr "(Bearbeiten)"
+
+#: ../inc/soblossom.php:640
+msgid "Your comment is awaiting moderation."
+msgstr "Ihr Kommentar wartet auf Freischaltung."
+
+#. translators: 1: date, 2: time
+#: ../inc/soblossom.php:646
+#, php-format
+msgid "%1$s at %2$s"
+msgstr "%1$s um %2$s"
+
+#: ../inc/soblossom.php:650
+msgid "Link to this comment."
+msgstr "Link zu diesem Kommentar."
+
+#: ../inc/functions/cmb.php:48
+msgid "Standard Fields"
+msgstr "Standard Felder"
+
+#: ../inc/functions/cmb.php:67
+msgid "Text"
+msgstr "Text"
+
+#: ../inc/functions/cmb.php:71
+msgid "Text description"
+msgstr "Text Beschreibung"
+
+#: ../inc/functions/cmb.php:74
+msgid "Default text value"
+msgstr "Standard Text Wert"
+
+#: ../inc/functions/cmb.php:80
+msgid "Checkbox"
+msgstr "Checkbox"
+
+#: ../inc/functions/cmb.php:88
+msgid "Radio"
+msgstr "Radio"
+
+#: ../inc/functions/cmb.php:94 ../inc/functions/cmb.php:105
+#: ../inc/functions/cmb. php:253 ../inc/functions/cmb.php:264
+#: ../inc/functions/cmb.php:313
+msgid "Label1"
+msgstr "Label1"
+
+#: ../inc/functions/cmb.php:95 ../inc/functions/cmb.php:106
+#: ../inc/functions/cmb. php:254 ../inc/functions/cmb.php:265
+#: ../inc/functions/cmb.php:314
+msgid "Label2"
+msgstr "Label2"
+
+#: ../inc/functions/cmb.php:100 ../inc/functions/cmb.php:308
+msgid "Select"
+msgstr "Auswahl"
+
+#: ../inc/functions/cmb.php:111 ../inc/functions/cmb.php:319
+#: ../inc/functions/cmb. php:344
+msgid "Select an Item"
+msgstr "Wählen Sie einen Eintrag aus"
+
+#: ../inc/functions/cmb.php:118
+msgid "Hidden value"
+msgstr "Versteckter Wert"
+
+#: ../inc/functions/cmb.php:130
+msgid "Textarea"
+msgstr "Textarea"
+
+#: ../inc/functions/cmb.php:131
+msgid "Textarea description"
+msgstr "Textarea Beschreibung"
+
+#: ../inc/functions/cmb.php:159
+msgid "Advanced Fields"
+msgstr "Erweiterte Felder"
+
+#: ../inc/functions/cmb.php:166
+msgid "Heading"
+msgstr "Überschrift"
+
+#: ../inc/functions/cmb.php:168
+msgid "Optional description for this heading"
+msgstr "Optionale Beschreibung für diese Überschrift"
+
+#: ../inc/functions/cmb.php:172
+msgid "Slider"
+msgstr "Slider"
+
+#: ../inc/functions/cmb.php:177
+msgid "$"
+msgstr "$"
+
+#: ../inc/functions/cmb.php:178
+msgid " USD"
+msgstr " USD"
+
+#: ../inc/functions/cmb.php:189
+msgid "Number"
+msgstr "Nummer"
+
+#: ../inc/functions/cmb.php:198
+msgid "Date picker"
+msgstr "Datums Wähler"
+
+#: ../inc/functions/cmb.php:204
+msgid "(yyyy-mm-dd)"
+msgstr "(dd.mm.YYYY)"
+
+#: ../inc/functions/cmb.php:205
+msgid "yy-mm-dd"
+msgstr "yy-mm-dd"
+
+#: ../inc/functions/cmb.php:213
+msgid "Datetime picker"
+msgstr "Zeit Wähler"
+
+#: ../inc/functions/cmb.php:227
+msgid "Time picker"
+msgstr "Zeit wähler"
+
+#: ../inc/functions/cmb.php:242
+msgid "Color picker"
+msgstr "Farbwähler"
+
+#: ../inc/functions/cmb.php:248
+msgid "Checkbox list"
+msgstr "Checkbox Liste"
+
+#: ../inc/functions/cmb.php:259
+msgid "Autocomplete"
+msgstr "Autovervollständigung"
+
+#: ../inc/functions/cmb.php:274
+msgid "Email"
+msgstr "E-Mail"
+
+#: ../inc/functions/cmb.php:276
+msgid "Email description"
+msgstr "E-Mail Beschreibung"
+
+#: ../inc/functions/cmb.php:282
+msgid "Range"
+msgstr "Bereich"
+
+#: ../inc/functions/cmb.php:284
+msgid "Range description"
+msgstr "Bereich Beschreibung"
+
+#: ../inc/functions/cmb.php:293
+msgid "URL"
+msgstr "URL"
+
+#: ../inc/functions/cmb.php:295
+msgid "URL description"
+msgstr "URL Beschreibung"
+
+#: ../inc/functions/cmb.php:301
+msgid "oEmbed"
+msgstr "oEmbed"
+
+#: ../inc/functions/cmb.php:303
+msgid "oEmbed description"
+msgstr "oEmbed Beschreibung"
+
+#: ../inc/functions/cmb.php:323
+msgid "Taxonomy"
+msgstr "Taxonomy"
+
+#: ../inc/functions/cmb.php:337
+msgid "Posts (Pages)"
+msgstr "Beiträge (Seiten)"
+
+#: ../inc/functions/cmb.php:353
+msgid "WYSIWYG / Rich Text Editor"
+msgstr "WYSIWYG / Rich Text Editor"
+
+#: ../inc/functions/cmb.php:358
+msgid "WYSIWYG default value"
+msgstr "WYSIWYG Standard Wert"
+
+#: ../inc/functions/cmb.php:374
+msgid "File Upload"
+msgstr "Datei Upload"
+
+#: ../inc/functions/cmb.php:380
+msgid "File Advanced Upload"
+msgstr "Erweiterter Dateiupload"
+
+#: ../inc/functions/cmb.php:388
+msgid "Image Upload"
+msgstr "Bilder Upload"
+
+#: ../inc/functions/cmb.php:394
+msgid "Thickbox Image Upload"
+msgstr "Bild Upload für die Thickbox"
+
+#: ../inc/functions/cmb.php:400
+msgid "Plupload Image Upload"
+msgstr "Mehrfach Bilder Upload"
+
+#: ../inc/functions/cmb.php:407
+msgid "Image Advanced Upload"
+msgstr "Erweiterter Bilder Upload"
+
+#: ../inc/functions/cpt.php:29
+msgctxt "Post Type General Name"
+msgid "Samples"
+msgstr "Beispiele"
+
+#: ../inc/functions/cpt.php:30
+msgctxt "Post Type Singular Name"
+msgid "Sample"
+msgstr "Beispiel"
+
+#: ../inc/functions/cpt.php:31
+msgid "Samples"
+msgstr "Beispiele"
+
+#: ../inc/functions/cpt.php:32
+msgid "Parent Sample:"
+msgstr "Übergeordnetes Beispiel:"
+
+#: ../inc/functions/cpt.php:33
+msgid "All Samples"
+msgstr "Alle Besipiele"
+
+#: ../inc/functions/cpt.php:34
+msgid "View Sample"
+msgstr "Beispiel anschauen"
+
+#: ../inc/functions/cpt.php:35
+msgid "Add New Sample"
+msgstr "Neues Beispiel hinzufügen"
+
+#: ../inc/functions/cpt.php:36
+msgid "Add New"
+msgstr "Neu hinzufügen"
+
+#: ../inc/functions/cpt.php:37
+msgid "Edit Sample"
+msgstr "Beispiel bearbeiten"
+
+#: ../inc/functions/cpt.php:38
+msgid "Update Sample"
+msgstr "Update Beispiel"
+
+#: ../inc/functions/cpt.php:39
+msgid "Search Sample"
+msgstr "Such Beispiel"
+
+#: ../inc/functions/cpt.php:40
+msgid "Not found"
+msgstr "Nicht gefunden"
+
+#: ../inc/functions/cpt.php:41
+msgid "Not found in Trash"
+msgstr "Nicht gefunden im Papierkorb"
+
+#: ../inc/functions/cpt.php:45
+msgid "sample_cpt"
+msgstr "sample_cpt"
+
+#: ../inc/functions/cpt.php:46
+msgid "Sample Custom Post Type for the soblossom theme"
+msgstr "Beispiel Custom Post Type für das soblossom Theme"
+
+#: ../inc/functions/dashboard-functions.php:52
+#, php-format
+msgid ""
+"The %s <a href=\"https://wordpress.org/\" target=\"_blank\">WordPress</a> "
+"website has been built on <a href=\"http://so-wp/themes/soblossom\" title="
+"\"Use soblossom to create an awesome WordPress theme!\" target=\"_blank"
+"\">soblossom</a>. "
+msgstr ""
+"Die %s <a href=\"https://wordpress.org/\" target=\"_blank\">WordPress</a> "
+"Website wurde erstellt mit <a href=\"http://so-wp/themes/soblossom\" title="
+"\"Use soblossom to create an awesome WordPress theme!\" target=\"_blank"
+"\">soblossom</a>. "
+
+#. Template Name of the plugin/theme
+msgid "Banded"
+msgstr "Banded"
+
+#: ../templates/banded.php:89 ../templates/banded.php:90
+msgid "Find out more"
+msgstr "Finden sie mehr heraus"
+
+#. Template Name of the plugin/theme
+msgid "Full Width"
+msgstr "Volle Breite"
+
+#. Template Name of the plugin/theme
+msgid "Name Page Template"
+msgstr "Benanntes Seiten Template"
+
+#. Template Name of the plugin/theme
+msgid "Workspace"
+msgstr "Workspace"
+
+#: ../templates/workspace.php:62 ../templates/workspace.php:63
+msgid "Learn more"
+msgstr "Mehr erfahren"
+
+#: ../templates/workspace.php:71 ../templates/workspace.php:72 ..
+#: /templates/workspace.php:73 ../templates/workspace.php:74
+msgid "as long as there is no services CPT, nothing will really happen here"
+msgstr "so lange es keine Custom Post Types gibt, wird hier nichts passieren"
+
+#: ../templates/workspace.php:113 ../templates/workspace.php:117
+msgid "Call To Action!"
+msgstr "Call To Action!"
+
+#: ../templates/workspace.php:137
+msgid "More Information"
+msgstr "Mehr Informationen"
+
+#: ../templates/workspace.php:142
+msgid "Download Brochure"
+msgstr "Broschüre downloaden"
+
+#: ../templates/workspace.php:146
+msgid "Book Event"
+msgstr "Veranstaltung buchen"
+
+#: ../templates/workspace.php:158
+msgid "Get in touch!"
+msgstr "Nehmen Sie Kontakt auf!"
+
+#: ../templates/workspace.php:161
+msgid "We'd love to hear from you, you attractive person you."
+msgstr "Wir freuen uns von Dir zu hören, Du attraktive Person Du."
+
+#: ../templates/workspace.php:165
+msgid "Contact Us"
+msgstr "Kontaktieren sie uns "
+
+#: ../tplparts/content-excerpt-seminar.php:69
+msgid "Read more..."
+msgstr "weiterlesen…"
+
+#: ../tplparts/content-home.php:17 ../tplparts/content-page.php:32 ..
+#: /tplparts/content-single-seminar.php:130 ../tplparts/content-single.php:42
+msgid "Edit"
+msgstr "Bearbeiten"
+
+#: ../tplparts/content-none.php:14
+msgid "Nothing Found"
+msgstr "Nichts gefunden"
+
+#: ../tplparts/content-none.php:21
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"Bereit um Ihren ersten Beitrag zu veröffentlichen? <a href=\"%1$s\">Starten "
+"Sie hier</a>."
+
+#: ../tplparts/content-none.php:25
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Sorry, nichts entspricht Ihren Suchworten. Bitte versuchen Sie es erneut "
+"mit anderen Schlüsselwörtern."
+
+#: ../tplparts/content-none.php:30
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+"Es scheint wir können nicht finden wonach Sie suchen. Vielleicht hilft eine "
+"Suche."
+
+#: ../tplparts/content-page.php:25 ../tplparts/content-single.php:31 ..
+#: /tplparts/content.php:27
+msgid "Pages:"
+msgstr "Seiten:"
+
+#: ../tplparts/content.php:24
+msgid "Continue reading <i class=\"fa fa-long-arrow-right\"></i>"
+msgstr "Weiter lesen <i class=\"fa fa-long-arrow-right\"></i>"
+
+#: ../tplparts/nav-offcanvas.php:26 ../tplparts/nav-topbar.php:12
+msgid "Menu"
+msgstr "Menü"
+
+#: ../tplparts/nav-offcanvas.php:68
+msgid "Navigation"
+msgstr "Navigation"
+
+#. Name of the theme
+msgid "Grell"
+msgstr "Grell"
+
+#. Theme URI of the plugin/theme
+msgid "http://so-wp.com/themes/soblossom/"
+msgstr "http://so-wp.com/themes/soblossom/"
+
+#. Description of the plugin/theme
+msgid ""
+"soblossom is a WordPress starter theme that is based on Foundation on the "
+"frontend and Underscores sass on the backend."
+msgstr ""
+"soblossom ist ein Starter Theme welches auf Foundation im Frontend und auf "
+"Underscore SASS im Backend basiert."
+
+#. Author of the theme
+msgid "Zitrusblau GmbH"
+msgstr "Zitrusblau GmbH"
+
+#. Author URI of the plugin/theme
+msgid "http://senlinonline.com/"
+msgstr "http://senlinonline.com/"
