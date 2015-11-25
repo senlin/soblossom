@@ -1,8 +1,8 @@
 soblossom WordPress theme
 =========
 
-###### Version 1.6.7
-###### Last updated on 2015.11.24
+###### Version 1.6.8
+###### Last updated on 2015.11.25
 ###### Foundation version 5.5.3
 ###### FontAwesome version 4.5.0
 ###### [DEMO SITE](http://so-wp.com/themes/soblossom/)
@@ -70,6 +70,7 @@ In the languages folder you will find the `soblossom.pot` file and any translati
 All contributions naturally receive credits here in the readme file.
 
 2014.12.27 - Dutch added - by [Piet Bos](http://senlinonline.com)
+2015.11.25 - German added - by [Tina](https://github.com/zitrusblau)
 
 ## Font Awesome
 
@@ -125,6 +126,12 @@ Nowadays there are plenty of WordPress themes built on Foundation and we have lo
 [soblossom on Facebook](https://www.facebook.com/sowp.soblossom/) 
 
 ## Changelog
+
+### 1.6.8 (date 2015.11.25)
+
+* bug fix, bug [#22](https://github.com/senlin/soblossom/issues/22) language files were named wrong and could not be picked up. Thanks for reporting and correcting this [Tina](https://github.com/zitrusblau)!
+* add German language files - credits [Tina](https://github.com/zitrusblau)
+* generate new .mo files for Dutch and German
 
 ### 1.6.7 (date 2015.11.24)
 
