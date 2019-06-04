@@ -5,8 +5,7 @@ soblossom WordPress theme
 ###### Last updated on 2015.11.25
 ###### Foundation version 5.5.3
 ###### FontAwesome version 4.5.0
-###### [DEMO SITE](http://so-wp.com/themes/soblossom/)
-###### Author: [Piet Bos](https://github.com/senlin)
+###### Author: [Pieter Bos](https://github.com/senlin)
 
 soblossom is a WordPress starter theme that is based on [Foundation](http://foundation.zurb.com) on the frontend and [Underscores sass](http://underscores.me) on the backend. 
 
@@ -33,7 +32,7 @@ Showing your galleries this way means that whatever you choose as amount of colu
 
 ### Other Foundation Features
 
-Foundation comes packed with features and although we have not actively implemented all of them, they are all readily available to you. You can ready all about them via the [Foundation Documentation](http://foundation.zurb.com/docs/). Check out the [demo](http://so-wp.com/themes/soblossom) where we show a few more things that are possible.
+Foundation comes packed with features and although we have not actively implemented all of them, they are all readily available to you. You can ready all about them via the [Foundation Documentation](http://foundation.zurb.com/docs/).
 
 ### Functions
 
@@ -46,30 +45,23 @@ The purpose of this file is to add your own functions and filters to the theme a
 
 Apart from the default ones, soblossom comes with 4 additional page templates. One is the full width template. Two are based on [Foundation templates](http://foundation.zurb.com/templates.html), Banded and Workspace. There is also a sample template which you can use to build a new template from/on.
 
-The [homepage of the demo site](http://so-wp.com/themes/soblossom/) uses the banded template, so you can have a look and decide whether you can use that on your own site(s) too.
-
 In the `templates` folder you can find these 4 page templates.
 
 ### Plugins
 
 The soblossom theme comes optimised for the following plugins:
 
-* [Formidable Pro](http://senl.in/FormidablePro) (aff.link) - turn off the CSS output of the plugin to fully enjoy the Foundation Forms styling
-* [Gravity Forms](http://senl.in/gRaVitY) (aff.link) - turn off the CSS output of the plugin to fully enjoy the Foundation Forms styling
-* [Meta Box](http://wordpress.org/plugins/meta-box/) - the `inc/functions/cmb.php` file has been generated with the [demo code](github.com/rilwis/meta-box/blob/master/demo/demo.php) of this plugin.
-* [Yoast SEO](http://wordpress.org/plugins/wordpress-seo/) - title tags in the head section, breadcrumb code already added
-* [WPML](http://senl.in/getwpml) (aff.link) - language code is added to the body class if WPML is active (filter in `inc/soblossom.php`)
+* [Formidable Pro](https://formidablepro.com/?aff=f0rmis3nL1dA8Le&p=formidable-pro) (aff.link) - turn off the CSS output of the plugin to fully enjoy the Foundation Forms styling
+* [Gravity Forms](https://rocketgenius.pxf.io/c/1210699/445235/7938) (aff.link) - turn off the CSS output of the plugin to fully enjoy the Foundation Forms styling
+* [Meta Box](https://wordpress.org/plugins/meta-box/) - the `inc/functions/cmb.php` file has been generated with the [demo code](github.com/rilwis/meta-box/blob/master/demo/demo.php) of this plugin.
+* [Yoast SEO](https://wordpress.org/plugins/wordpress-seo/) - title tags in the head section, breadcrumb code already added
+* [WPML](https://wpml.org/?aid=140&affiliate_key=qGikbikRYa9M) (aff.link) - language code is added to the body class if WPML is active (filter in `inc/soblossom.php`)
 
 ## Languages
 
-In the languages folder you will find the `soblossom.pot` file and any translations that have been completed. To help us translate soblossom in your language, you can do as follows:
+In the languages folder you will find the `soblossom.pot` file and any translations that have been completed.
 
-* Help translate soblossom using [Transifex](https://www.transifex.com/projects/p/soblossom/)
-* Fork soblossom on Github, locally open the pot file with PO Edit, translate the file into your language and send us a Pull Request on Github
-
-All contributions naturally receive credits here in the readme file.
-
-2014.12.27 - Dutch added - by [Piet Bos](http://senlinonline.com)
+2014.12.27 - Dutch added - by [myself](https://so-wp.com)
 2015.11.25 - German added - by [Tina](https://github.com/zitrusblau)
 
 ## Font Awesome
@@ -111,19 +103,7 @@ Nowadays there are plenty of WordPress themes built on Foundation and we have lo
 
 ## Donations
 
-* Donate link: [http://so-wp.com/donations](http://so-wp.com/donations)
-
-## Connect with me through
-
-[Github](https://github.com/senlin) 
-
-[LinkedIn](https://www.linkedin.com/in/pietbos) 
-
-[WordPress](https://profiles.wordpress.org/senlin/) 
-
-[Website](http://senlinonline.com)
-
-[soblossom on Facebook](https://www.facebook.com/sowp.soblossom/) 
+* Donate link: [https://so-wp.com/donations](https://so-wp.com/donations)
 
 ## Changelog
 
