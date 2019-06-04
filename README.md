@@ -1,6 +1,8 @@
 soblossom WordPress theme
 =========
 
+== NO LONGER IN ACTIVE DEVELOPMENT, USE AT OWN RISK ==
+
 ###### Version 1.6.8
 ###### Last updated on 2015.11.25
 ###### Foundation version 5.5.3
